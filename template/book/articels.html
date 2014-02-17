@@ -1,0 +1,15 @@
+{% extends "book/index.html" %}
+
+
+{% block content %}
+ {% for a in articels %}
+   	
+    <h1> {{ a.title }}</h1>
+    <h3>Tags: {% for t in a.tags %}{{t}} {%endfor %}</h3>
+    <h3>Locations: {% for l in a.location %}{{l}} {%endfor %}</h3>
+    {% autoescape off %}{{a.text}}{% endautoescape %}
+   
+{% endfor %}
+
+
+{%endblock%}

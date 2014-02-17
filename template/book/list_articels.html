@@ -1,0 +1,26 @@
+{% extends "book/index.html" %}
+
+{% block content %}
+<table class="table table-striped">
+	<tr><td><h3>Title</h3></td><td><h3>Tags</h3></td><td><h3>Location</h3></td></tr>
+
+
+ {% for a in articels %}
+   	
+    <tr><td><a href="/book/articel/{{ a.id }}" >{{ a.title }}</a></td><td>
+		{% for t in a.tags %}
+			{{t}}
+		{%endfor %}
+	</td><td> 
+	{% for l in a.location %}
+			{{l}}
+		{%endfor %}
+</td></tr>
+   
+   
+{% endfor %}
+
+</table>
+
+
+{%endblock%}

@@ -1,0 +1,30 @@
+{% extends "book/index.html" %}
+
+
+{% block content %}
+
+{%if info == "delete" %}
+<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Deleted!</strong> The Articel has bean deleted.
+</div>
+
+{%endif%}
+
+ {% for a in articels %}
+  <form action="#" method='post'>
+
+   	{% csrf_token %}
+	<input type="hidden" name="id" value="{{a.id}}" />
+	 <button type="submit" class="btn btn-danger">DELETE</button>
+</form>
+   	
+    <h1> {{ a.title }}</h1>
+    <h3>Tags: {{a.tags}}</h3>
+    <h3>Locations: {{a.location}}</h3>
+    {% autoescape off %}{{a.text}}{% endautoescape %}
+   
+{% endfor %}
+
+
+{%endblock%}

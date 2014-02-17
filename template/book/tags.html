@@ -1,0 +1,13 @@
+{% extends "book/index.html" %}
+
+
+{% block content %}
+<h1>Tags</h1>
+ {% for t in tags %}
+   	
+    <h3> {{ t }}</h3>
+    
+{% endfor %}
+
+
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends "book/index.html" %}
+
+
+{% block content %}
+<h1>Locations</h1>
+ {% for l in location %}
+   	
+    <h3> {{ l }}</h3>
+    
+{% endfor %}
+
+
+{%endblock%}

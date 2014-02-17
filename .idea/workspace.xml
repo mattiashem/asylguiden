@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg.png" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/img/button_bg.png" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/img/button_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg_black.png" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg_black.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg_silver.png" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg_silver.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/buttons.png" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/buttons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/colorpicker.jpg" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/colorpicker.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/flash.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/flash.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/icons.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/img/icons.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/img/icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/iframe.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/iframe.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/items.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/items.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/menu_arrow.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/menu_arrow.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/menu_check.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/menu_check.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/pagebreak.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/pagebreak.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/progress.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/progress.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/quicktime.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/quicktime.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/realmedia.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/realmedia.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/shockwave.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/shockwave.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/tabs.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/tabs.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/trans.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/trans.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_228ef1_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffffff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/video.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/video.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/windowsmedia.gif" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/windowsmedia.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mylibs/.gitignore" afterPath="$PROJECT_DIR$/static/js/mylibs/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/about.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/about.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/about.html" afterPath="$PROJECT_DIR$/template/book/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/about.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/about.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/anchor.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/anchor.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/anchor.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/anchor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/charmap.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/charmap.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/charmap.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/charmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/color_picker.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/color_picker.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/color_picker.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/color_picker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mylibs/console.js" afterPath="$PROJECT_DIR$/static/js/mylibs/console.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/content.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/content.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/default/content.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/default/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/dialog.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/dialog.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/dialog.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/editor_template.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/editor_template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/editor_template.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/editor_template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/editor_template_src.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/editor_template_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/editor_template_src.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/editor_template_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/langs/en.js" afterPath="$PROJECT_DIR$/static/js/tinymc/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/langs/en.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/langs/en.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/langs/en_dlg.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/langs/en_dlg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/image.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/image.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/image.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/index.html" afterPath="$PROJECT_DIR$/template/book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.js" afterPath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.min.js" afterPath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/jquery-ui-1.8.16.custom.css" afterPath="$PROJECT_DIR$/static/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/link.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/link.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/link.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/libs/modernizr-2.0.6.min.js" afterPath="$PROJECT_DIR$/static/js/libs/modernizr-2.0.6.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/plugins.js" afterPath="$PROJECT_DIR$/static/js/plugins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/script.js" afterPath="$PROJECT_DIR$/static/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asylguiden/settings.py" afterPath="$PROJECT_DIR$/asylguiden/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/shortcuts.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/shortcuts.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/source_editor.htm" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/source_editor.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/source_editor.js" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/source_editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/tiny_mce.js" afterPath="$PROJECT_DIR$/static/js/tinymc/tiny_mce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/ui.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/ui.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/default/ui.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/default/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui_black.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui_black.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui_silver.css" afterPath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui_silver.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asylguiden/urls.py" afterPath="$PROJECT_DIR$/asylguiden/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/templatetags/users_tags.py" afterPath="$PROJECT_DIR$/book/templatetags/users_tags.py" />
+    </list>
+    <ignored path="asylguiden.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="asylguiden" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asylguiden/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="53" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="2535">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="42" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="945">
+              <folding>
+                <element signature="e#41#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/book/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/book/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="178" selection-end="178" vertical-scroll-proportion="0.21238938" vertical-offset="0" max-vertical-offset="870">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding>
+                <element signature="e#27#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2640">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_tags.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book/templatetags/users_tags.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="0" selection-start="2104" selection-end="2104" vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="2010">
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/asylguiden/urls.py" />
+        <option value="$PROJECT_DIR$/asylguiden/settings.py" />
+        <option value="$PROJECT_DIR$/book/templatetags/users_tags.py" />
+        <option value="$PROJECT_DIR$/template/book/index.html" />
+        <option value="$PROJECT_DIR$/template/book/about.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
+    <option name="y" value="-4" />
+    <option name="width" value="1368" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="" />
+      <created>1392489645512</created>
+      <updated>1392489645512</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="42" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="945">
+          <folding>
+            <element signature="e#41#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asylguiden/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="53" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="2535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
+          <folding>
+            <element signature="e#27#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/templatetags/users_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="2104" selection-end="2104" vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="2010">
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="178" selection-end="178" vertical-scroll-proportion="0.21238938" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
