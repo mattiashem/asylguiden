@@ -1,6 +1,6 @@
 # Django settings for asylguiden project.
 
-from mongoengine import *
+#from mongoengine import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
