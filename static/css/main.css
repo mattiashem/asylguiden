@@ -15,7 +15,7 @@ console{
 	/* Don't delete anything below here */
 #dhtmlgoodies_control{
 
-		height:20px;
+		height:35px;
 		position:relative;
 		background-color:#DC533F;
 		width:100%;
@@ -43,7 +43,7 @@ console{
 	.dhtmlgoodies_content{
 		position:relative;		
 		background-color:#DC533F;
-		width:100%;
+		width:90%;
 		font-size:14px;
 		z-index:+4;
 		
@@ -289,3 +289,9 @@ console{
       }
 
     }
+
+
+
+ .textarea {
+    width: 200px;
+}

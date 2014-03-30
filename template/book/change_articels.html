@@ -1,5 +1,5 @@
 {% extends "book/index.html" %}
-
+{% load i18n %}
 
 {% block content %}
 
@@ -7,35 +7,35 @@
 {%if info == "update" %}
 <div class="alert">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Changed!</strong> The Articel has bean updated.
+  <strong>{% trans "Changed!" %}</strong>[% trans "The Articel has bean updated." %}
 </div>
 
 {%endif%}
 
-<h1>Change Articel</h1>
+<h1>{% trans "Change Articel" %}</h1>
  {% for a in articels %}
  <form action="#" method='post'>
 
    	{% csrf_token %}
 
   <fieldset>
-    <label>Name</label>
+    <label>{% trans "Name" %}</label>
     <input type="hidden" name="id" value="{{ a.id }}"/>
     <input type="text" placeholder="Articel name" name='title'  value='{{ a.title }}'>
-    <span class="help-block">Enter name of articel</span>
-    <label>Locations</label>
+    <span class="help-block">{% trans "Enter name of articel" %}</span>
+    <label>{% trans "Locations" %}</label>
     <input type="text" placeholder="Enter Locations " name="location" value='{% for l in a.location %}{{l}} {%endfor %}' id="lo_search" data-provide="typeahead" data-items="10" >
-    <span class="help-block">Enter location for articel if any</span>
-    <label>Tags</label>
+    <span class="help-block">{% trans "Enter location for articel if any" %}</span>
+    <label>{% trans "Tags" %}</label>
     <input type="text" placeholder="Tags" name="tags" value='{% for t in a.tags %}{{t}} {%endfor %}' id="ta_search" data-provide="typeahead" data-items="10">
-    <span class="help-block">Enter tags to articel</span>
+    <span class="help-block">{% trans "Enter tags to articel" %}</span>
     <textarea rows="10" cols="50" name="text">{{ a.text }}</textarea>
 
 
     <label class="checkbox">
       <input type="checkbox"> Check me out
     </label>
-    <button type="submit" class="btn btn-success">Save</button>
+    <button type="submit" class="btn btn-success">{% trans "Save" %}</button>
   </fieldset>
 </form>
 

@@ -1,0 +1,399 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-30 22:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: asylguiden/settings.py:128
+msgid "English"
+msgstr "Engelska"
+
+#: asylguiden/settings.py:129
+msgid "Swedish"
+msgstr "Svenska"
+
+#: template/book/about.html:8
+msgid "Asylguiden.se"
+msgstr ""
+
+#: template/book/about.html:9
+msgid "Asylguiden is and plattform for delevering information beetween people"
+msgstr "Asyluiden en plattform för informatiosn delnad"
+
+#: template/book/about.html:11
+msgid "People working on Asylguiden"
+msgstr "Folk som jobbar på Asylguiden"
+
+#: template/book/about.html:34
+msgid "Contact Asylguiden"
+msgstr "Kontakta Asylguiden"
+
+#: template/book/change_articels.html:10
+msgid "Changed!"
+msgstr "Ändrad!"
+
+#: template/book/change_articels.html:15
+msgid "Change Articel"
+msgstr "Ändra Artikel"
+
+#: template/book/change_articels.html:22 template/book/new.html:12
+#: template/book/qsearch.html:12 template/book/search.html:12
+msgid "Name"
+msgstr "Namn"
+
+#: template/book/change_articels.html:25 template/book/new.html:14
+msgid "Enter name of articel"
+msgstr "Skriv namn på artikel"
+
+#: template/book/change_articels.html:26 template/book/locations.html:5
+#: template/book/new.html:15
+msgid "Locations"
+msgstr "Område"
+
+#: template/book/change_articels.html:28
+msgid "Enter location for articel if any"
+msgstr "Skriv område som rör artikel"
+
+#: template/book/change_articels.html:29 template/book/index.html:105
+#: template/book/list_articels.html:5 template/book/new.html:20
+#: template/book/tags.html:5 template/users/mypage.html:330
+msgid "Tags"
+msgstr "Tags"
+
+#: template/book/change_articels.html:31
+msgid "Enter tags to articel"
+msgstr "Skriv tags för artiklar"
+
+#: template/book/change_articels.html:38 template/book/new.html:30
+msgid "Save"
+msgstr "Sparad"
+
+#: template/book/delete_articels.html:9
+msgid "Deleted!"
+msgstr "Bortagen!"
+
+#: template/book/delete_articels.html:9
+msgid "The Articel has bean deleted."
+msgstr "Artikeln har blivit bortagen"
+
+#: template/book/delete_articels.html:19
+msgid "DELETE"
+msgstr "RADERA"
+
+#: template/book/help.html:5
+msgid "Help us"
+msgstr "Hjälp oss"
+
+#: template/book/index.html:74
+msgid "The Book"
+msgstr "Boken"
+
+#: template/book/index.html:75
+msgid "Home"
+msgstr "Hem"
+
+#: template/book/index.html:76 template/book/index.html.py:87
+msgid "Read"
+msgstr "Läs"
+
+#: template/book/index.html:78 template/book/index.html.py:89
+msgid "Write"
+msgstr "Skriv"
+
+#: template/book/index.html:80 template/book/index.html.py:91
+#: template/book/qsearch.html:16 template/book/search.html:5
+#: template/book/search.html.py:16
+msgid "Search"
+msgstr "Sök"
+
+#: template/book/index.html:86
+msgid "Qestions and Answers"
+msgstr "Frågot och svar"
+
+#: template/book/index.html:98
+msgid "Places"
+msgstr "Platser"
+
+#: template/book/index.html:114 template/book/index.html.py:117
+msgid "Account"
+msgstr "Konto"
+
+#: template/book/index.html:115
+msgid "Log Out"
+msgstr "Logga ut"
+
+#: template/book/index.html:118 template/users/login.html:12
+msgid "Login"
+msgstr "Logga in"
+
+#: template/book/index.html:119
+msgid "Register"
+msgstr "Registrera"
+
+#: template/book/index.html:125
+msgid "Choose Language"
+msgstr "Välj Språk"
+
+#: template/book/index.html:156
+msgid "Console"
+msgstr ""
+
+#: template/book/index.html:157
+msgid "Start using the guide by pressing Console"
+msgstr ""
+
+#: template/book/index.html:166
+msgid "Start today writing to the Guide"
+msgstr "Börja idag med att skriva till Guiden"
+
+#: template/book/index.html:168
+msgid "Sign Up"
+msgstr "Registrera dig"
+
+#: template/book/index.html:176
+msgid "Giving back"
+msgstr "Ge tillbaka"
+
+#: template/book/index.html:178
+msgid "Write Articel"
+msgstr "Skriv Artikel"
+
+#: template/book/index.html:233
+msgid "Back to top"
+msgstr "Tillbaka upp"
+
+#: template/book/index.html:234
+msgid "Privacy"
+msgstr "Privacy"
+
+#: template/book/index.html:234
+msgid "Terms"
+msgstr "Terms"
+
+#: template/book/list_articels.html:5 template/users/mypage.html:330
+msgid "Title"
+msgstr "Titel"
+
+#: template/book/list_articels.html:5 template/users/mypage.html:330
+msgid "Location"
+msgstr "Område"
+
+#: template/book/new.html:11
+msgid "New Articel"
+msgstr "Ny Artikel"
+
+#: template/book/new.html:19
+msgid ""
+"Enter location for articel if any (Sepperate with , exemple stockholm, "
+"Uppsala)"
+msgstr "Skriv in område för artikeln tex (stockholm,uppsala)"
+
+#: template/book/new.html:23
+msgid "Enter tags to articel (Sepperate with , exemple work, internet)"
+msgstr ""
+
+#: template/book/qarticels.html:4
+msgid "Questions and Answers"
+msgstr "Frågor och svar"
+
+#: template/book/qarticels.html:9
+msgid "Tags:"
+msgstr "Tags"
+
+#: template/book/qarticels.html:10
+msgid "Locations:"
+msgstr "Område"
+
+#: template/book/qsearch.html:5
+msgid "Search in Questions"
+msgstr "Sök i Frågor"
+
+#: template/book/qsearch.html:14 template/book/search.html:14
+msgid "Enter search ords for Articels, tags ore locations"
+msgstr "Skriv sökord för artiklar tags eller området"
+
+#: template/book/qsearch.html:24 template/book/search.html:24
+msgid "Results"
+msgstr "Resultat"
+
+#: template/book/saved.html:5
+msgid "Thank You"
+msgstr "Tack"
+
+#: template/book/saved.html:6
+msgid "You articel has bean saved"
+msgstr "Din artikel har sparats"
+
+#: template/book/support.html:4
+msgid "Support"
+msgstr "Support"
+
+#: template/book/tech.html:4
+msgid "Tech"
+msgstr "Teknik"
+
+#: template/users/login.html:7 template/users/register.html:7
+msgid "Error"
+msgstr "Error"
+
+#: template/users/login.html:7
+msgid " Wrong Login please efter correct username ore password"
+msgstr "Fel login ogiltigt användrnamn eller lösenord"
+
+#: template/users/login.html:17 template/users/mypage.html:29
+#: template/users/register.html:17
+msgid "Username:"
+msgstr "Användrnamn"
+
+#: template/users/login.html:19 template/users/mypage.html:31
+msgid "Password:"
+msgstr "Lösenord"
+
+#: template/users/lost_password.html:8
+msgid "Reset Link generated"
+msgstr "Återställnings link har genererats"
+
+#: template/users/lost_password.html:8
+msgid " An reset link has bean generated and send to you email."
+msgstr ""
+
+#: template/users/lost_password.html:16
+msgid "No email found"
+msgstr ""
+
+#: template/users/lost_password.html:16
+msgid " There was no users found with that email."
+msgstr ""
+
+#: template/users/lost_password.html:23
+msgid "Reset Password"
+msgstr ""
+
+#: template/users/lost_password.html:24
+msgid ""
+"To resett you password please provide us with your email addres to you "
+"account"
+msgstr ""
+
+#: template/users/lost_password.html:29
+msgid "Email:"
+msgstr ""
+
+#: template/users/mypage.html:9
+msgid "My page"
+msgstr ""
+
+#: template/users/mypage.html:13
+msgid "Updated!"
+msgstr ""
+
+#: template/users/mypage.html:13
+msgid "You account has bean updated."
+msgstr ""
+
+#: template/users/mypage.html:21
+msgid "Account Settings"
+msgstr ""
+
+#: template/users/mypage.html:22
+msgid "User Detailjs"
+msgstr ""
+
+#: template/users/mypage.html:23
+msgid "Articels"
+msgstr ""
+
+#: template/users/mypage.html:33
+msgid "Password confirmation:"
+msgstr ""
+
+#: template/users/mypage.html:36
+msgid "Emaill:"
+msgstr ""
+
+#: template/users/mypage.html:38 template/users/mypage.html.py:41
+#: template/users/register.html:26
+msgid "Enter you email address"
+msgstr ""
+
+#: template/users/mypage.html:51
+msgid "Name:"
+msgstr ""
+
+#: template/users/mypage.html:55
+msgid "Surname:"
+msgstr ""
+
+#: template/users/mypage.html:57
+msgid "Address:"
+msgstr ""
+
+#: template/users/mypage.html:59
+msgid "Postnumber"
+msgstr ""
+
+#: template/users/mypage.html:61
+msgid "Phone:"
+msgstr ""
+
+#: template/users/mypage.html:63
+msgid "Contry:"
+msgstr ""
+
+#: template/users/mypage.html:314
+msgid "Contry of stay"
+msgstr ""
+
+#: template/users/mypage.html:316
+msgid "Langage:"
+msgstr ""
+
+#: template/users/mypage.html:324
+msgid "Languages to write and read articels in. Press  to mark several"
+msgstr ""
+
+#: template/users/mypage.html:348
+msgid "Change"
+msgstr ""
+
+#: template/users/mypage.html:348
+msgid "Delete"
+msgstr ""
+
+#: template/users/mypage.html:350
+msgid "No Articels"
+msgstr ""
+
+#: template/users/register.html:7
+msgid "Error Register user username ore email address"
+msgstr ""
+
+#: template/users/register.html:12
+msgid "Register new account"
+msgstr ""
+
+#: template/users/register.html:19
+msgid "Password"
+msgstr ""
+
+#: template/users/register.html:21
+msgid "Password confirmation"
+msgstr ""
+
+#: template/users/register.html:24
+msgid "Email"
+msgstr ""

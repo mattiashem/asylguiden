@@ -1,8 +1,7 @@
 #from django.conf.urls.defaults import *
 from django.views.static import *
 from django.conf import settings
-from django.conf.urls import patterns
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -20,6 +19,7 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
     
     #Include book url
+    #url(r'^i18n/', include('django.conf.urls.i18n')),
      url(r'^about$', 'book.views.about'),
      url(r'^support$', 'book.views.support'),
      url(r'^help$', 'book.views.help'),
@@ -27,6 +27,9 @@ urlpatterns = patterns('',
      url(r'^book$', 'book.views.start'),
      url(r'^book/start$', 'book.views.start'),
      url(r'^book/new$', 'book.views.new'),
+     url(r'^book/question$', 'book.views.question'),
+    url(r'^book/new-question$', 'book.views.writeqestion'),
+    url(r'^book/search-question$', 'book.views.searchquestion'),
      url(r'^book/articels$', 'book.views.articels'),
      url(r'^book/articel/$', 'book.views.articels'),
      url(r'^book/articel/(\w+)/$', 'book.views.view_articel'),
@@ -45,6 +48,7 @@ urlpatterns = patterns('',
      url(r'^users/resetpassword/(\w+)/$', 'users.views.resetpassword'),
      url(r'^users/lostpassword$', 'users.views.lostpassword'),
      url(r'^$', 'book.views.start'),
+
      
 
 

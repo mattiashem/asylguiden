@@ -1,22 +1,14 @@
-<!-- Load extra tags -->
- {% load users_tags %}-->
-<!--Top tags for meny-->
-{% get_top_tags %}
-{% get_top_location %}
 
-<!--Tags for typahead -->
-{% get_location %}
-{% get_tags %}
 
 
 
 {% extends "book/index.html" %}
-
+{% load i18n %}
 {% block content %}
-<h1>Asylguiden.se</h1>
-<p>Asylguiden is and plattform for delevering information beetween people</p>
+<h1>{% trans "Asylguiden.se" %}</h1>
+<p>{% trans "Asylguiden is and plattform for delevering information beetween people" %}</p>
 
-<h2>People working on Asylguiden</h2>
+<h2>{% trans "People working on Asylguiden" %}</h2>
 
 <table>
 	<tr><td width="200" ><b>Mattias</b>
@@ -39,7 +31,7 @@
 
 
 
-<h2>Contakt Asylguiden</h2>
+<h2>{% trans "Contact Asylguiden" %}</h2>
 
 <form>
 		<input type="text" name="subject" placeholder="Subject"/>

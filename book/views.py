@@ -8,7 +8,7 @@ from operator import itemgetter
 from mongoengine.queryset import Q
 from django import forms
 from mongoengine.django.auth import User
-from book.models import Post
+from book.models import Post, Question
 from users.models import UserInfo
 
 from mongoengine import *
@@ -42,6 +42,60 @@ def new(request):
 
 
 	return render_to_response('book/new.html', c,context_instance=RequestContext(request))
+
+
+
+def writeqestion(request):
+	c = {}
+	c.update(csrf(request))
+
+	if request.method == 'POST':
+		currentuser = User.objects.get(id=request.user.id)
+
+		#Tags
+		incommingtags=request.POST["tags"].replace(" ","")
+		thetags=incommingtags.split(',')
+
+		#Location
+		where=request.POST["where"].replace(" ","")
+		thewhere=where.split(',')
+
+		#Saving articel
+		quest=Question(title=request.POST['quest'],auther=currentuser,where=thewhere,tags=thetags,text=request.POST["text"])
+		quest.save()
+		return render_to_response('book/saved.html',context_instance=RequestContext(request))
+
+
+	return render_to_response('book/qestion.html', c,context_instance=RequestContext(request))
+
+
+def question(request):
+	'''
+	Show articels in databas
+	'''
+	articels = Question.objects()
+	return render_to_response('book/qarticels.html',  {'articels': articels},context_instance=RequestContext(request))
+
+
+def searchquestion(request):
+	'''
+	Searching trow articels for match.
+	Search in both tags, Locations and articel text
+	'''
+	#Ceating CSRF
+	c = {}
+	c.update(csrf(request))
+
+	if request.method == 'POST':
+		search=request.POST['search']
+		Articels = Question.objects(Q(tags=search) | Q(where=search))
+		print Articels
+		return render_to_response('book/qsearch.html', {'articels': Articels},context_instance=RequestContext(request))
+
+	else:
+		return render_to_response('book/qsearch.html',context_instance=RequestContext(request) )
+
+
 
 def articels(request):
 	'''

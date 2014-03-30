@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block content %}
-<h1>{% trans "Search" %}</h1>
+<h1>{% trans "Search in Questions" %}</h1>
 <form action="#" method='post'>
 
    	{% csrf_token %}
@@ -12,7 +12,7 @@
     <label>{% trans "Name" %}</label>
     <input type="text" placeholder="Search words" name='search'>
     <span class="help-block">{% trans "Enter search ords for Articels, tags ore locations" %}</span>
-    
+
     <button type="submit" class="btn btn-success">{% trans "Search" %}</button>
   </fieldset>
 </form>
@@ -24,9 +24,9 @@
 <h2>{% trans "Results" %}</h2>
 <table class="table table-striped">
  {% for a in articels %}
-   	
+
     <tr><td><a href="/book/articel/{{a.id}}" >{{ a.title }}</a></td></tr>
-    
+
 {% endfor %}
 </table>
 {%  endif %}

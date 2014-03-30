@@ -9,3 +9,11 @@ class Post(Document):
     location = ListField(StringField(max_length=40))
     tags = ListField(StringField(max_length=40))
     text = StringField()
+
+
+class Question(Document):
+    title = StringField(max_length=120, required=True)
+    auther = ReferenceField(User)
+    where = ListField(StringField(max_length=40))
+    tags = ListField(StringField(max_length=40))
+    text = StringField()

@@ -7,7 +7,7 @@
 <!--Tags for typahead -->
 {% get_location %}
 {% get_tags %}
-
+{% load i18n %}
 
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -70,49 +70,76 @@
 			<!-- Console content goes here -->
 			<console>
 			<div class="row">
-      <div class="span2">
-<li><h3>The Book</h3></li>       
-<li><a href="/book/start">Home</a></li>
-<li><a href="/book/articels">Read</a></li>
+      <div class="col-md-2">
+<li><h3>{% trans "The Book" %}</h3></li>
+<li><a href="/book/start">{% trans "Home" %}</a></li>
+<li><a href="/book/articels">{% trans "Read" %}</a></li>
 {% if user.is_authenticated %}
-<li><a href="/book/new">Write</a></li>
+<li><a href="/book/new">{% trans "Write" %}</a></li>
 {%endif%}
-<li><a href="/book/search">Search</a></li>
+<li><a href="/book/search">{% trans "Search" %}</a></li>
+<li>--</li>
 
       </div>
-      <div class="span2">
-<li><h3>Places</h3></li>  
+
+<div class="col-md-2">
+<li><h3>{% trans "Qestions and Answers" %}</h3></li>
+<li><a href="/book/question">{% trans "Read" %}</a></li>
+{% if user.is_authenticated %}
+<li><a href="/book/new-question">{% trans "Write" %}</a></li>
+{%endif%}
+<li><a href="/book/search-question">{% trans "Search" %}</a></li>
+<li>--</li>
+
+      </div>
+
+
+      <div class="col-md-2">
+<li><h3>{% trans "Places" %}</h3></li>
 {% for loca in top_locations %}
 <li><a href="/book/location/{{loca}}/">{{ loca }}</a></li>
 {% endfor %}
 
       </div>
-      <div class="span2">
-<li><h3>Tags</h3></li>
+      <div class="col-md-2">
+<li><h3>{% trans "Tags" %}</h3></li>
 {% for tags in top_tags %}
 <li><a href="/book/tags/{{tags}}/">{{ tags }}</a></li>
 {% endfor %}
 
       </div>
-      <div class="span2"
+      <div class="col-md-2">
 {% if user.is_authenticated %}
 <li><h3>User {{ user.username}}</h3></li>
-<li><a href="/users/mypage">Account</a></li>
-<li><a href="/users/logout">Log Out</a></li>
+<li><a href="/users/mypage">{% trans "Account" %}</a></li>
+<li><a href="/users/logout">{% trans "Log Out" %}</a></li>
 {% else %}
-<li><h3>Account</h3></li>
-<li><a href="/users/login">Login</a></li>
-<li><a href="/users/register">Register</a></li>
+<li><h3>{% trans "Account" %}</h3></li>
+<li><a href="/users/login">{% trans "Login" %}</a></li>
+<li><a href="/users/register">{% trans "Register" %}</a></li>
 {%endif%}
 </div>
-<div class="span2">
 
-<li><h3>About</h3></li>       
-<li><a href="/about">About us</a></li>
-<li><a href="/support">Support</a></li>
-<li><a href="/help">Help us</a></li>
-<li><a href="/tech">Tech</a></li>
+
+<div class="col-md-2">
+    <li><h3>{% trans "Choose Language" %}</h3></li>
+
+ <form action="" method="post" class="form-inline" role="form">
+     <div class="form-group">
+{% csrf_token %}
+<input  class="form-control" name="next" type="hidden" value="{{ redirect_to }}" />
+<select class="form-control" name="language">
+{% get_language_info_list for LANGUAGES as languages %}
+{% for language in languages %}
+<option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+    {{ language.name_local }} ({{ language.code }})
+</option>
+{% endfor %}
+</select>
+<input type="submit" value="Go" class="btn btn-info"/>
+</form>
 </div>
+  </div>
 
     </div></console></div></div></div>
  <div class="container">
@@ -126,8 +153,8 @@
           <img src="/static/img/slide-01.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Console</h1>
-              <p class="lead">Start using the guide by pressing Console</p>
+              <h1>{% trans "Console" %}</h1>
+              <p class="lead">{% trans "Start using the guide by pressing Console" %}</p>
               
             </div>
           </div>
@@ -136,9 +163,9 @@
           <img src="/static/img/slide-02.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Start today writing to the Guide</h1>
+              <h1>{% trans "Start today writing to the Guide" %}</h1>
               <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign Up</a>
+              <a class="btn btn-large btn-primary" href="#">{% trans "Sign Up" %}</a>
             </div>
           </div>
         </div>
@@ -146,9 +173,9 @@
           <img src="/static/img/slide-03.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Giving back</h1>
+              <h1>{% trans "Giving back" %}</h1>
               <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Write Articel</a>
+              <a class="btn btn-large btn-primary" href="#">{% trans "Write Articel" %}</a>
             </div>
           </div>
         </div>
@@ -203,8 +230,8 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Northamlin Inc. &middot; <a href="/privacy">Privacy</a> &middot; <a href="Terms">Terms</a></p>
+        <p class="pull-right"><a href="#">{% trans "Back to top" %}</a></p>
+        <p>&copy; 2013 Northamlin Inc. &middot; <a href="/privacy">{% trans "Privacy" %}</a> &middot; <a href="Terms">{% trans "Terms" %}</a></p>
       </footer>
 
     </div><!-- /.container -->

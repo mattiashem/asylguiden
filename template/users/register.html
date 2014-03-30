@@ -1,29 +1,29 @@
 {% extends "book/index.html" %}
-
+{% load i18n %}
 {% block content %}
 {%if info == "error" %}
 <div class="alert">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Error</strong> Error Register user username ore email address
+  <strong>{% trans "Error" %}</strong>{% trans  "Error Register user username ore email address" %}
 </div>
 
 {%endif%}
 
-<h1>Register new account</h1>
+<h1>{% trans "Register new account" %}</h1>
 <form action="" method="post">
 
 	{% csrf_token %}
 
-	<p><label for="id_username">Username:</label> 
+	<p><label for="id_username">{% trans "Username:" %}</label>
 		<input id="id_username" type="text" name="username" maxlength="30" /> <span class="helptext">Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
-<p><label for="id_password1">Password:</label> 
+<p><label for="id_password1">{% trans "Password" %}:</label>
 	<input type="password" name="password1" id="id_password1" /></p>
-<p><label for="id_password2">Password confirmation:</label> 
+<p><label for="id_password2">{% trans "Password confirmation" %}:</label>
 	<input type="password" name="password2" id="id_password2" /> <span class="helptext">Enter the same password as above, for verification.</span></p>
 	<div class="control-group">
-	<p><label class="control-label">Emaill:</label>
+	<p><label class="control-label">{% trans "Email" %}:</label>
 	<div class="controls">
-	<input type="email" name="email" id="id_email" /> <span class="helptext">Enter you email address</span><p class="help-block"></p></p>
+	<input type="email" name="email" id="id_email" /> <span class="helptext">{% trans "Enter you email address" %}</span><p class="help-block"></p></p>
 </div>
 </div>
 	<input type="submit" value="Create new account" class="btn btn-success">
