@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
     
     #Include book url
-    #url(r'^i18n/', include('django.conf.urls.i18n')),
+
      url(r'^about$', 'book.views.about'),
      url(r'^support$', 'book.views.support'),
      url(r'^help$', 'book.views.help'),
@@ -47,6 +47,7 @@ urlpatterns = patterns('',
      url(r'^users/mypage$', 'users.views.mypage'),
      url(r'^users/resetpassword/(\w+)/$', 'users.views.resetpassword'),
      url(r'^users/lostpassword$', 'users.views.lostpassword'),
+     url(r'^i18n/', include('django.conf.urls.i18n')),
      url(r'^$', 'book.views.start'),
 
      

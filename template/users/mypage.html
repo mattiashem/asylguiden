@@ -8,7 +8,7 @@
 {% for user in userinfo %}
 <h1>{% trans "My page" %}</h1>
 {%if info == "saved" %}
-<div class="alert">
+<div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <strong>{% trans "Updated!" %}</strong>{% trans  "You account has bean updated." %}
 </div>
@@ -16,48 +16,51 @@
 {%endif%}
 <br>
 
-<div class="tabbable tabs-left">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#lA" data-toggle="tab">{% trans  "Account Settings" %}</a></li>
-                <li><a href="#lB" data-toggle="tab">{% trans  "User Detailjs" %}</a></li>
-                <li><a href="#lC" data-toggle="tab">{% trans "Articels" %}</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="lA">
-                  <form action="" method="post">
+        <!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#home" data-toggle="tab">{% trans  "Account Settings" %}</a></li>
+
+  <li><a href="#messages" data-toggle="tab">{% trans  "User Detailjs" %}</a></li>
+  <li><a href="#settings" data-toggle="tab">{% trans "Articels" %}</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+                                <form action="" method="post">
 								{% csrf_token %}
 								<p><label for="id_username">{% trans  "Username:" %}</label>
-									<input id="id_username" type="text" name="username" maxlength="30" value="{{ username }}" readonly="readonly"/> <span class="helptext"></span></p>							
+									<input id="id_username" type="text" name="username" maxlength="30" value="{{ username }}" readonly="readonly"/> <span class="helptext"></span></p>
 								<p><label for="id_password1">{% trans  "Password:" %}</label>
-								<input type="password" name="password1" id="id_password1" /></p>							
+								<input type="password" name="password1" id="id_password1" /></p>
 								<p><label for="id_password2">{% trans  "Password confirmation:" %}</label>
-								<input type="password" name="password2" id="id_password2" /> <span class="helptext">Enter the same password as above, for verification.</span></p>							
+								<input type="password" name="password2" id="id_password2" /> <span class="helptext">Enter the same password as above, for verification.</span></p>
 									<div class="control-group">
 									<p><label class="control-label">{% trans  "Emaill:" %}</label>
 									<div class="controls">
 									<input type="email" name="email" id="id_email" value="{{ useremail }}" /> <span class="helptext">{% trans "Enter you email address" %}</span><p class="help-block"></p></p>
-	div>
+	                                </div>
 								</div>
-							{% trans  "Enter you email address" %}</span></p>
 								<input type="submit" name="user_settings" value="Save" class="btn btn-success">
 							</form>
-                </div>
-                <div class="tab-pane" id="lB">
-                      <form action="" method="post">
+ </div>
+
+  <div class="tab-pane" id="messages">
+   <form action="" method="post">
 
 								{% csrf_token %}
 								<input type="hidden" name="id" value="{{user.id}}">
 
 								<p><label for="id_fname">{% trans  "Name:" %}</label>
-									<input id="id_fname" type="text" name="id_fname" maxlength="30" value="{{user.first_name}}" /> 
-									<span class="helptext"></span></p>							
-								
+									<input id="id_fname" type="text" name="id_fname" maxlength="30" value="{{user.first_name}}" />
+									<span class="helptext"></span></p>
+
 								<p><label for="id_sname">{% trans  "Surname:" %}</label>
-								<input type="text" name="id_sname" id="id_sname" value="{{user.last_name}}"/></p>							
+								<input type="text" name="id_sname" id="id_sname" value="{{user.last_name}}"/></p>
 								<p><label for="id_addres">{% trans  "Address:" %}</label>
 								<input type="text" name="id_address" id="id_address" value="{{user.address}}"/> <span class="helptext"></span></p>
 								<p><label for="id_addres">{% trans  "Postnumber" %}:</label>
-								<input type="text" name="id_postnr" id="id_postnr" value="{{user.postnr}}"/> <span class="helptext"></span></p>		
+								<input type="text" name="id_postnr" id="id_postnr" value="{{user.postnr}}"/> <span class="helptext"></span></p>
 								<p><label for="id_cell">{% trans  "Phone:" %}</label>
 								<input type="text" name="id_cell" id="id_cell" value="{{ user.cell }}"/> <span class="helptext"></span></p>
 								<p><label for="id_cell">{% trans  "Contry:" %}</label>
@@ -312,7 +315,7 @@
 
 								</select>
 								<span class="helptext">{% trans  "Contry of stay" %}</span></p>
-								
+
 								<p><label for="id_cell">{% trans  "Langage:" %}</label>
 								<select multiple="multiple" name="id_language">
 								  <option>Swedish</option>
@@ -324,40 +327,34 @@
 								<span class="helptext">{% trans  "Languages to write and read articels in. Press  to mark several" %}</span></p>
 								<input type="submit" name="user_detial" value="Save" class="btn btn-success">
 							</form>
-                </div>
-                <div class="tab-pane" id="lC">
-                  <table class="table table-striped">
+
+
+
+  </div>
+  <div class="tab-pane" id="settings">
+
+  <table class="table table-striped">
 						<tr><td><h3>{% trans  "Title" %}</h3></td><td><h3>{% trans  "Tags" %}</h3></td><td><h3>{% trans  "Location" %}</h3></td><td></td></tr>
-
-					
-						
-
-						{% for articel in users_articel%}
-
-
+                        {% for articel in users_articel%}
 						<tr><td>{{articel.title}}</td><td>
 								{% for t in articel.tags %}
 									{{t}}
 									{%endfor %}
 							</td><td>
-
 								{% for l in articel.location %}
-										{{l}} 
+										{{l}}
 										{%endfor %}
-
 							</td><td><a href='/book/change/{{ articel.id }}'><button  class="btn btn-warning" type="button">{% trans  "Change" %}</button></a> <a href="/book/delete/{{ articel.id }}"><button id="example" class="btn btn-danger" type="button">{% trans  "Delete" %}</button></a></td></tr>
 						 {% empty %}
   						<tr><td>{% trans  "No Articels" %}<td></tr>
-				
-						{%endfor%}	
-					
-					
-
-
+						{%endfor%}
 				</table>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
+  </div>
+</div>
+
+
+
+
 
 
 {%endfor%}

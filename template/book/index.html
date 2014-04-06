@@ -8,6 +8,7 @@
 {% get_location %}
 {% get_tags %}
 {% load i18n %}
+{% trans alert %}
 
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -83,13 +84,13 @@
       </div>
 
 <div class="col-md-2">
-<li><h3>{% trans "Qestions and Answers" %}</h3></li>
+<li><h3>{% trans "Answers" %}</h3></li>
 <li><a href="/book/question">{% trans "Read" %}</a></li>
 {% if user.is_authenticated %}
 <li><a href="/book/new-question">{% trans "Write" %}</a></li>
 {%endif%}
 <li><a href="/book/search-question">{% trans "Search" %}</a></li>
-<li>--</li>
+
 
       </div>
 
@@ -122,9 +123,9 @@
 
 
 <div class="col-md-2">
-    <li><h3>{% trans "Choose Language" %}</h3></li>
+    <li><h3>{% trans "Language" %}</h3></li>
 
- <form action="" method="post" class="form-inline" role="form">
+ <form action="{% url 'set_language' %}" method="post" class="form-inline" role="form">
      <div class="form-group">
 {% csrf_token %}
 <input  class="form-control" name="next" type="hidden" value="{{ redirect_to }}" />
@@ -136,7 +137,7 @@
 </option>
 {% endfor %}
 </select>
-<input type="submit" value="Go" class="btn btn-info"/>
+<input type="submit" value="Change" class="btn btn-info"/>
 </form>
 </div>
   </div>
@@ -164,7 +165,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>{% trans "Start today writing to the Guide" %}</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class="lead">{% trans "Sign up today and start writing into the guid" %}</p>
               <a class="btn btn-large btn-primary" href="#">{% trans "Sign Up" %}</a>
             </div>
           </div>
@@ -174,7 +175,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>{% trans "Giving back" %}</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class="lead">{% trans "Dont let other fall into the same pits as you, Give the guide you experiencse and let other move on"%}</p>
               <a class="btn btn-large btn-primary" href="#">{% trans "Write Articel" %}</a>
             </div>
           </div>
@@ -202,8 +203,8 @@
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="/static/img/work.jpg">
-        <h2 class="featurette-heading">Finding Work !!<span class="muted">Read how to get an work in Sweden</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">{% trans "Finding Work !!" %}<span class="muted">{% trans "Read how to get an work in Sweden" %}</span></h2>
+        <p class="lead">{% trans "Findin work in Stockholm is hard, Here we have collected our articels about getting work in STHLM" %}</p>
       </div>
 
       <hr class="featurette-divider">
@@ -211,16 +212,16 @@
       <div class="featurette">
         <img class="featurette-image pull-right" src="/static/img/sthlm.jpg">
 
-        <h2 class="featurette-heading">Help living arount Stockholm<span class="muted">Read local articels from Stockholm</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">{% trans "Help living arount Stockholm" %}<span class="muted">{% trans "Read local articels from Stockholm" %}</span></h2>
+        <p class="lead">{% trans "Qestions about STHLM here we have collected our best articels from Stockholm"%}</p>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="/static/img/a.jpg">
-        <h2 class="featurette-heading">GIVE TO The Guide <span class="muted">Give us the five stories from you</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">{% trans "GIVE TO The Guide "%}<span class="muted">{% trans "Give us the five stories from you" %}</span></h2>
+        <p class="lead">{% trans "Give the guide five stories that you have heard och experince. So other can learn from your" %}</p>
       </div>
 
       <hr class="featurette-divider">
@@ -274,6 +275,21 @@
         
 
     </script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://admin.elinodrift.se/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "11"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
 
 </body>  
 </html>  
