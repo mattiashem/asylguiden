@@ -1,7 +1,7 @@
-{% load i18n %}
+
 
 {% extends "book/index.html" %}
-
+{% load i18n %}
 
 {% block content %}
    <form action="#" method='post'>
@@ -9,27 +9,25 @@
    	{% csrf_token %}
 
   <fieldset>
-    <legend>{% trans Answer Gestion %}</legend>
-    <label>{% trans The guestion ? %}</label>
+    <legend>{% trans "Answer Qestion" %}</legend>
+    <label>{% trans "The guestion"  %}</label>
     <input type="text" placeholder="The Question" name='quest'>
-    <span class="help-block">{% trans Enter the qestion %}</span>
-    <label>{% trans Where is this qestion %}</label>
+    <span class="help-block">{% trans "Enter the qestion" %}</span>
+    <label>{% trans "Where is this qestion" %}</label>
     <input type="text" placeholder="Where / What" name="where" id="wh_search" data-provide="typeahead" data-items="10" />
 
 
-    <span class="help-block">{% trans Enter location for articel if any (Sepperate with , exemple stockholm, uppsala) %}</span>
-    <label>{% trans Tags the qestion %}</label>
+    <span class="help-block">{% trans "Enter location for articel if any (Sepperate with , exemple stockholm, uppsala)" %}</span>
+    <label>{% trans "Tags the qestion" %}</label>
     <input type="text" placeholder="Tags" name="tags" id="ta_search" data-provide="typeahead" data-items="10" />
 
-    <span class="help-block">{% trans Enter tags to articel (Sepperate with , exemple work, internet) %}</span>
-    <label>The Answer</label>
+    <span class="help-block">{% trans "Enter tags to articel (Sepperate with , exemple work, internet)" %}</span>
+    <label>{% trans "The Answer" %}</label>
       <textarea rows="10" cols="50" name="text" class="textin"></textarea>
 
 
-    <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
-    <button type="submit" class="btn btn-success">{% trans Save %}</button>
+
+    <button type="submit" class="btn btn-success">{% trans "Save" %}</button>
   </fieldset>
 </form>
 
