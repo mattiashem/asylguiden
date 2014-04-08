@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-30 22:14+0200\n"
+"POT-Creation-Date: 2014-04-08 20:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: asylguiden/settings.py:128
+#: asylguiden/settings.py:144
 msgid "English"
 msgstr "Engelska"
 
-#: asylguiden/settings.py:129
+#: asylguiden/settings.py:145
 msgid "Swedish"
 msgstr "Svenska"
 
@@ -68,9 +68,9 @@ msgstr "Område"
 msgid "Enter location for articel if any"
 msgstr "Skriv område som rör artikel"
 
-#: template/book/change_articels.html:29 template/book/index.html:105
+#: template/book/change_articels.html:29 template/book/index.html:106
 #: template/book/list_articels.html:5 template/book/new.html:20
-#: template/book/tags.html:5 template/users/mypage.html:330
+#: template/book/tags.html:5 template/users/mypage.html:337
 msgid "Tags"
 msgstr "Tags"
 
@@ -79,6 +79,7 @@ msgid "Enter tags to articel"
 msgstr "Skriv tags för artiklar"
 
 #: template/book/change_articels.html:38 template/book/new.html:30
+#: template/book/qestion.html:30
 msgid "Save"
 msgstr "Sparad"
 
@@ -98,97 +99,150 @@ msgstr "RADERA"
 msgid "Help us"
 msgstr "Hjälp oss"
 
-#: template/book/index.html:74
+#: template/book/index.html:75
 msgid "The Book"
 msgstr "Boken"
 
-#: template/book/index.html:75
+#: template/book/index.html:76
 msgid "Home"
 msgstr "Hem"
 
-#: template/book/index.html:76 template/book/index.html.py:87
+#: template/book/index.html:77 template/book/index.html.py:88
 msgid "Read"
 msgstr "Läs"
 
-#: template/book/index.html:78 template/book/index.html.py:89
+#: template/book/index.html:79 template/book/index.html.py:90
 msgid "Write"
 msgstr "Skriv"
 
-#: template/book/index.html:80 template/book/index.html.py:91
+#: template/book/index.html:81 template/book/index.html.py:92
 #: template/book/qsearch.html:16 template/book/search.html:5
 #: template/book/search.html.py:16
 msgid "Search"
 msgstr "Sök"
 
-#: template/book/index.html:86
-msgid "Qestions and Answers"
-msgstr "Frågot och svar"
+#: template/book/index.html:87
+msgid "Answers"
+msgstr "Frågor"
 
-#: template/book/index.html:98
+#: template/book/index.html:99
 msgid "Places"
 msgstr "Platser"
 
-#: template/book/index.html:114 template/book/index.html.py:117
+#: template/book/index.html:115 template/book/index.html.py:118
 msgid "Account"
 msgstr "Konto"
 
-#: template/book/index.html:115
+#: template/book/index.html:116
 msgid "Log Out"
 msgstr "Logga ut"
 
-#: template/book/index.html:118 template/users/login.html:12
+#: template/book/index.html:119 template/users/login.html:12
 msgid "Login"
 msgstr "Logga in"
 
-#: template/book/index.html:119
+#: template/book/index.html:120
 msgid "Register"
 msgstr "Registrera"
 
-#: template/book/index.html:125
-msgid "Choose Language"
+#: template/book/index.html:126
+#, fuzzy
+msgid "Language"
 msgstr "Välj Språk"
 
-#: template/book/index.html:156
+#: template/book/index.html:157
 msgid "Console"
 msgstr ""
 
-#: template/book/index.html:157
+#: template/book/index.html:158
 msgid "Start using the guide by pressing Console"
-msgstr ""
+msgstr "Börja använd guiden genom att tryca console"
 
-#: template/book/index.html:166
+#: template/book/index.html:167
 msgid "Start today writing to the Guide"
 msgstr "Börja idag med att skriva till Guiden"
 
 #: template/book/index.html:168
+#, fuzzy
+msgid "Sign up today and start writing into the guid"
+msgstr "Börja idag med att skriva till Guiden"
+
+#: template/book/index.html:169
 msgid "Sign Up"
 msgstr "Registrera dig"
 
-#: template/book/index.html:176
+#: template/book/index.html:177
 msgid "Giving back"
 msgstr "Ge tillbaka"
 
 #: template/book/index.html:178
+msgid ""
+"Dont let other fall into the same pits as you, Give the guide you "
+"experiencse and let other move on"
+msgstr "Låt inte andra göra samma mistage som dig. Skriv in i Guiden idag"
+
+#: template/book/index.html:179
 msgid "Write Articel"
 msgstr "Skriv Artikel"
 
-#: template/book/index.html:233
+#: template/book/index.html:206
+msgid "Finding Work !!"
+msgstr "Hitta arbete"
+
+#: template/book/index.html:206
+msgid "Read how to get an work in Sweden"
+msgstr "Läs hur du får ett arbete i sverige"
+
+#: template/book/index.html:207
+msgid ""
+"Findin work in Stockholm is hard, Here we have collected our articels about "
+"getting work in STHLM"
+msgstr "Hitta arbete i Stockholm är svårt. Läs våra artiklar hur du hittar jobba i STHLM"
+
+#: template/book/index.html:215
+msgid "Help living arount Stockholm"
+msgstr "Hjälp bo runt Stockholm"
+
+#: template/book/index.html:215
+msgid "Read local articels from Stockholm"
+msgstr "Läs lokala artiklar från Stockholm"
+
+#: template/book/index.html:216
+msgid ""
+"Qestions about STHLM here we have collected our best articels from Stockholm"
+msgstr "Frågor om STHLM vi har samlat dom ästa artiklarna om Stockholm"
+
+#: template/book/index.html:223
+msgid "GIVE TO The Guide "
+msgstr "Ge till guiden"
+
+#: template/book/index.html:223
+msgid "Give us the five stories from you"
+msgstr "Ge oss fem historier"
+
+#: template/book/index.html:224
+msgid ""
+"Give the guide five stories that you have heard och experince. So other can "
+"learn from your"
+msgstr "GE oss fem historier som du har hört eller upplevt. Så att andra kan lära från dom"
+
+#: template/book/index.html:234
 msgid "Back to top"
 msgstr "Tillbaka upp"
 
-#: template/book/index.html:234
+#: template/book/index.html:235
 msgid "Privacy"
 msgstr "Privacy"
 
-#: template/book/index.html:234
+#: template/book/index.html:235
 msgid "Terms"
 msgstr "Terms"
 
-#: template/book/list_articels.html:5 template/users/mypage.html:330
+#: template/book/list_articels.html:5 template/users/mypage.html:337
 msgid "Title"
 msgstr "Titel"
 
-#: template/book/list_articels.html:5 template/users/mypage.html:330
+#: template/book/list_articels.html:5 template/users/mypage.html:337
 msgid "Location"
 msgstr "Område"
 
@@ -202,9 +256,9 @@ msgid ""
 "Uppsala)"
 msgstr "Skriv in område för artikeln tex (stockholm,uppsala)"
 
-#: template/book/new.html:23
+#: template/book/new.html:23 template/book/qestion.html:24
 msgid "Enter tags to articel (Sepperate with , exemple work, internet)"
-msgstr ""
+msgstr "Skriv tag för artikel dela med , tex (jobba, internet)"
 
 #: template/book/qarticels.html:4
 msgid "Questions and Answers"
@@ -217,6 +271,38 @@ msgstr "Tags"
 #: template/book/qarticels.html:10
 msgid "Locations:"
 msgstr "Område"
+
+#: template/book/qestion.html:12
+#, fuzzy
+msgid "Answer Qestion"
+msgstr "Sök i Frågor"
+
+#: template/book/qestion.html:13
+msgid "The guestion"
+msgstr "Frågan"
+
+#: template/book/qestion.html:15
+msgid "Enter the qestion"
+msgstr "Din fråga"
+
+#: template/book/qestion.html:16
+msgid "Where is this qestion"
+msgstr "Vart rör frågan"
+
+#: template/book/qestion.html:20
+#, fuzzy
+msgid ""
+"Enter location for articel if any (Sepperate with , exemple stockholm, "
+"uppsala)"
+msgstr "Skriv in område för artikeln tex (stockholm,uppsala)"
+
+#: template/book/qestion.html:21
+msgid "Tags the qestion"
+msgstr "Tags till frågan"
+
+#: template/book/qestion.html:25
+msgid "The Answer"
+msgstr "Svaret"
 
 #: template/book/qsearch.html:5
 msgid "Search in Questions"
@@ -254,12 +340,12 @@ msgstr "Error"
 msgid " Wrong Login please efter correct username ore password"
 msgstr "Fel login ogiltigt användrnamn eller lösenord"
 
-#: template/users/login.html:17 template/users/mypage.html:29
+#: template/users/login.html:17 template/users/mypage.html:32
 #: template/users/register.html:17
 msgid "Username:"
 msgstr "Användrnamn"
 
-#: template/users/login.html:19 template/users/mypage.html:31
+#: template/users/login.html:19 template/users/mypage.html:34
 msgid "Password:"
 msgstr "Lösenord"
 
@@ -269,131 +355,133 @@ msgstr "Återställnings link har genererats"
 
 #: template/users/lost_password.html:8
 msgid " An reset link has bean generated and send to you email."
-msgstr ""
+msgstr "En återställnings länk har renereats och skickts till dig"
 
 #: template/users/lost_password.html:16
 msgid "No email found"
-msgstr ""
+msgstr "Ingen email hittad"
 
 #: template/users/lost_password.html:16
 msgid " There was no users found with that email."
-msgstr ""
+msgstr "Det fanns ingen användare med det email"
 
 #: template/users/lost_password.html:23
 msgid "Reset Password"
-msgstr ""
+msgstr "Återställ Lösenord"
 
 #: template/users/lost_password.html:24
 msgid ""
 "To resett you password please provide us with your email addres to you "
 "account"
-msgstr ""
+msgstr "För att återställa ditt lösenord skriv in din email address till ditt konto"
 
 #: template/users/lost_password.html:29
 msgid "Email:"
-msgstr ""
+msgstr "Email:"
 
 #: template/users/mypage.html:9
 msgid "My page"
-msgstr ""
+msgstr "Min Sida"
 
 #: template/users/mypage.html:13
 msgid "Updated!"
-msgstr ""
+msgstr "Updaterad!"
 
 #: template/users/mypage.html:13
 msgid "You account has bean updated."
-msgstr ""
+msgstr "Ditt Konto har blivit updaterad"
 
 #: template/users/mypage.html:21
 msgid "Account Settings"
-msgstr ""
-
-#: template/users/mypage.html:22
-msgid "User Detailjs"
-msgstr ""
+msgstr "Konto Instaällningar"
 
 #: template/users/mypage.html:23
-msgid "Articels"
-msgstr ""
+msgid "User Detailjs"
+msgstr "Användar Uppgifter"
 
-#: template/users/mypage.html:33
-msgid "Password confirmation:"
-msgstr ""
+#: template/users/mypage.html:24
+msgid "Articels"
+msgstr "Artiklar"
 
 #: template/users/mypage.html:36
+msgid "Password confirmation:"
+msgstr "Lösenord Konfirmation"
+
+#: template/users/mypage.html:39
 msgid "Emaill:"
-msgstr ""
+msgstr "Email:"
 
-#: template/users/mypage.html:38 template/users/mypage.html.py:41
-#: template/users/register.html:26
+#: template/users/mypage.html:41 template/users/register.html:27
 msgid "Enter you email address"
-msgstr ""
+msgstr "Skriv in din email address"
 
-#: template/users/mypage.html:51
+#: template/users/mypage.html:54
 msgid "Name:"
-msgstr ""
+msgstr "Namn:"
 
-#: template/users/mypage.html:55
+#: template/users/mypage.html:58
 msgid "Surname:"
-msgstr ""
+msgstr "Efternamn:"
 
-#: template/users/mypage.html:57
+#: template/users/mypage.html:60
 msgid "Address:"
-msgstr ""
+msgstr "Address:"
 
-#: template/users/mypage.html:59
+#: template/users/mypage.html:62
 msgid "Postnumber"
-msgstr ""
+msgstr "Postnummer"
 
-#: template/users/mypage.html:61
+#: template/users/mypage.html:64
 msgid "Phone:"
-msgstr ""
+msgstr "Telefon:"
 
-#: template/users/mypage.html:63
+#: template/users/mypage.html:66
 msgid "Contry:"
-msgstr ""
+msgstr "Land:"
 
-#: template/users/mypage.html:314
+#: template/users/mypage.html:317
 msgid "Contry of stay"
-msgstr ""
+msgstr "Land där du är"
 
-#: template/users/mypage.html:316
+#: template/users/mypage.html:319
 msgid "Langage:"
-msgstr ""
+msgstr "Språk"
 
-#: template/users/mypage.html:324
+#: template/users/mypage.html:327
 msgid "Languages to write and read articels in. Press  to mark several"
-msgstr ""
+msgstr "Språk att skriva och läsa artiklar i"
 
-#: template/users/mypage.html:348
+#: template/users/mypage.html:347
 msgid "Change"
-msgstr ""
+msgstr "Ändrat"
 
-#: template/users/mypage.html:348
+#: template/users/mypage.html:347
 msgid "Delete"
-msgstr ""
+msgstr "Radera"
 
-#: template/users/mypage.html:350
+#: template/users/mypage.html:349
 msgid "No Articels"
-msgstr ""
+msgstr "Inga Artiklar"
 
 #: template/users/register.html:7
 msgid "Error Register user username ore email address"
-msgstr ""
+msgstr "Error med att registrera ditt konto"
 
 #: template/users/register.html:12
 msgid "Register new account"
-msgstr ""
+msgstr "Registrera nytt konto"
 
 #: template/users/register.html:19
 msgid "Password"
-msgstr ""
+msgstr "Lösenord"
 
 #: template/users/register.html:21
 msgid "Password confirmation"
-msgstr ""
+msgstr "Lösenords Konfirmation"
 
-#: template/users/register.html:24
+#: template/users/register.html:25
 msgid "Email"
-msgstr ""
+msgstr "Email"
+
+#~ msgid "Qestions and Answers"
+#~ msgstr "Frågot och svar"
