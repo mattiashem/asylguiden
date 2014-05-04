@@ -2,7 +2,11 @@
 {% extends "book/index.html" %}
 {% load i18n %}
 
+
+
 {% block content %}
+
+
    <form action="#" method='post'>
 
    	{% csrf_token %}
@@ -21,12 +25,10 @@
     <input type="text" placeholder="Tags" name="tags" id="ta_search" data-provide="typeahead" data-items="10" />
 
     <span class="help-block">{% trans "Enter tags to articel (Sepperate with , exemple work, internet)" %}</span>
+
+      <a href="/book/myupload"><button type="button" class="btn btn-success">{% trans "Upload Media" %}</button></a>
     <textarea rows="10" cols="50" name="text"></textarea>
 
-
-    <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
     <button type="submit" class="btn btn-success">{% trans "Save" %}</button>
   </fieldset>
 </form>

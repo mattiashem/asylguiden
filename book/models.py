@@ -17,3 +17,6 @@ class Question(Document):
     where = ListField(StringField(max_length=40))
     tags = ListField(StringField(max_length=40))
     text = StringField()
+
+class Media(Document):
+    file = FileField(required=True)

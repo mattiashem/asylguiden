@@ -2,6 +2,9 @@
 from django.views.static import *
 from django.conf import settings
 from django.conf.urls import patterns, url, include
+from filebrowser.sites import site
+from django.contrib import admin
+admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -28,8 +31,8 @@ urlpatterns = patterns('',
      url(r'^book/start$', 'book.views.start'),
      url(r'^book/new$', 'book.views.new'),
      url(r'^book/question$', 'book.views.question'),
-    url(r'^book/new-question$', 'book.views.writeqestion'),
-    url(r'^book/search-question$', 'book.views.searchquestion'),
+     url(r'^book/new-question$', 'book.views.writeqestion'),
+     url(r'^book/search-question$', 'book.views.searchquestion'),
      url(r'^book/articels$', 'book.views.articels'),
      url(r'^book/articel/$', 'book.views.articels'),
      url(r'^book/articel/(\w+)/$', 'book.views.view_articel'),
@@ -48,15 +51,14 @@ urlpatterns = patterns('',
      url(r'^users/resetpassword/(\w+)/$', 'users.views.resetpassword'),
      url(r'^users/lostpassword$', 'users.views.lostpassword'),
      url(r'^i18n/', include('django.conf.urls.i18n')),
+
+     #MEdia upload
+     url(r'book/myupload$', 'book.views.upload_file', name = 'myupload' ),
+     url(r'book/media$', 'book.views.media', name = 'myupload' ),
      url(r'^$', 'book.views.start'),
 
-     
-
-
-
-
-     
      # MEDIA files
-      (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-      (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
 )

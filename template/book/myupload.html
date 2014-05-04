@@ -1,0 +1,23 @@
+{% extends "book/index.html" %}
+{% load i18n %}
+
+
+
+{% block content %}
+
+{%if info == "Uploaded" %}
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>{% trans "Uploaded" %}</strong>{% trans "  You file has bean uploaded" %}
+</div>
+
+{%endif%}
+
+
+
+<form action="#" method="post" enctype="multipart/form-data" class="form-inline" role="form">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Upload" class="btn btn-success" />
+</form>
+        {%endblock%}

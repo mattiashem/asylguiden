@@ -1,15 +1,21 @@
 # Create your views here.
+import os
 from django.core.context_processors import csrf
+from django.conf import settings
+from django.core.urlresolvers import reverse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.template import Library
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect ,HttpResponse
 from operator import itemgetter
 from mongoengine.queryset import Q
 from django import forms
 from mongoengine.django.auth import User
-from book.models import Post, Question
+from book.models import Post, Question, Media
 from users.models import UserInfo
+from django.views.decorators.http import require_POST
+from .forms import UploadFileForm
+
 
 from mongoengine import *
 from django.contrib import auth
@@ -236,3 +242,40 @@ def help(request):
 
 def tech(request):
     return render_to_response('book/tech.html',context_instance=RequestContext(request))
+
+
+def media(request):
+    #Getting the media for the user
+    print settings.STATIC_URL
+    print settings.STATIC_ROOT
+    return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(request.user.id)),'dest':settings.STATIC_URL+"/user/"+str(request.user.id)+"/"}, context_instance=RequestContext(request))
+    #return HttpResponse("<html><head><script type='text/javascript' src='/static/js/tinymce/plugins/compat3x/tiny_mce_popup.js'></head></script> <a href='bild.jpg'>bild.jpg</a>")
+
+def upload_file(request):
+    info="no"
+    if request.method == 'POST':
+        print "is post"
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            handle_uploaded_file(request.FILES['file'],request.FILES['file'].name,request.user.id)
+            info="Uploaded"
+    else:
+        form = UploadFileForm()
+    return render_to_response('book/myupload.html', {'form': form, 'info':info}, context_instance=RequestContext(request))
+
+
+
+
+
+
+
+
+
+
+def handle_uploaded_file(f,name,id):
+
+    if not os.path.isdir(settings.STATIC_ROOT+"/user/"+str(id)):
+        os.mkdir(settings.STATIC_ROOT+"/user/"+str(id))
+    with open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
