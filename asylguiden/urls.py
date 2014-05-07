@@ -25,6 +25,7 @@ urlpatterns = patterns('',
 
      url(r'^about$', 'book.views.about'),
      url(r'^support$', 'book.views.support'),
+     url(r'^supporters$', 'book.views.supporters'),
      url(r'^help$', 'book.views.help'),
      url(r'^tech$', 'book.views.tech'),
      url(r'^book$', 'book.views.start'),

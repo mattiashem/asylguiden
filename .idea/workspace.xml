@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/book/supporters.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/about.html" afterPath="$PROJECT_DIR$/template/book/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/help.html" afterPath="$PROJECT_DIR$/template/book/help.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/index.html" afterPath="$PROJECT_DIR$/template/book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/tech.html" afterPath="$PROJECT_DIR$/template/book/tech.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asylguiden/urls.py" afterPath="$PROJECT_DIR$/asylguiden/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/views.py" afterPath="$PROJECT_DIR$/book/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -26,28 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asylguiden/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="0" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="3744">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/book/new.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1350">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="media.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/media.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="846">
+            <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-22.666666" vertical-offset="0" max-vertical-offset="846">
               <folding />
             </state>
           </provider>
@@ -56,7 +44,7 @@
       <file leaf-file-name="list_articels.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/list_articels.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="558">
+            <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -65,16 +53,16 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="42" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1260">
+            <state line="27" column="48" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1206">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="137" selection-start="7158" selection-end="7158" vertical-scroll-proportion="0.22680412" vertical-offset="4350" max-vertical-offset="4986">
+            <state line="258" column="46" selection-start="7513" selection-end="7513" vertical-scroll-proportion="0.0" vertical-offset="4188" max-vertical-offset="5364">
               <folding>
                 <element signature="e#26#35#0" expanded="true" />
               </folding>
@@ -82,19 +70,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myupload.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/book/myupload.html">
+      <file leaf-file-name="supporters.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/book/supporters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="79" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="504">
+            <state line="12" column="145" selection-start="369" selection-end="369" vertical-scroll-proportion="0.38918918" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="change_articels.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/book/change_articels.html">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/book/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1152">
+            <state line="303" column="295" selection-start="10757" selection-end="10757" vertical-scroll-proportion="-11.888889" vertical-offset="5133" max-vertical-offset="6660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/book/help.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="3769" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tech.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/book/tech.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="8" selection-start="854" selection-end="854" vertical-scroll-proportion="-14.37037" vertical-offset="62" max-vertical-offset="972">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/book/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="471" selection-end="715" vertical-scroll-proportion="-1.3333334" vertical-offset="324" max-vertical-offset="1008">
               <folding />
             </state>
           </provider>
@@ -103,16 +118,7 @@
       <file leaf-file-name="mypage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/users/mypage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="250" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6588">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="20" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="504">
+            <state line="9" column="0" selection-start="226" selection-end="463" vertical-scroll-proportion="-3.3333333" vertical-offset="72" max-vertical-offset="6588">
               <folding />
             </state>
           </provider>
@@ -136,22 +142,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/template/users/lost_password.html" />
-        <option value="$PROJECT_DIR$/template/users/register.html" />
-        <option value="$PROJECT_DIR$/users/views.py" />
-        <option value="$PROJECT_DIR$/template/users/mypage.html" />
         <option value="$PROJECT_DIR$/template/book/qestion.html" />
         <option value="$PROJECT_DIR$/locale/sv/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/static/js/tinymce/plugins/image/plugin.min.js" />
-        <option value="$PROJECT_DIR$/template/book/index.html" />
         <option value="$PROJECT_DIR$/book/models.py" />
         <option value="$PROJECT_DIR$/asylguiden/settings.py" />
         <option value="$PROJECT_DIR$/book/forms.py" />
         <option value="$PROJECT_DIR$/template/book/myupload.html" />
         <option value="$PROJECT_DIR$/template/book/new.html" />
-        <option value="$PROJECT_DIR$/asylguiden/urls.py" />
         <option value="$PROJECT_DIR$/template/book/media.html" />
+        <option value="$PROJECT_DIR$/template/book/about.html" />
+        <option value="$PROJECT_DIR$/template/book/tech.html" />
+        <option value="$PROJECT_DIR$/template/book/help.html" />
+        <option value="$PROJECT_DIR$/template/book/index.html" />
+        <option value="$PROJECT_DIR$/asylguiden/urls.py" />
         <option value="$PROJECT_DIR$/book/views.py" />
+        <option value="$PROJECT_DIR$/template/book/supporters.html" />
       </list>
     </option>
   </component>
@@ -215,6 +221,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asylguiden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="book" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -241,6 +279,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="/media/mattias" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -432,31 +471,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/js/tinymce/plugins/image/plugin.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="0" selection-start="8440" selection-end="8440" vertical-scroll-proportion="-13.481482" vertical-offset="6062" max-vertical-offset="7596" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/book/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="4" selection-start="1238" selection-end="1238" vertical-scroll-proportion="9.185185" vertical-offset="842" max-vertical-offset="6624" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/plupload/js/plupload.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="158" selection-end="165" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/plupload/js/plupload.full.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="228" selection-end="230" vertical-scroll-proportion="-2.8148148" vertical-offset="68" max-vertical-offset="594" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="33" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
@@ -478,37 +492,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/users/mypage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="250" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/book/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="42" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="1188">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/book/myupload.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="79" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="504">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/book/list_articels.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
@@ -520,19 +506,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="113" selection-end="130" vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/list_articels.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/book/media.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="846">
+        <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-22.666666" vertical-offset="0" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/users/mypage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="226" selection-end="463" vertical-scroll-proportion="-3.3333333" vertical-offset="72" max-vertical-offset="6588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="471" selection-end="715" vertical-scroll-proportion="-1.3333334" vertical-offset="324" max-vertical-offset="1008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/tech.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="8" selection-start="854" selection-end="854" vertical-scroll-proportion="-14.37037" vertical-offset="62" max-vertical-offset="972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="303" column="295" selection-start="10757" selection-end="10757" vertical-scroll-proportion="-11.888889" vertical-offset="5133" max-vertical-offset="6660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="48" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1206">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="137" selection-start="7158" selection-end="7158" vertical-scroll-proportion="0.22680412" vertical-offset="4350" max-vertical-offset="4986">
+        <state line="258" column="46" selection-start="7513" selection-end="7513" vertical-scroll-proportion="0.0" vertical-offset="4188" max-vertical-offset="5364">
           <folding>
             <element signature="e#26#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/help.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="3769" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/book/supporters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="145" selection-start="369" selection-end="369" vertical-scroll-proportion="0.38918918" vertical-offset="0" max-vertical-offset="555">
+          <folding />
         </state>
       </provider>
     </entry>

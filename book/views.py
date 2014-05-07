@@ -15,7 +15,9 @@ from book.models import Post, Question, Media
 from users.models import UserInfo
 from django.views.decorators.http import require_POST
 from .forms import UploadFileForm
+from django.contrib.auth.decorators import login_required
 import hashlib
+from django.core.mail import send_mail, BadHeaderError
 
 
 from mongoengine import *
@@ -26,7 +28,8 @@ class User(User):
 
 def start(request):
     return render_to_response('book/index.html',context_instance=RequestContext(request))
-    
+
+@login_required
 def new(request):
 	c = {}
 	c.update(csrf(request))
@@ -51,7 +54,7 @@ def new(request):
 	return render_to_response('book/new.html', c,context_instance=RequestContext(request))
 
 
-
+@login_required
 def writeqestion(request):
 	c = {}
 	c.update(csrf(request))
@@ -183,7 +186,7 @@ def view_location(request,locations):
 	return render_to_response('book/list_articels.html',  {'articels': articels},context_instance=RequestContext(request))
 	
 
-
+@login_required
 def view_delete(request,id):
 	'''
 	view and articel
@@ -199,7 +202,7 @@ def view_delete(request,id):
 	articels = Post.objects(id=id,auther=currentuser)
 	return render_to_response('book/delete_articels.html',  {'articels': articels,'info':info},context_instance=RequestContext(request))
 
-
+@login_required
 def view_change(request,id):
 	'''
 	view and articel
@@ -233,10 +236,27 @@ def view_change(request,id):
 	return render_to_response('book/change_articels.html',  {'articels': articels,'info':info},context_instance=RequestContext(request))
 
 def about(request):
-    return render_to_response('book/about.html',context_instance=RequestContext(request))
+    info = "no"
+    if request.method == 'POST':
+        #Ceating CSRF
+        c = {}
+        c.update(csrf(request))
+        info ="saved"
+        subject = request.POST['subject']
+        message = request.POST['text']
+        from_email = request.POST['from_email']
+        if subject and message and from_email:
+            try:
+                send_mail(subject, message, from_email, ['mattias@asylguiden.se'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+    return render_to_response('book/about.html',{'info':info},context_instance=RequestContext(request))
 
 def support(request):
     return render_to_response('book/support.html',context_instance=RequestContext(request))
+
+def supporters(request):
+    return render_to_response('book/supporters.html',context_instance=RequestContext(request))
 
 def help(request):
     return render_to_response('book/help.html',context_instance=RequestContext(request))
@@ -244,11 +264,12 @@ def help(request):
 def tech(request):
     return render_to_response('book/tech.html',context_instance=RequestContext(request))
 
-
+@login_required
 def media(request):
     #Getting the media for the user
     return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())), 'dest':settings.STATIC_URL+"/user/"+str(request.user.id)+"/"}, context_instance=RequestContext(request))
 
+@login_required
 def upload_file(request):
     info="no"
     if request.method == 'POST':
