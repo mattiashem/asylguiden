@@ -15,6 +15,7 @@ from book.models import Post, Question, Media
 from users.models import UserInfo
 from django.views.decorators.http import require_POST
 from .forms import UploadFileForm
+import hashlib
 
 
 from mongoengine import *
@@ -246,10 +247,7 @@ def tech(request):
 
 def media(request):
     #Getting the media for the user
-    print settings.STATIC_URL
-    print settings.STATIC_ROOT
-    return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(request.user.id)),'dest':settings.STATIC_URL+"/user/"+str(request.user.id)+"/"}, context_instance=RequestContext(request))
-    #return HttpResponse("<html><head><script type='text/javascript' src='/static/js/tinymce/plugins/compat3x/tiny_mce_popup.js'></head></script> <a href='bild.jpg'>bild.jpg</a>")
+    return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())), 'dest':settings.STATIC_URL+"/user/"+str(request.user.id)+"/"}, context_instance=RequestContext(request))
 
 def upload_file(request):
     info="no"
@@ -257,18 +255,11 @@ def upload_file(request):
         print "is post"
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            handle_uploaded_file(request.FILES['file'],request.FILES['file'].name,request.user.id)
+            handle_uploaded_file(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
             info="Uploaded"
     else:
         form = UploadFileForm()
     return render_to_response('book/myupload.html', {'form': form, 'info':info}, context_instance=RequestContext(request))
-
-
-
-
-
-
-
 
 
 

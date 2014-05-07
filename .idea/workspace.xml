@@ -2,125 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/book/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/book/media.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/book/myupload.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/langs/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/about.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/anchor.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/charmap.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/color_picker.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/editor_template.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/editor_template_src.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/image.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/colorpicker.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/flash.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/icons.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/iframe.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/pagebreak.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/quicktime.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/realmedia.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/shockwave.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/trans.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/video.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/img/windowsmedia.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/about.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/anchor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/charmap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/color_picker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/link.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/js/source_editor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/langs/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/langs/en_dlg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/link.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/shortcuts.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/content.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/buttons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/items.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/menu_arrow.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/menu_check.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/progress.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/img/tabs.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/default/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/content.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/highcontrast/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/content.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg_black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/img/button_bg_silver.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui_black.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/skins/o2k7/ui_silver.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/advanced/source_editor.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/editor_template.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/editor_template_src.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/img/icons.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/langs/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/default/content.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/default/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/content.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/img/button_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/themes/simple/skins/o2k7/ui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/tinymc/tiny_mce.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/a.jpg" afterPath="$PROJECT_DIR$/static/img/a.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/a.xcf" afterPath="$PROJECT_DIR$/static/img/a.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/backgrund.xcf" afterPath="$PROJECT_DIR$/static/img/backgrund.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-01.jpg" afterPath="$PROJECT_DIR$/static/img/slide-01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-01.xcf" afterPath="$PROJECT_DIR$/static/img/slide-01.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-02.jpg" afterPath="$PROJECT_DIR$/static/img/slide-02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-02.xcf" afterPath="$PROJECT_DIR$/static/img/slide-02.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-03.jpg" afterPath="$PROJECT_DIR$/static/img/slide-03.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-03.xcf" afterPath="$PROJECT_DIR$/static/img/slide-03.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/sthlm.jpg" afterPath="$PROJECT_DIR$/static/img/sthlm.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/sthlm.xcf" afterPath="$PROJECT_DIR$/static/img/sthlm.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_228ef1_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ef8c08_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffd27a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/static/css/ui-lightness/images/ui-icons_ffffff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/work.jpg" afterPath="$PROJECT_DIR$/static/img/work.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/work.xcf" afterPath="$PROJECT_DIR$/static/img/work.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mylibs/.gitignore" afterPath="$PROJECT_DIR$/static/js/mylibs/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/static/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mylibs/console.js" afterPath="$PROJECT_DIR$/static/js/mylibs/console.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/formvalidation.js" afterPath="$PROJECT_DIR$/static/js/formvalidation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/index.html" afterPath="$PROJECT_DIR$/template/book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.js" afterPath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.min.js" afterPath="$PROJECT_DIR$/static/js/libs/jquery-1.6.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/ui-lightness/jquery-ui-1.8.16.custom.css" afterPath="$PROJECT_DIR$/static/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.min.js" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/models.py" afterPath="$PROJECT_DIR$/book/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/libs/modernizr-2.0.6.min.js" afterPath="$PROJECT_DIR$/static/js/libs/modernizr-2.0.6.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/new.html" afterPath="$PROJECT_DIR$/template/book/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/plugins.js" afterPath="$PROJECT_DIR$/static/js/plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/script.js" afterPath="$PROJECT_DIR$/static/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asylguiden/urls.py" afterPath="$PROJECT_DIR$/asylguiden/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/views.py" afterPath="$PROJECT_DIR$/book/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -149,9 +30,7 @@
         <entry file="file://$PROJECT_DIR$/asylguiden/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="135" column="0" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="3744">
-              <folding>
-                <element signature="e#43#68#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +38,7 @@
       <file leaf-file-name="new.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-15.333333" vertical-offset="126" max-vertical-offset="1350">
+            <state line="30" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -168,7 +47,7 @@
       <file leaf-file-name="media.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/media.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-15.703704" vertical-offset="188" max-vertical-offset="846">
+            <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="846">
               <folding />
             </state>
           </provider>
@@ -177,7 +56,7 @@
       <file leaf-file-name="list_articels.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/list_articels.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="558">
+            <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -186,7 +65,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="42" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="1188">
+            <state line="56" column="42" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -195,7 +74,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/book/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="250" column="179" selection-start="7246" selection-end="7246" vertical-scroll-proportion="0.35051546" vertical-offset="4296" max-vertical-offset="5148">
+            <state line="249" column="137" selection-start="7158" selection-end="7158" vertical-scroll-proportion="0.22680412" vertical-offset="4350" max-vertical-offset="4986">
               <folding>
                 <element signature="e#26#35#0" expanded="true" />
               </folding>
@@ -206,7 +85,7 @@
       <file leaf-file-name="myupload.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/myupload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="79" selection-start="393" selection-end="393" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="504">
+            <state line="17" column="79" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="504">
               <folding />
             </state>
           </provider>
@@ -215,7 +94,7 @@
       <file leaf-file-name="change_articels.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/change_articels.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="1152">
+            <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1152">
               <folding />
             </state>
           </provider>
@@ -224,7 +103,7 @@
       <file leaf-file-name="mypage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/users/mypage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="250" selection-end="283" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="6588">
+            <state line="10" column="0" selection-start="250" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6588">
               <folding />
             </state>
           </provider>
@@ -233,10 +112,8 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="20" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-              <folding>
-                <element signature="e#27#55#0" expanded="true" />
-              </folding>
+            <state line="21" column="20" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="504">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -557,74 +434,60 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/js/tinymce/plugins/image/plugin.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="0" selection-start="8440" selection-end="8440" vertical-scroll-proportion="-13.481482" vertical-offset="6062" max-vertical-offset="7596">
-          <folding />
-        </state>
+        <state line="357" column="0" selection-start="8440" selection-end="8440" vertical-scroll-proportion="-13.481482" vertical-offset="6062" max-vertical-offset="7596" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="4" selection-start="1238" selection-end="1238" vertical-scroll-proportion="9.185185" vertical-offset="842" max-vertical-offset="6624">
-          <folding />
-        </state>
+        <state line="33" column="4" selection-start="1238" selection-end="1238" vertical-scroll-proportion="9.185185" vertical-offset="842" max-vertical-offset="6624" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/plupload/js/plupload.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="158" selection-end="165" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="324">
-          <folding />
-        </state>
+        <state line="7" column="32" selection-start="158" selection-end="165" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/plupload/js/plupload.full.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="228" selection-end="230" vertical-scroll-proportion="-2.8148148" vertical-offset="68" max-vertical-offset="594">
-          <folding />
-        </state>
+        <state line="8" column="32" selection-start="228" selection-end="230" vertical-scroll-proportion="-2.8148148" vertical-offset="68" max-vertical-offset="594" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="33" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding>
-            <marker date="1399226706372" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="20" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <folding>
-            <element signature="e#27#55#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/change_articels.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="1152">
+        <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1152">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/users/mypage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="250" selection-end="283" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="6588">
+        <state line="10" column="0" selection-start="250" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="6588">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-15.333333" vertical-offset="126" max-vertical-offset="1350">
+        <state line="30" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
@@ -638,14 +501,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/myupload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="79" selection-start="393" selection-end="393" vertical-scroll-proportion="-11.333333" vertical-offset="0" max-vertical-offset="504">
+        <state line="17" column="79" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="504">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/list_articels.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="558">
+        <state line="7" column="1" selection-start="231" selection-end="254" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
@@ -653,22 +516,20 @@
     <entry file="file://$PROJECT_DIR$/asylguiden/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="0" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="3744">
-          <folding>
-            <element signature="e#43#68#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/media.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="-15.703704" vertical-offset="188" max-vertical-offset="846">
+        <state line="34" column="57" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="846">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/book/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="250" column="179" selection-start="7246" selection-end="7246" vertical-scroll-proportion="0.35051546" vertical-offset="4296" max-vertical-offset="5148">
+        <state line="249" column="137" selection-start="7158" selection-end="7158" vertical-scroll-proportion="0.22680412" vertical-offset="4350" max-vertical-offset="4986">
           <folding>
             <element signature="e#26#35#0" expanded="true" />
           </folding>
