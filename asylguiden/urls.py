@@ -2,7 +2,6 @@
 from django.views.static import *
 from django.conf import settings
 from django.conf.urls import patterns, url, include
-from filebrowser.sites import site
 from django.contrib import admin
 admin.autodiscover()
 

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/book/supporters.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/about.html" afterPath="$PROJECT_DIR$/template/book/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/help.html" afterPath="$PROJECT_DIR$/template/book/help.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/index.html" afterPath="$PROJECT_DIR$/template/book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/tech.html" afterPath="$PROJECT_DIR$/template/book/tech.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asylguiden/urls.py" afterPath="$PROJECT_DIR$/asylguiden/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/views.py" afterPath="$PROJECT_DIR$/book/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asylguiden.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="48" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1206">
+            <state line="3" column="51" selection-start="159" selection-end="159" vertical-scroll-proportion="0.090756305" vertical-offset="0" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -70,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="supporters.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="supporters.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/supporters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="145" selection-start="369" selection-end="369" vertical-scroll-proportion="0.38918918" vertical-offset="0" max-vertical-offset="555">
+            <state line="12" column="145" selection-start="369" selection-end="369" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="414">
               <folding />
             </state>
           </provider>
@@ -155,9 +148,9 @@
         <option value="$PROJECT_DIR$/template/book/tech.html" />
         <option value="$PROJECT_DIR$/template/book/help.html" />
         <option value="$PROJECT_DIR$/template/book/index.html" />
-        <option value="$PROJECT_DIR$/asylguiden/urls.py" />
         <option value="$PROJECT_DIR$/book/views.py" />
         <option value="$PROJECT_DIR$/template/book/supporters.html" />
+        <option value="$PROJECT_DIR$/asylguiden/urls.py" />
       </list>
     </option>
   </component>
@@ -555,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="48" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1206">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="258" column="46" selection-start="7513" selection-end="7513" vertical-scroll-proportion="0.0" vertical-offset="4188" max-vertical-offset="5364">
@@ -580,7 +566,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/supporters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="145" selection-start="369" selection-end="369" vertical-scroll-proportion="0.38918918" vertical-offset="0" max-vertical-offset="555">
+        <state line="12" column="145" selection-start="369" selection-end="369" vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="51" selection-start="159" selection-end="159" vertical-scroll-proportion="0.090756305" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
