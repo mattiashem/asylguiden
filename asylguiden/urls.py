@@ -50,6 +50,8 @@ urlpatterns = patterns('',
      url(r'^users/mypage$', 'users.views.mypage'),
      url(r'^users/resetpassword/(\w+)/$', 'users.views.resetpassword'),
      url(r'^users/lostpassword$', 'users.views.lostpassword'),
+     url(r'^edu/start$','edu.views.start'),
+     url(r'^work/start$','work.views.start'),
      url(r'^i18n/', include('django.conf.urls.i18n')),
 
      #MEdia upload

@@ -24,10 +24,10 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Asylguiden.se</title>
-		
+
 		<link type="text/css" href="/static/css/bootstrap.css" rel="stylesheet" />
     <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
-		<link type="text/css" href="/static/css/main.css" rel="stylesheet" />	
+		<link type="text/css" href="/static/css/main_work.css" rel="stylesheet" />
 
     <!--  Tinymc -->
     <script type="text/javascript" src="/static/js/tinymce/tinymce.min.js"></script>
@@ -123,12 +123,12 @@
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   <script src="/static/js/libs/modernizr-2.0.6.min.js"></script>
-       
+
 	</head>
-	 
-<body>  
+
+<body>
 <!-- Top menu -->
-  <div class="row topmenu">
+  <div class="topbar row topmenu">
             <div class="col-md-1"></div>
             <div class="col-md-1 topbook"><a href="/book/start"><b>{% trans "Book" %}</b></a></div>
             <div class="col-md-1 topedu"><a href="/edu/start"><b>{% trans "Education" %}</b></a></div>
@@ -137,7 +137,7 @@
   </div>
 
    <!-- custom page menu -->
-     <div class="topmenu">
+     <div class="topbar">
 
 
 
@@ -233,7 +233,7 @@
             <div class="carousel-caption">
               <h1>{% trans "Console" %}</h1>
               <p class="lead">{% trans "Start using the guide by pressing Console" %}</p>
-              
+
             </div>
           </div>
         </div>
@@ -264,14 +264,14 @@
 
 
 
-    
+
 
 
 
 
     <div class="container">
 
-   
+
 
 
       <!-- START THE FEATURETTES -->
@@ -316,11 +316,11 @@
 
     </div><!-- /.container -->
 
-   
+
   <!-- JavaScript at the bottom for fast page loading -->
 
   <script src="/static/js/jquery.min.js"></script>
-  
+
 
   <!-- scripts concatenated and minified via ant build script-->
   <script defer src="/static/js/plugins.js"></script>
@@ -339,19 +339,19 @@
         })
       }(window.jQuery)
 
-     
+
 
 
 
         $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
 
-        
+
         {% endblock %}
 
-    
 
 
-        
+
+
 
     </script>
 <!-- Piwik -->
@@ -370,5 +370,5 @@
 </script>
 <!-- End Piwik Code -->
 
-</body>  
-</html>  
+</body>
+</html>

@@ -15,10 +15,10 @@
 console{
 	color:#242424;
 	list-style: none;
-	background-color:#DC533F;
+	background-color:#C4C4C4;
 	width:100%;
 	z-index:+4;
-	
+
 }
 
 
@@ -28,36 +28,36 @@ console{
 
 		height:35px;
 		position:relative;
-		background-color:#DC533F;
+		background-color:#C4C4C4;
 		width:100%;
 		padding:10px;
 		font-size: 20px;
 		color:#242424;
 		z-index:+4;
-				
+
 	}
 
 
 
 	.dhtmlgoodies_contentBox{
-		
+
 		height:0px;
 		visibility:hidden;
 		position:absolute;
-		background-color:#DC533F;
+		background-color:#C4C4C4;
 		overflow:hidden;
 		padding:20px;
 		width:100%;
 		z-index:+4;
-				
+
 	}
 	.dhtmlgoodies_content{
-		position:relative;		
-		background-color:#DC533F;
+		position:relative;
+		background-color:#C4C4C4;
 		width:90%;
 		font-size:14px;
 		z-index:+4;
-		
+
 	}
 
   /* GLOBAL STYLES
@@ -305,4 +305,3 @@ console{
 
  .textarea {
     width: 200px;
-}

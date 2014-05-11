@@ -267,7 +267,7 @@ def tech(request):
 @login_required
 def media(request):
     #Getting the media for the user
-    return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())), 'dest':settings.STATIC_URL+"/user/"+str(request.user.id)+"/"}, context_instance=RequestContext(request))
+    return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())), 'dest':settings.STATIC_URL+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())+"/"}, context_instance=RequestContext(request))
 
 @login_required
 def upload_file(request):
