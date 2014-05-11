@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/edu/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/work/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/main_edu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/main_work.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-01.jpg" afterPath="$PROJECT_DIR$/static/img/slide-01.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-01_book.xcf" afterPath="$PROJECT_DIR$/static/img/slide-01_book.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-02.jpg" afterPath="$PROJECT_DIR$/static/img/slide-02.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-03.jpg" afterPath="$PROJECT_DIR$/static/img/slide-03.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/index.html" afterPath="$PROJECT_DIR$/template/book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asylguiden/urls.py" afterPath="$PROJECT_DIR$/asylguiden/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book/views.py" afterPath="$PROJECT_DIR$/book/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/edu/index.html" afterPath="$PROJECT_DIR$/template/edu/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/work/index.html" afterPath="$PROJECT_DIR$/template/work/index.html" />
     </list>
     <ignored path="asylguiden.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +67,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/edu/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="56" selection-start="1102" selection-end="1102" vertical-scroll-proportion="-9.333333" vertical-offset="270" max-vertical-offset="6840">
+            <state line="168" column="0" selection-start="5452" selection-end="5452" vertical-scroll-proportion="-5.888889" vertical-offset="2865" max-vertical-offset="6498">
               <folding />
             </state>
           </provider>
@@ -84,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/work/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="57" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-9.333333" vertical-offset="270" max-vertical-offset="6840">
+            <state line="166" column="0" selection-start="5473" selection-end="5473" vertical-scroll-proportion="0.51891893" vertical-offset="2700" max-vertical-offset="6498">
               <folding />
             </state>
           </provider>
@@ -111,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="24" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.6576577" vertical-offset="2137" max-vertical-offset="6840">
+            <state line="300" column="150" selection-start="10730" selection-end="10730" vertical-scroll-proportion="-12.0" vertical-offset="5076" max-vertical-offset="6840">
               <folding />
             </state>
           </provider>
@@ -156,13 +154,13 @@
         <option value="$PROJECT_DIR$/asylguiden/settings.py" />
         <option value="$PROJECT_DIR$/edu/views.py" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
-        <option value="$PROJECT_DIR$/template/edu/index.html" />
         <option value="$PROJECT_DIR$/static/css/main_edu.css" />
         <option value="$PROJECT_DIR$/asylguiden/urls.py" />
         <option value="$PROJECT_DIR$/work/views.py" />
-        <option value="$PROJECT_DIR$/template/work/index.html" />
         <option value="$PROJECT_DIR$/static/css/main_work.css" />
         <option value="$PROJECT_DIR$/template/book/index.html" />
+        <option value="$PROJECT_DIR$/template/edu/index.html" />
+        <option value="$PROJECT_DIR$/template/work/index.html" />
       </list>
     </option>
   </component>
@@ -548,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/edu/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="56" selection-start="1102" selection-end="1102" vertical-scroll-proportion="-9.333333" vertical-offset="270" max-vertical-offset="6840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="307" column="0" selection-start="0" selection-end="6182" vertical-scroll-proportion="0.0" vertical-offset="4980" max-vertical-offset="5634">
@@ -596,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/work/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="57" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-9.333333" vertical-offset="270" max-vertical-offset="6840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main_work.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="10" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="5634">
@@ -619,7 +603,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="24" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.6576577" vertical-offset="2137" max-vertical-offset="6840">
+        <state line="300" column="150" selection-start="10730" selection-end="10730" vertical-scroll-proportion="-12.0" vertical-offset="5076" max-vertical-offset="6840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/edu/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="0" selection-start="5452" selection-end="5452" vertical-scroll-proportion="-5.888889" vertical-offset="2865" max-vertical-offset="6498">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/work/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="0" selection-start="5473" selection-end="5473" vertical-scroll-proportion="0.51891893" vertical-offset="2700" max-vertical-offset="6498">
           <folding />
         </state>
       </provider>

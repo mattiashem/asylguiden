@@ -149,41 +149,22 @@
 			<console>
 			<div class="row">
       <div class="col-md-2">
-<li><h3>{% trans "The Book" %}</h3></li>
-<li><a href="/book/start">{% trans "Home" %}</a></li>
-<li><a href="/book/articels">{% trans "Read" %}</a></li>
-{% if user.is_authenticated %}
-<li><a href="/book/new">{% trans "Write" %}</a></li>
-{%endif%}
-<li><a href="/book/search">{% trans "Search" %}</a></li>
-<li>--</li>
+<li><h3>{% trans "Work" %}</h3></li>
+
 
       </div>
 
 <div class="col-md-2">
-<li><h3>{% trans "Answers" %}</h3></li>
-<li><a href="/book/question">{% trans "Read" %}</a></li>
-{% if user.is_authenticated %}
-<li><a href="/book/new-question">{% trans "Write" %}</a></li>
-{%endif%}
-<li><a href="/book/search-question">{% trans "Search" %}</a></li>
 
 
       </div>
 
 
       <div class="col-md-2">
-<li><h3>{% trans "Places" %}</h3></li>
-{% for loca in top_locations %}
-<li><a href="/book/location/{{loca}}/">{{ loca }}</a></li>
-{% endfor %}
 
       </div>
       <div class="col-md-2">
-<li><h3>{% trans "Tags" %}</h3></li>
-{% for tags in top_tags %}
-<li><a href="/book/tags/{{tags}}/">{{ tags }}</a></li>
-{% endfor %}
+
 
       </div>
       <div class="col-md-2">
