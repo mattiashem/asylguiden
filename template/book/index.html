@@ -27,7 +27,8 @@
 		
 		<link type="text/css" href="/static/css/bootstrap.css" rel="stylesheet" />
     <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
-		<link type="text/css" href="/static/css/main.css" rel="stylesheet" />	
+		<link type="text/css" href="/static/css/main.css" rel="stylesheet" />
+      <script defer src="/static/js/bootstrap.js"></script>
 
     <!--  Tinymc -->
     <script type="text/javascript" src="/static/js/tinymce/tinymce.min.js"></script>
@@ -222,6 +223,42 @@
     </div></console></div></div></div>
  <div class="container">
    {% block content %}
+
+
+
+<!-- for telling asylgusein is in bete Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">{% trans "Asylguiden is in BETE"%}</h4>
+      </div>
+      <div class="modal-body">
+        {% trans "Asylguiden are in bete stage that means the site is not 100% complet and heavy work is going on."%}
+          {% trans "But the site is so stabil that we would like you to test the site and give us feedback on how to improve."%}
+          <br>
+          {% trans "Feel free to register and work on the site so that we can se where we need to add axtra work"%}
+          <br>
+          <h4>{% trans "We need more people"%}</h4>
+          {% trans "If you se anything that you can help us improve please send us an email"%}
+          <br><br>
+          {% trans "Thanks for visting us and I hope you would like the site and if you have any qestions send me an email"%}
+          <br>
+          {% trans "Best reagars Mattias Hemmingsson"%}
+          <br>
+          <a href="mailto:mattias@asylguiden.se">mattias@asylguiden.se</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans "I understand take me to the site" %}</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
         </div>
 <!-- Carousel
     ================================================== -->
@@ -261,19 +298,7 @@
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div><!-- /.carousel -->
-
-
-
-    
-
-
-
-
     <div class="container">
-
-   
-
-
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
@@ -325,13 +350,23 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script defer src="/static/js/plugins.js"></script>
   <script defer src="/static/js/script.js"></script>
-  <script defer src="/static/js/bootstrap.js"></script>
+
   <script defer src="/static/js/formvalidation.js"></script>
   <script defer src="/static/js/mylibs/console.js"></script>
   <!-- end scripts-->
    <script>
 
+
+
+
+
    {% block js_end %}
+
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+
+
       !function ($) {
         $(function(){
           // carousel demo
