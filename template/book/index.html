@@ -128,14 +128,7 @@
 	</head>
 	 
 <body>  
-<!-- Top menu -->
-  <div class="row topmenu">
-            <div class="col-md-1"></div>
-            <div class="col-md-1 topbook"><a href="/book/start"><b>{% trans "Book" %}</b></a></div>
-            <div class="col-md-1 topedu"><a href="/edu/start"><b>{% trans "Education" %}</b></a></div>
-            <div class="col-md-1 topwork"><a href="/work/start"><b>{% trans "Work" %}</b></a></div>
 
-  </div>
 
    <!-- custom page menu -->
      <div class="topmenu">
@@ -226,35 +219,7 @@
 
 
 
-<!-- for telling asylgusein is in bete Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">{% trans "Asylguiden is in BETE"%}</h4>
-      </div>
-      <div class="modal-body">
-        {% trans "Asylguiden are in bete stage that means the site is not 100% complet and heavy work is going on."%}
-          {% trans "But the site is so stabil that we would like you to test the site and give us feedback on how to improve."%}
-          <br>
-          {% trans "Feel free to register and work on the site so that we can se where we need to add axtra work"%}
-          <br>
-          <h4>{% trans "We need more people"%}</h4>
-          {% trans "If you se anything that you can help us improve please send us an email"%}
-          <br><br>
-          {% trans "Thanks for visting us and I hope you would like the site and if you have any qestions send me an email"%}
-          <br>
-          {% trans "Best reagars Mattias Hemmingsson"%}
-          <br>
-          <a href="mailto:mattias@asylguiden.se">mattias@asylguiden.se</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans "I understand take me to the site" %}</button>
 
-      </div>
-    </div>
-  </div>
 
 
 
@@ -327,6 +292,37 @@
       </div>
 
       <hr class="featurette-divider">
+
+
+        <!-- for telling asylgusein is in bete Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">{% trans "Asylguiden is in BETE"%}</h4>
+      </div>
+      <div class="modal-body">
+        {% trans "Asylguiden are in bete stage that means the site is not 100% complet and heavy work is going on."%}
+          {% trans "But the site is so stabil that we would like you to test the site and give us feedback on how to improve."%}
+          <br>
+          {% trans "Feel free to register and work on the site so that we can se where we need to add axtra work"%}
+          <br>
+          <h4>{% trans "We need more people"%}</h4>
+          {% trans "If you se anything that you can help us improve please send us an email"%}
+          <br><br>
+          {% trans "Thanks for visting us and I hope you would like the site and if you have any qestions send me an email"%}
+          <br>
+          {% trans "Best reagars Mattias Hemmingsson"%}
+          <br>
+          <a href="mailto:mattias@asylguiden.se">mattias@asylguiden.se</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans "I understand take me to the site" %}</button>
+
+      </div>
+    </div>
+  </div>
 
       <!-- /END THE FEATURETTES -->
   {% endblock %}

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="144e303d-1273-49f8-b552-ffb02b1af43b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-02.jpg" afterPath="$PROJECT_DIR$/static/img/slide-02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slide-03.jpg" afterPath="$PROJECT_DIR$/static/img/slide-03.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slider_2_book.xcf" afterPath="$PROJECT_DIR$/static/img/slider_2_book.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/slider_3_book.xcf" afterPath="$PROJECT_DIR$/static/img/slider_3_book.xcf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/book/index.html" afterPath="$PROJECT_DIR$/template/book/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/edu/index.html" afterPath="$PROJECT_DIR$/template/edu/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/work/index.html" afterPath="$PROJECT_DIR$/template/work/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asylguiden.iws" />
@@ -36,7 +29,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/work/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="35" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
+            <state line="5" column="35" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="216">
               <folding />
             </state>
           </provider>
@@ -63,7 +56,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/work/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="171" selection-start="9726" selection-end="9726" vertical-scroll-proportion="-19.222221" vertical-offset="4521" max-vertical-offset="6480">
+            <state line="280" column="171" selection-start="9726" selection-end="9726" vertical-scroll-proportion="0.0" vertical-offset="4521" max-vertical-offset="6480">
               <folding />
             </state>
           </provider>
@@ -90,7 +83,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/book/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="261" column="14" selection-start="9133" selection-end="9133" vertical-scroll-proportion="0.5783784" vertical-offset="4377" max-vertical-offset="7470">
+            <state line="324" column="8" selection-start="12000" selection-end="12000" vertical-scroll-proportion="0.9351351" vertical-offset="5313" max-vertical-offset="7398">
               <folding />
             </state>
           </provider>
@@ -99,7 +92,7 @@
       <file leaf-file-name="search.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/book/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="702">
+            <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="702">
               <folding />
             </state>
           </provider>
@@ -108,7 +101,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="5364">
+            <state line="20" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="5364">
               <folding />
             </state>
           </provider>
@@ -117,7 +110,7 @@
       <file leaf-file-name="test.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1871" selection-end="1949" vertical-scroll-proportion="-13.703704" vertical-offset="674" max-vertical-offset="1278">
+            <state line="58" column="0" selection-start="1871" selection-end="1949" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="1278">
               <folding />
             </state>
           </provider>
@@ -192,6 +185,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -234,7 +228,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="book" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,13 +242,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="book" />
+              <option name="myItemId" value="asylguiden" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -475,23 +468,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="0" selection-start="0" selection-end="6182" vertical-scroll-proportion="0.0" vertical-offset="4980" max-vertical-offset="5634">
-          <folding />
-        </state>
+        <state line="307" column="0" selection-start="0" selection-end="6182" vertical-scroll-proportion="0.0" vertical-offset="4980" max-vertical-offset="5634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asylguiden/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="30" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1296">
-          <folding />
-        </state>
+        <state line="53" column="30" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1296" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edu/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/work/views.py">
@@ -531,35 +518,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/work/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="171" selection-start="9726" selection-end="9726" vertical-scroll-proportion="-19.222221" vertical-offset="4521" max-vertical-offset="6480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="5364">
+        <state line="280" column="171" selection-start="9726" selection-end="9726" vertical-scroll-proportion="0.0" vertical-offset="4521" max-vertical-offset="6480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="702">
+        <state line="3" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="702">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1871" selection-end="1949" vertical-scroll-proportion="-13.703704" vertical-offset="674" max-vertical-offset="1278">
+        <state line="58" column="0" selection-start="1871" selection-end="1949" vertical-scroll-proportion="0.0" vertical-offset="674" max-vertical-offset="1278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="5364">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/book/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="14" selection-start="9133" selection-end="9133" vertical-scroll-proportion="0.5783784" vertical-offset="4377" max-vertical-offset="7470">
+        <state line="324" column="8" selection-start="12000" selection-end="12000" vertical-scroll-proportion="0.9351351" vertical-offset="5313" max-vertical-offset="7398">
           <folding />
         </state>
       </provider>
