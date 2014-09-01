@@ -1,3 +1,4 @@
+{% load thumbnail %}
 <script type="text/javascript" src="/static/js/tinymce/plugins/compat3x/tiny_mce_popup.js">
 </script>
 
@@ -31,9 +32,9 @@ tinyMCEPopup.onInit.add(FileBrowserDialogue.init, FileBrowserDialogue);
 
 </script>
 <ul>
-        {% for a in media %}
-    <li onClick="FileBrowserDialogue.mySubmit('{{ dest }}{{ a }}');" >{{ a }}</li>
 
+        {% for a in media %}
+            <img src="{{ thumb }}thumpnail_{{ a }}" onClick="FileBrowserDialogue.mySubmit('{{ dest }}{{ a }}');"/>
         {% endfor %}
 
 

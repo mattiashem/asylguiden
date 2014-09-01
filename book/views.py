@@ -23,6 +23,14 @@ from django.core.mail import send_mail, BadHeaderError
 from mongoengine import *
 from django.contrib import auth
 
+
+#Images process
+try:
+	    from PIL import Image, ImageOps
+except ImportError:
+	    import Image
+	    import ImageOps
+
 class User(User):
     location =  GeoPointField()
 
@@ -31,27 +39,29 @@ def start(request):
 
 @login_required
 def new(request):
-	c = {}
-	c.update(csrf(request))
-	
-	if request.method == 'POST':
-		currentuser = User.objects.get(id=request.user.id)
-		
-		#Tags	
-		incommingtags=request.POST["tags"].replace(" ","")
-		thetags=incommingtags.split(',')
+    c = {}
+    c.update(csrf(request))
 
-		#Location
-		incommingloca=request.POST["location"].replace(" ","")
-		thelocations=incommingloca.split(',')
+    if request.method == 'POST':
+        currentuser = User.objects.get(id=request.user.id)
 
-		#Saving articel
-		articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"])
-		articel.save()	 
-		return render_to_response('book/saved.html',context_instance=RequestContext(request))
+        #Tags
+        incommingtags=request.POST["tags"].replace(" ","")
+        thetags=incommingtags.split(',')
+
+        #Location
+        incommingloca=request.POST["location"].replace(" ","")
+        thelocations=incommingloca.split(',')
+
+        #Saving articel
+        articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0)
+        articel.save()
+        UserInfo.objects(user=currentuser).update_one(inc__postscount=1)
+
+        return render_to_response('book/saved.html',context_instance=RequestContext(request))
 
 
-	return render_to_response('book/new.html', c,context_instance=RequestContext(request))
+    return render_to_response('book/new.html', c,context_instance=RequestContext(request))
 
 
 @login_required
@@ -78,6 +88,19 @@ def writeqestion(request):
 
 	return render_to_response('book/qestion.html', c,context_instance=RequestContext(request))
 
+def rate(request):
+    '''
+    Rate the articel
+    '''
+    if request.method == 'POST':
+        if request.user.id:
+            currentuser = User.objects.get(id=request.user.id)
+            Post.objects(id=request.POST.get('articel')).update_one(inc__page_rate=int(request.POST.get('rate')))
+            return render_to_response('book/rate_ok.html',context_instance=RequestContext(request))
+        else:
+            print "User not login"
+            return render_to_response('book/rate_no.html',context_instance=RequestContext(request))
+    return render_to_response('book/rate_no.html',context_instance=RequestContext(request))
 
 def question(request):
 	'''
@@ -112,7 +135,7 @@ def articels(request):
 	Show articels in databas
 	'''
 	articels = Post.objects()
-	return render_to_response('book/articels.html',  {'articels': articels},context_instance=RequestContext(request))
+	return render_to_response('book/list_articels.html',  {'articels': articels},context_instance=RequestContext(request))
 
 def top_ten_tags(request):
 	'''
@@ -162,12 +185,16 @@ def view_location_tags(request,location,tags):
 
 
 def view_articel(request,id):
-	'''
-	View and articel
-	'''
-	
-	articels = Post.objects(id=id)
-	return render_to_response('book/articels.html',  {'articels': articels},context_instance=RequestContext(request))
+    '''
+    View and articel
+    '''
+    Post.objects(id=id).update_one(inc__page_views=1)
+    articels = Post.objects(id=id)
+    a = articels[0]
+    UserInfo.objects(user=a.auther).update_one(inc__read=1)
+    theuser = UserInfo.objects(user=a.auther)
+
+    return render_to_response('book/articels.html',  {'articels': articels, 'auther': theuser },context_instance=RequestContext(request))
 
 def view_tags(request,tags):
 	'''
@@ -267,27 +294,113 @@ def tech(request):
 @login_required
 def media(request):
     #Getting the media for the user
-    return render_to_response('book/media.html',{'media':os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())), 'dest':settings.STATIC_URL+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())+"/"}, context_instance=RequestContext(request))
+
+    images = [".jpg", ".png", ".gif", ".JPG", ".PNG", ".GIF"]
+    movies = [".mp4", ".MP4"]
+    media=[]
+    if request.GET['type'] == "image":
+    #Show images to user
+        for file in os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())):
+            if file.endswith(tuple(images)):
+                media.append(file)
+
+    if request.GET['type'] == "media":
+    #Show movies to user
+        for file in os.listdir(settings.STATIC_ROOT+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())):
+            if file.endswith(tuple(movies)):
+                media.append(file)
+
+    #Send data back to user
+    return render_to_response('book/media.html',{'media':media, 'dest':settings.STATIC_URL+"/user/"+str(hashlib.sha224(str(request.user.id)).hexdigest())+"/",'thumb':settings.STATIC_URL+"/thumb/"+str(hashlib.sha224(str(request.user.id)).hexdigest())+"/"}, context_instance=RequestContext(request))
 
 @login_required
 def upload_file(request):
     info="no"
+    #Approved file extenasions
+    images = [".jpg", ".png", ".gif", ".JPG", ".PNG", ".GIF"]
+    movies = [".mp4", ".MP4"]
     if request.method == 'POST':
-        print "is post"
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            handle_uploaded_file(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
-            info="Uploaded"
+        # WHEN AN IMAGES IS UPLOADED
+        if request.FILES['file'].name.endswith(tuple(images)):
+            if request.method == 'POST':
+                form = UploadFileForm(request.POST, request.FILES)
+                if form.is_valid():
+                    #If the form is good process the file for update
+                    handle_uploaded_file(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
+                    if "profile" == request.POST['profile']:
+                        #If profile images is used send file to be the profile images
+                        profile_file(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
+                    info="Uploaded"
+        #WHEN AN MOVIE IS UPLOADED
+        elif request.FILES['file'].name.endswith(tuple(movies)):
+                if request.method == 'POST':
+                    form = UploadFileForm(request.POST, request.FILES)
+                    if form.is_valid():
+                        #If the form is good process the file for update
+                        handle_uploaded_movie(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
+                    info="Uploaded"
+        else:
+            info="ERROR_FILETYPE"
+            form = UploadFileForm()
     else:
         form = UploadFileForm()
     return render_to_response('book/myupload.html', {'form': form, 'info':info}, context_instance=RequestContext(request))
 
+def profile_file(f,name,id):
+    '''
+    Making the profile photo for users
+    '''
+    with open(settings.STATIC_ROOT+"/profile/"+str(id)+name, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
+    image = Image.open(settings.STATIC_ROOT+"/profile/"+str(id)+name)
+    # ImageOps compatible mode
+    if image.mode not in ("L", "RGB"):
+        image = image.convert("RGB")
+
+    image.thumbnail((200,200), Image.ANTIALIAS)
+    image.save(settings.STATIC_ROOT+"/profile/thumb_"+str(id)+".jpg", 'JPEG', quality=75)
+
+def handle_uploaded_movie(f,name,id):
+    '''
+    Uploading the movie to the correct folder
+    And transcode the movie if its not mp4 format and used for html5 standards
+    '''
+    if not os.path.isdir(settings.STATIC_ROOT+"/user/"+str(id)):
+        os.mkdir(settings.STATIC_ROOT+"/user/"+str(id))
+    with open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
 
 
 def handle_uploaded_file(f,name,id):
+    '''
+    Uploading and rezecing imgaes uploaded from users
+    '''
 
     if not os.path.isdir(settings.STATIC_ROOT+"/user/"+str(id)):
         os.mkdir(settings.STATIC_ROOT+"/user/"+str(id))
     with open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
+
+    image = Image.open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name)
+
+    #Making thumbnail and images in differnt sizes
+    if not os.path.isdir(settings.STATIC_ROOT+"/thumb/"+str(id)):
+        os.mkdir(settings.STATIC_ROOT+"/thumb/"+str(id))
+
+    # ImageOps compatible mode
+    if image.mode not in ("L", "RGB"):
+        image = image.convert("RGB")
+
+    fname=name.split('.')
+
+    imageresize = image.resize((200,200), Image.ANTIALIAS)
+    imageresize.save(settings.STATIC_ROOT+"/thumb/"+str(id)+"/resize_200_200"+fname[0]+".jpg", 'JPEG', quality=75)
+
+    image.thumbnail((200,200), Image.ANTIALIAS)
+    image.save(settings.STATIC_ROOT+"/thumb/"+str(id)+"/thumpnail_"+fname[0]+".jpg", 'JPEG', quality=75)
+
+    imagefit = ImageOps.fit(image, (200, 200), Image.ANTIALIAS)
+    imagefit.save(settings.STATIC_ROOT+"/thumb/"+str(id)+"/fit_"+fname[0]+".jpg", 'JPEG', quality=75)

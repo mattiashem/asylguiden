@@ -16,57 +16,57 @@ import os, random, string
 from mongoengine import *
 from django.contrib import auth
 import datetime
-
-
+import hashlib
+from chimpy import chimpy
 
 
 class User(User):
-    location =  GeoPointField()
+    location = GeoPointField()
 
 
 def register(request):
-	'''
+    '''
 	Register an new user
 	'''
-	c = {}
-	c.update(csrf(request))
-	info="no"
-	if request.method == 'POST':
-		try:
-			User.create_user(request.POST['username'],request.POST['password1'],request.POST['email'])
-			user = auth.authenticate(username=request.POST['username'],password=request.POST['password1'])
-			if user is not None and user.is_active:
-				auth.login(request,user)
-				User_info=UserInfo.objects.get_or_create(user=user,username=request.POST['username'])
-				return HttpResponseRedirect("/users/mypage")
+    c = {}
+    c.update(csrf(request))
+    info = "no"
+    if request.method == 'POST':
+        try:
+            User.create_user(request.POST['username'], request.POST['password1'], request.POST['email'])
+            user = auth.authenticate(username=request.POST['username'], password=request.POST['password1'])
+            if user is not None and user.is_active:
+                auth.login(request, user)
+                User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'])
+                signup_mailchump(request.POST['email'])
+                return HttpResponseRedirect("/users/mypage")
 
-		except:
-			info = "error"
-			return render_to_response("users/register.html",{'info':info},context_instance=RequestContext(request))
-	else:
-		return render_to_response("users/register.html",{'info':info},context_instance=RequestContext(request))
-
+        except:
+            info = "error"
+            return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
+    else:
+        return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
 
 
 def login(request):
-	'''
+    '''
 	loggin the user
 	'''
-	c = {}
-	c.update(csrf(request))
-	info="no"
-	if request.method == 'POST':
-		username = request.POST.get('username','')
-		password = request.POST.get('password','')
-		user = auth.authenticate(username=username,password=password)
-		if user is not None and user.is_active:
-			auth.login(request,user)
-			User_info=UserInfo.objects.get_or_create(user=user,username=request.POST['username'])
-			return HttpResponseRedirect("/users/mypage")
-		else:
-			info="error"
-	
-	return render_to_response("users/login.html",{'info':info},context_instance=RequestContext(request))		
+    c = {}
+    c.update(csrf(request))
+    info = "no"
+    if request.method == 'POST':
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+        user = auth.authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            auth.login(request, user)
+            User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'])
+            return HttpResponseRedirect("/users/mypage")
+        else:
+            info = "error"
+
+    return render_to_response("users/login.html", {'info': info}, context_instance=RequestContext(request))
 
 def resetpassword(request,keys):
 	'''
@@ -102,22 +102,33 @@ def lostpassword(request):
 			theuser_info.save()
 			#Sending email to user
 		#send_mail('Password Resetting at Asylguiden', 'This is you password resetting from asylguiden \n Press this link to resett ypu password', 'system@asylguiden.se',
-    	#		[theuser.email], fail_silently=False)
+		#		[theuser.email], fail_silently=False)
 			info = "reset"
-		
+
 		except:
 			info = "error"
-		
-		
-		
+
+
+
 		return render_to_response("users/lost_password.html",{'info':info},context_instance=RequestContext(request))
 
-		
+
 	c = {}
 	c.update(csrf(request))
 	auth.logout(request)
 	return render_to_response("users/lost_password.html",{'info':info},context_instance=RequestContext(request))		
 
+
+def user(request,username):
+	'''
+	Show the user profile OPEN
+	'''
+
+	user = UserInfo.objects(username=username)
+	user_2 = User.objects(username=username)
+	for u in user_2:
+		user_id =  str(hashlib.sha224(str(u.id)).hexdigest())
+	return render_to_response("users/user.html",{'user_id':user_id,'userinfo':user},context_instance=RequestContext(request))
 
 
 
@@ -169,6 +180,13 @@ def mypage(request):
 	users_articel = Post.objects(auther=user_info)
 
 
-	
-	return render_to_response("users/mypage.html",{'username':username,'useremail':useremail,'userid':userid,'users_articel':users_articel,'info':info,'userinfo':currentuser},context_instance=RequestContext(request))
 
+	return render_to_response("users/mypage.html",{'user_id':str(hashlib.sha224(str(request.user.id)).hexdigest()),'username':username,'useremail':useremail,'userid':userid,'users_articel':users_articel,'info':info,'userinfo':currentuser},context_instance=RequestContext(request))
+
+def signup_mailchump(email):
+    '''
+    Sign upp new user to our mailchimp email service
+    All new usere that sign up will get sign up to automatical
+    '''
+    chimp = chimpy.Connection('d784f29c89de4f56fc793d85a074623c-us8')
+    chimp.list_subscribe('be2d53aa4d', email, {'FIRST': 'User', 'LAST': 'Asylguiden'}, double_optin=False)

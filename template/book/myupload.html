@@ -4,20 +4,42 @@
 
 
 {% block content %}
-
-{%if info == "Uploaded" %}
+        {%if info == "Uploaded" %}
 <div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <strong>{% trans "Uploaded" %}</strong>{% trans "  You file has bean uploaded" %}
 </div>
 
 {%endif%}
+         {%if info == "ERROR_FILETYPE" %}
+<div class="alert alert-danger">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>{% trans "Error" %}</strong>{% trans "  You file has the wrong file type" %}
+</div>
+
+{%endif%}
 
 
+
+<h2>{% trans "File upload" %} </h2>
+        <h4>{% trans "You can upload images with file extenasion .jpg .png and .gif" %}</h4>
+        <h4>{% trans "Movies is preferd in mp4 format else we will try to transcode to mp4 format for html5 video player" %}</h4>
 
 <form action="#" method="post" enctype="multipart/form-data" class="form-inline" role="form">
+    <input type="hidden" name="profile" id="profile" value="file"/>
 {% csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="Upload" class="btn btn-success" />
 </form>
+
+
+<h2>{% trans "Profile Photo" %}</h2>
+        <h4>{% trans "To update you profile photo upload a file here. The photo will be rezised" %}</h4>
+        <form action="#" method="post" enctype="multipart/form-data" class="form-inline" role="form">
+        <input type="hidden" name="profile" id="profile" value="profile"/>
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Upload" class="btn btn-success" />
+</form>
+
         {%endblock%}

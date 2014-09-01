@@ -8,6 +8,8 @@ class Post(Document):
     auther = ReferenceField(User) 
     location = ListField(StringField(max_length=40))
     tags = ListField(StringField(max_length=40))
+    page_views = IntField()
+    page_rate = IntField()
     text = StringField()
 
 
