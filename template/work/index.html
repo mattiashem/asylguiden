@@ -1,8 +1,9 @@
 <!-- Load extra tags -->
- {% load users_tags %}
+{% load users_tags %}
+
 <!--Top tags for meny-->
 {% get_top_tags %}
-{% get_top_location %}
+{% get_top_loc %}
 
 <!--Tags for typahead -->
 {% get_location %}
@@ -204,35 +205,34 @@
  <div class="container">
    {% block content %}
         </div>
-<!-- Carousel
-    ================================================== -->
+
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="/static/img/slide-01-work.jpg" alt="">
-          <div class="container">
+            <img src="/static/img/slide-01-work.jpg" alt="">          <div class="container">
             <div class="carousel-caption">
-              <h1>{% trans "Working is integrationg" %}</h1>
-              <p class="lead">{% trans "Finding the skills, Making good CV and searching for work, Asylguiden knows how " %}</p>
+              <h1>{% trans "Integration basic ONE" %}</h1>
+              <p class="lead">{% trans "Information " %}</p>
+                <p>{% trans "Get information abount where you arem how things work and how you can get involved "%}</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+        <img src="/static/img/slide-02-work.jpg" alt="">          <div class="container">
+            <div class="carousel-caption">
+                <h1>{% trans "Integration basic TWO" %}</h1>
+              <p class="lead">{% trans "Educations" %}</p>
+                <p>{% trans "Get education can be university ore not"%}</p>
 
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="/static/img/slide-02-work.jpg" alt="">
-          <div class="container">
+        <img src="/static/img/slide-03-work.jpg" alt="">          <div class="container">
             <div class="carousel-caption">
-              <h1>{% trans "Asylguiden in front" %}</h1>
-              <p class="lead">{% trans "Asylguiden stand infront, Taking all the responsible and contact with costumers and traning and teaching people while doing it" %}</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="/static/img/slide-03-work.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>{% trans "Help starting new busniess" %}</h1>
-              <p class="lead">{% trans "Having this great ide for an company, Asylguiden can help getting your ides into reality."%}</p>
+              <h1>{% trans "Integration basic TREE" %}</h1>
+                <p class="lead">{% trans "WORK" %}</p>
+              <p>{% trans "Get a work and wrote us you story and the circel is closed"%}</p>
 
             </div>
           </div>
@@ -260,9 +260,9 @@
 
       <div class="featurette">
 
-        <h2 class="featurette-heading">{% trans "Asylguiden in FRONT" %}<br><span class="muted">{% trans "Asylguiden will act as an consult company fronting work to costumers." %}</span></h2>
-        <p class="lead">{% trans "Making amazing work and also traning student at the same time, Asylguiden staff and company will stand for quality, stability and communcation" %}</p>
-          <p>And BEST PART we want you to hire our consultans.</p>
+        <h2 class="featurette-heading">{% trans "Matching" %}<br></h2>
+        <p class="lead">{% trans "Lets start matching stuff up. And here we need help today if you are good at matching people and companies drop us an email" %}</p>
+
       </div>
 
       <hr class="featurette-divider">
@@ -270,15 +270,15 @@
       <div class="featurette">
 
 
-        <h2 class="featurette-heading">{% trans "Get you ides to reality" %}<br><span class="muted">{% trans "Got an great ide for an ny bussniess?" %}</span></h2>
-        <p class="lead">{% trans "Asylguiden can support you with all that you need to get it stared"%}</p>
+        <h2 class="featurette-heading">{% trans "Founding" %}</h2>
+        <p class="lead">{% trans "If there is a good ide lets found it and make it fly off, Asylguiden can found and help getting founding from great ides"%}</p>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <h2 class="featurette-heading">{% trans "Making new businiess"%}<br><span class="muted">{% trans "Asylguiden will work for expanding its businness"%}</span></h2>
-        <p class="lead">{% trans "With the help from our staff and people Asylguiden will expand to the areas where our staff and students can fins work ore helping others" %}</p>
+        <h2 class="featurette-heading">{% trans "Expanding the guide"%}</h2>
+        <p class="lead">{% trans "We are in the business of helping and where people need help we should expand" %}</p>
       </div>
 
       <hr class="featurette-divider">
@@ -334,21 +334,7 @@
 
 
     </script>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
 
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://admin.elinodrift.se/piwik/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", "11"]);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
 
 </body>
 </html>

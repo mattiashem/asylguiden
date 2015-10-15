@@ -7,18 +7,17 @@ from django.template import RequestContext
 from django.template import Library
 from django.http import HttpResponseRedirect
 from operator import itemgetter
-from mongoengine.queryset import Q
 from django import forms
-from mongoengine.django.auth import User
+from django.contrib.auth.models import User
 from book.models import Post
 from users.models import UserInfo
+from django.db.models import Count
 
-from mongoengine import *
 from django.contrib import auth
 register = template.Library()
 
-class User(User):
-    location =  GeoPointField()
+#class User(User):
+#    location =  GeoPointField()
 
 class UserInfoNode(Node):
 
@@ -39,16 +38,17 @@ def get_user_info(parser, token):
 class GetTopLocation(Node):
 
 	def render(self, context):
-		locations_freqs = Post.objects.item_frequencies('location', normalize=True)
-		esorted = sorted(locations_freqs.items(), key=itemgetter(1), reverse=True)[:10]
-		return_list=[]
-		for i in esorted:
-			return_list.append(i[0])
+		locations_freqs = Post.objects.all()
+		get_top_loc=[]
 
-		context['top_locations'] = return_list
+		for loc in locations_freqs:
+			for l in loc.location:
+				print l
+				get_top_loc.append(l)
+		context['top_locations'] = get_top_loc
 		return ''
 		
-@register.tag(name='get_top_location')
+@register.tag(name='get_top_loc')
 def get_top_location(parser, token):
 	return GetTopLocation()
 
@@ -60,13 +60,8 @@ def get_top_location(parser, token):
 class GetLocation(Node):
 
 	def render(self, context):
-		locations_freqs = Post.objects.item_frequencies('location', normalize=True)
-		esorted = sorted(locations_freqs.items(), key=itemgetter(1), reverse=True)
-		return_list=[]
-		for i in esorted:
-			return_list.append(i[0])
-
-		context['locations'] = return_list
+		locations = Post.objects.order_by('location')
+		context['locations'] = locations
 
 		return ''
 		
@@ -80,13 +75,14 @@ def get_location(parser, token):
 class GetTopTags(Node):
 
 	def render(self, context):
-		tags_freqs = Post.objects.item_frequencies('tags', normalize=True)
-		esorted = sorted(tags_freqs.items(), key=itemgetter(1), reverse=True)[:10]
-		return_list=[]
-		for i in esorted:
-			return_list.append(i[0])
+		tags_freqs = Post.objects.all()
+		get_top_freqs=[]
 
-		context['top_tags'] = return_list
+		for tag in tags_freqs:
+			for t in tag.tags:
+				get_top_freqs.append(t)
+
+		context['top_tags'] = get_top_freqs
 		return ''
 		
 @register.tag(name='get_top_tags')
@@ -100,13 +96,8 @@ def get_top_tags(parser, token):
 class GetTags(Node):
 
 	def render(self, context):
-		tags_freqs = Post.objects.item_frequencies('tags', normalize=True)
-		esorted = sorted(tags_freqs.items(), key=itemgetter(1), reverse=True)
-		return_list=[]
-		for i in esorted:
-			return_list.append(i[0])
-
-		context['tags'] = return_list
+		tags = Post.objects.order_by('tags')
+		context['tags'] = tags
 		return ''
 		
 @register.tag(name='get_tags')

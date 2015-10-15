@@ -13,33 +13,30 @@
 {%endif%}
 
 <h1>{% trans "Change Articel" %}</h1>
- {% for a in articels %}
+
  <form action="#" method='post'>
 
    	{% csrf_token %}
 
   <fieldset>
     <label>{% trans "Name" %}</label>
-    <input type="hidden" name="id" value="{{ a.id }}"/>
-    <input type="text" placeholder="Articel name" name='title'  value='{{ a.title }}'>
+    <input type="hidden" name="id" value="{{ articels.id }}"/>
+    <input type="text" placeholder="Articel name" name='title'  value='{{ articels.title }}'>
     <span class="help-block">{% trans "Enter name of articel" %}</span>
     <label>{% trans "Locations" %}</label>
-    <input type="text" placeholder="Enter Locations " name="location" value='{% for l in a.location %}{{l}} {%endfor %}' id="lo_search" data-provide="typeahead" data-items="10" >
+    <input type="text" placeholder="Enter Locations " name="location" value='{% for l in articels.location %}{{l}} {%endfor %}' id="lo_search" data-provide="typeahead" data-items="10" >
     <span class="help-block">{% trans "Enter location for articel if any" %}</span>
     <label>{% trans "Tags" %}</label>
-    <input type="text" placeholder="Tags" name="tags" value='{% for t in a.tags %}{{t}} {%endfor %}' id="ta_search" data-provide="typeahead" data-items="10">
+    <input type="text" placeholder="Tags" name="tags" value='{% for t in articels.tags %}{{t}} {%endfor %}' id="ta_search" data-provide="typeahead" data-items="10">
     <span class="help-block">{% trans "Enter tags to articel" %}</span>
-    <textarea rows="10" cols="50" name="text">{{ a.text }}</textarea>
+    <textarea rows="10" cols="50" name="text">{{ articels.text }}</textarea>
 
 
-    <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
+
     <button type="submit" class="btn btn-success">{% trans "Save" %}</button>
   </fieldset>
 </form>
 
-{% endfor %}
 
 
 {%endblock%}

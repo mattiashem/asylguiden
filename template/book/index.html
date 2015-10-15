@@ -1,8 +1,9 @@
 <!-- Load extra tags -->
- {% load users_tags %}
+{% load users_tags %}
+
 <!--Top tags for meny-->
 {% get_top_tags %}
-{% get_top_location %}
+{% get_top_loc %}
 
 <!--Tags for typahead -->
 {% get_location %}
@@ -128,7 +129,13 @@
 	</head>
 	 
 <body>  
+  <div class="topbar row topmenu">
+            <div class="col-md-1"></div>
+            <div class="col-md-1 topbook"><a href="/book/start"><b>{% trans "Book" %}</b></a></div>
+            <div class="col-md-1 topedu"><a href="/edu/start"><b>{% trans "Education" %}</b></a></div>
+            <div class="col-md-1 topwork"><a href="/work/start"><b>{% trans "Work" %}</b></a></div>
 
+  </div>
 
    <!-- custom page menu -->
      <div class="topmenu">
@@ -154,16 +161,7 @@
 
       </div>
 
-<div class="col-md-2">
-<li><h3>{% trans "Answers" %}</h3></li>
-<li><a href="/book/question">{% trans "Read" %}</a></li>
-{% if user.is_authenticated %}
-<li><a href="/book/new-question">{% trans "Write" %}</a></li>
-{%endif%}
-<li><a href="/book/search-question">{% trans "Search" %}</a></li>
 
-
-      </div>
 
 
       <div class="col-md-2">
@@ -230,31 +228,30 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="/static/img/slide-01.jpg" alt="">
-          <div class="container">
+            <img src="/static/img/slide-01-edu.jpg" alt="">          <div class="container">
             <div class="carousel-caption">
-              <h1>{% trans "Give to the Guide" %}</h1>
-              <p class="lead">{% trans "Tell us you stories and lives in short articels and question, Your experience and actions can help other" %}</p>
-              <a class="btn btn-large btn-primary" href="#">{% trans "Sign Up" %}</a>
+              <h1>{% trans "Integration basic ONE" %}</h1>
+              <p class="lead">{% trans "Information " %}</p>
+                <p>{% trans "Get information abount where you arem how things work and how you can get involved "%}</p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="/static/img/slide-02.jpg" alt="">
-          <div class="container">
+        <img src="/static/img/slide-02-edu.jpg" alt="">          <div class="container">
             <div class="carousel-caption">
-              <h1>{% trans "The Guide will live and Work" %}</h1>
-              <p class="lead">{% trans "The Guiden will the always work trow the people using the guide, And use that info to process the info" %}</p>
+                <h1>{% trans "Integration basic TWO" %}</h1>
+              <p class="lead">{% trans "Educations" %}</p>
+                <p>{% trans "Get education can be university ore not"%}</p>
 
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="/static/img/slide-03.jpg" alt="">
-          <div class="container">
+        <img src="/static/img/slide-03-edu.jpg" alt="">          <div class="container">
             <div class="carousel-caption">
-              <h1>{% trans "Returning the knowledge" %}</h1>
-              <p class="lead">{% trans "The Guiden can then output our knowledge to people that need it in a printed book ore online her for us all."%}</p>
+              <h1>{% trans "Integration basic TREE" %}</h1>
+                <p class="lead">{% trans "WORK" %}</p>
+              <p>{% trans "Get a work and wrote us you story and the circel is closed"%}</p>
 
             </div>
           </div>
@@ -266,12 +263,13 @@
     <div class="container">
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+ <hr class="featurette-divider">
+
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="/static/img/work.jpg">
-        <h2 class="featurette-heading">{% trans "SFI Swedish for Imigrants " %}<br><span class="muted">{% trans "SFI can both give to the guiden and read from it" %}</span></h2>
-        <p class="lead">{% trans "If you are taking SFI classes today <please></please> add you experience to the guide and let the one taking SFI tomorrow read it" %}</p>
+        <h2 class="featurette-heading">{% trans "Information " %}<br><span class="muted"></span></h2>
+        <p class="lead">{% trans "Read how others have done and experince, And when you are at the end of you intergartion please give back so that you can help others." %}</p>
       </div>
 
       <hr class="featurette-divider">
@@ -279,7 +277,7 @@
       <div class="featurette">
         <img class="featurette-image pull-right" src="/static/img/sthlm.jpg">
 
-        <h2 class="featurette-heading">{% trans "Stockholm" %}<br><span class="muted">{% trans "Read local articels from Stockholm" %}</span></h2>
+        <h2 class="featurette-heading">{% trans "Stockholm" %}<br></h2>
         <p class="lead">{% trans "Qestions about STHLM here we have collected our best articels from Stockholm"%}</p>
       </div>
 
@@ -287,42 +285,14 @@
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="/static/img/a.jpg">
-        <h2 class="featurette-heading">{% trans "GIVE TO The Guide "%}<span class="muted"><br>{% trans "Give us the five stories from you" %}</span></h2>
+        <h2 class="featurette-heading">{% trans "GIVE TO The Guide "%}</h2>
         <p class="lead">{% trans "Give the guide five stories that you have heard och experince. So other can learn from what you have sean and heard." %}</p>
       </div>
 
       <hr class="featurette-divider">
 
 
-        <!-- for telling asylgusein is in bete Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">{% trans "Asylguiden is in BETE"%}</h4>
-      </div>
-      <div class="modal-body">
-        {% trans "Asylguiden are in bete stage that means the site is not 100% complet and heavy work is going on."%}
-          {% trans "But the site is so stabil that we would like you to test the site and give us feedback on how to improve."%}
-          <br>
-          {% trans "Feel free to register and work on the site so that we can se where we need to add axtra work"%}
-          <br>
-          <h4>{% trans "We need more people"%}</h4>
-          {% trans "If you se anything that you can help us improve please send us an email"%}
-          <br><br>
-          {% trans "Thanks for visting us and I hope you would like the site and if you have any qestions send me an email"%}
-          <br>
-          {% trans "Best reagars Mattias Hemmingsson"%}
-          <br>
-          <a href="mailto:mattias@asylguiden.se">mattias@asylguiden.se</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">{% trans "I understand take me to the site" %}</button>
 
-      </div>
-    </div>
-  </div>
 
       <!-- /END THE FEATURETTES -->
   {% endblock %}
@@ -358,9 +328,7 @@
 
    {% block js_end %}
 
-    $(window).load(function(){
-        $('#myModal').modal('show');
-    });
+
 
 
       !function ($) {
@@ -385,21 +353,7 @@
         
 
     </script>
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
 
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://admin.elinodrift.se/piwik/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", "11"]);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
 
 </body>  
 </html>  

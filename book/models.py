@@ -1,22 +1,26 @@
 # Create your models here.
 from django.db import models
-from mongoengine import *
-from mongoengine.django.auth import User
-
-class Post(Document):
-    title = StringField(max_length=120, required=True)
-    auther = ReferenceField(User) 
-    location = ListField(StringField(max_length=40))
-    tags = ListField(StringField(max_length=40))
-    text = StringField()
+from django.contrib.auth.models import User
+from django.db import models
+from djangotoolbox.fields import ListField
 
 
-class Question(Document):
-    title = StringField(max_length=120, required=True)
-    auther = ReferenceField(User)
-    where = ListField(StringField(max_length=40))
-    tags = ListField(StringField(max_length=40))
-    text = StringField()
+class Post(models.Model):
+    title = models.CharField(max_length=120)
+    auther = models.CharField(max_length=120)
+    location = ListField()
+    tags = ListField()
+    page_views = models.FloatField()
+    page_rate = models.FloatField()
+    text = models.TextField()
 
-class Media(Document):
-    file = FileField(required=True)
+
+class Question(models.Model):
+    title = models.CharField(max_length=120)
+    auther = models.CharField(max_length=120)
+    where = ListField()
+    tags = ListField()
+    text = models.TextField()
+
+#class Media(models.Model):
+#    file = models.FileField(storage=gridfs_storage, upload_to='/')

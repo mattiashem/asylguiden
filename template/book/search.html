@@ -3,20 +3,23 @@
 
 {% block content %}
 <h1>{% trans "Search" %}</h1>
-<form action="#" method='post'>
+  <div class="row">
+  <div class="col-md-4">
+<form action="#" method='post'  class="form-horizontal">
 
    	{% csrf_token %}
 
 
   <fieldset>
     <label>{% trans "Name" %}</label>
-    <input type="text" placeholder="Search words" name='search'>
+    <input type="text" placeholder="Search words" name='search' class="form-control" >
     <span class="help-block">{% trans "Enter search ords for Articels, tags ore locations" %}</span>
     
-    <button type="submit" class="btn btn-success">{% trans "Search" %}</button>
+    <button type="submit" class="btn btn-success" class="form-control" >{% trans "Search" %}</button>
   </fieldset>
 </form>
-
+</div>
+      </div>
 
 
 
@@ -24,9 +27,9 @@
 <h2>{% trans "Results" %}</h2>
 <table class="table table-striped">
  {% for a in articels %}
-   	
+
     <tr><td><a href="/book/articel/{{a.id}}" >{{ a.title }}</a></td></tr>
-    
+
 {% endfor %}
 </table>
 {%  endif %}

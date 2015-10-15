@@ -5,7 +5,6 @@
 {% block content %}
 
 <!--Getting user data from mongodb and adding   -->
-{% for user in userinfo %}
 <h1>{% trans "My page" %}</h1>
 {%if info == "saved" %}
 <div class="alert alert-success">
@@ -27,44 +26,50 @@
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active" id="home">
-                                <form action="" method="post">
+                                    <div class="row">
+                                    <div class="col-md-4">
+                                <form action="" method="post" class="form-horizontal">
 								{% csrf_token %}
 								<p><label for="id_username">{% trans  "Username:" %}</label>
-									<input id="id_username" type="text" name="username" maxlength="30" value="{{ username }}" readonly="readonly"/> <span class="helptext"></span></p>
+									<input id="id_username" class="form-control" type="text" name="username" maxlength="30" value="{{ username }}" readonly="readonly"/> <span class="helptext"></span></p>
 								<p><label for="id_password1">{% trans  "Password:" %}</label>
-								<input type="password" name="password1" id="id_password1" /></p>
+								<input type="password" class="form-control" name="password1" id="id_password1" /></p>
 								<p><label for="id_password2">{% trans  "Password confirmation:" %}</label>
-								<input type="password" name="password2" id="id_password2" /> <span class="helptext">Enter the same password as above, for verification.</span></p>
+								<input type="password" class="form-control" name="password2" id="id_password2" /> <span class="helptext">Enter the same password as above, for verification.</span></p>
 									<div class="control-group">
 									<p><label class="control-label">{% trans  "Emaill:" %}</label>
 									<div class="controls">
-									<input type="email" name="email" id="id_email" value="{{ useremail }}" /> <span class="helptext">{% trans "Enter you email address" %}</span><p class="help-block"></p></p>
+									<input type="email" class="form-control" name="email" id="id_email" value="{{ useremail }}" /> <span class="helptext">{% trans "Enter you email address" %}</span><p class="help-block"></p></p>
 	                                </div>
 								</div>
-								<input type="submit" name="user_settings" value="Save" class="btn btn-success">
+								<input type="submit" name="user_settings" value="Save" class="btn btn-success" class="form-control">
 							</form>
  </div>
+                                    </div>
+  </div> <!-- Closing tab row -->
 
   <div class="tab-pane" id="messages">
    <form action="" method="post">
+                                   <div class="row">
+                                    <div class="col-md-4">
 
 								{% csrf_token %}
 								<input type="hidden" name="id" value="{{user.id}}">
-
+                                <img src="/static/profile/thumb_{{ user_id }}.jpg" />
 								<p><label for="id_fname">{% trans  "Name:" %}</label>
-									<input id="id_fname" type="text" name="id_fname" maxlength="30" value="{{user.first_name}}" />
+									<input class="form-control" id="id_fname" type="text" name="id_fname" maxlength="30" value="{{userinfo.first_name}}" />
 									<span class="helptext"></span></p>
 
 								<p><label for="id_sname">{% trans  "Surname:" %}</label>
-								<input type="text" name="id_sname" id="id_sname" value="{{user.last_name}}"/></p>
+								<input type="text" class="form-control" name="id_sname" id="id_sname" value="{{userinfo.last_name}}"/></p>
 								<p><label for="id_addres">{% trans  "Address:" %}</label>
-								<input type="text" name="id_address" id="id_address" value="{{user.address}}"/> <span class="helptext"></span></p>
+								<input type="text" class="form-control" name="id_address" id="id_address" value="{{userinfo.address}}"/> <span class="helptext"></span></p>
 								<p><label for="id_addres">{% trans  "Postnumber" %}:</label>
-								<input type="text" name="id_postnr" id="id_postnr" value="{{user.postnr}}"/> <span class="helptext"></span></p>
+								<input type="text" class="form-control" name="id_postnr" id="id_postnr" value="{{userinfo.postnr}}"/> <span class="helptext"></span></p>
 								<p><label for="id_cell">{% trans  "Phone:" %}</label>
-								<input type="text" name="id_cell" id="id_cell" value="{{ user.cell }}"/> <span class="helptext"></span></p>
+								<input type="text" class="form-control" name="id_cell" id="id_cell" value="{{ userinfo.cell }}"/> <span class="helptext"></span></p>
 								<p><label for="id_cell">{% trans  "Contry:" %}</label>
-								<select name="country">
+								<select class="form-control" name="country">
 <option value="Sweden">Sweden</option>
 <option value="Afganistan">Afghanistan</option>
 <option value="Albania">Albania</option>
@@ -317,7 +322,7 @@
 								<span class="helptext">{% trans  "Contry of stay" %}</span></p>
 
 								<p><label for="id_cell">{% trans  "Langage:" %}</label>
-								<select multiple="multiple" name="id_language">
+								<select class="form-control" multiple="multiple" name="id_language">
 								  <option>Swedish</option>
 								  <option>English</option>
 								  <option>3</option>
@@ -325,9 +330,11 @@
 								  <option>5</option>
 								</select>
 								<span class="helptext">{% trans  "Languages to write and read articels in. Press  to mark several" %}</span></p>
-								<input type="submit" name="user_detial" value="Save" class="btn btn-success">
+								<input  type="submit" name="user_detial" value="Save" class="btn btn-success" class="form-control">
 							</form>
-
+                </div>
+                </div>
+                <!-- Closing row for tab -->
 
 
   </div>
@@ -357,5 +364,5 @@
 
 
 
-{%endfor%}
+
 {%endblock%}

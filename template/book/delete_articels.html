@@ -11,20 +11,20 @@
 
 {%endif%}
 
- {% for a in articels %}
+
   <form action="#" method='post'>
 
    	{% csrf_token %}
-	<input type="hidden" name="id" value="{{a.id}}" />
+	<input type="hidden" name="id" value="{{articels.id}}" />
 	 <button type="submit" class="btn btn-danger">{% trans "DELETE" %}</button>
 </form>
    	
-    <h1> {{ a.title }}</h1>
-    <h3>Tags: {{a.tags}}</h3>
-    <h3>Locations: {{a.location}}</h3>
-    {% autoescape off %}{{a.text}}{% endautoescape %}
+    <h1> {{ articels.title }}</h1>
+    <h3>Tags: {{articels.tags}}</h3>
+    <h3>Locations: {{articels.location}}</h3>
+    {% autoescape off %}{{articels.text}}{% endautoescape %}
    
-{% endfor %}
+
 
 
 {%endblock%}

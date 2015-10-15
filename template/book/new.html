@@ -6,28 +6,32 @@
 
 {% block content %}
 
-
-   <form action="#" method='post'>
+        <div class="row">
+  <div class="col-md-4">
+   <form action="#" method='post' class="form-horizontal">
 
    	{% csrf_token %}
 
   <fieldset>
     <legend>{% trans "New Articel" %}</legend>
     <label>{% trans "Name" %}</label>
-    <input type="text" placeholder="Articel name" name='title'>
+    <input type="text" placeholder="Articel name" name='title' class="form-control">
     <span class="help-block">{% trans "Enter name of articel" %}</span>
     <label>{% trans "Locations" %}</label>
-    <input type="text" placeholder="Enter Locations" name="location" id="lo_search" data-provide="typeahead" data-items="10" />
+    <input type="text" placeholder="Enter Locations" name="location" id="lo_search" data-provide="typeahead" data-items="10" class="form-control"/>
    
     
     <span class="help-block">{% trans "Enter location for articel if any (Sepperate with , exemple stockholm, Uppsala)" %}</span>
     <label>{% trans "Tags" %}</label>
-    <input type="text" placeholder="Tags" name="tags" id="ta_search" data-provide="typeahead" data-items="10" />
+    <input type="text" placeholder="Tags" name="tags" id="ta_search" data-provide="typeahead" data-items="10" class="form-control" />
 
     <span class="help-block">{% trans "Enter tags to articel (Sepperate with , exemple work, internet)" %}</span>
 
-      <a href="/book/myupload"><button type="button" class="btn btn-success">{% trans "Upload Media" %}</button></a>
-    <textarea rows="10" cols="50" name="text"></textarea>
+      <a href="/book/myupload"><button type="button" class="btn btn-success" class="form-control">{% trans "Upload Media" %}</button></a><br></br>
+    </div>
+            </div>
+
+      <textarea rows="10" cols="50" name="text"></textarea><br></br>
 
     <button type="submit" class="btn btn-success">{% trans "Save" %}</button>
   </fieldset>

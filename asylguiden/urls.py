@@ -3,6 +3,7 @@ from django.views.static import *
 from django.conf import settings
 from django.conf.urls import patterns, url, include
 from django.contrib import admin
+from django.conf.urls.static import static
 admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
@@ -31,6 +32,7 @@ urlpatterns = patterns('',
      url(r'^book/start$', 'book.views.start'),
      url(r'^book/new$', 'book.views.new'),
      url(r'^book/question$', 'book.views.question'),
+     url(r'^book/question/(\w+)/$', 'book.views.view_question'),
      url(r'^book/new-question$', 'book.views.writeqestion'),
      url(r'^book/search-question$', 'book.views.searchquestion'),
      url(r'^book/articels$', 'book.views.articels'),
@@ -43,12 +45,14 @@ urlpatterns = patterns('',
      url(r'^book/tags$', 'book.views.top_ten_tags'),
      url(r'^book/location$', 'book.views.top_ten_location'),
      url(r'^book/search$', 'book.views.search_articels'),
+     url(r'^book/rate$', 'book.views.rate'),
      url(r'^book/(\w+)/(\w+)/$', 'book.views.view_location_tags'),
      url(r'^users/register$', 'users.views.register'),
-     url(r'^users/login$', 'users.views.login'),
+     url(r'^users/login$', 'users.views.web_login'),
      url(r'^users/logout$', 'users.views.logout'),
      url(r'^users/mypage$', 'users.views.mypage'),
      url(r'^users/resetpassword/(\w+)/$', 'users.views.resetpassword'),
+     url(r'^user/(\w+)$', 'users.views.user'),
      url(r'^users/lostpassword$', 'users.views.lostpassword'),
      url(r'^edu/start$','edu.views.start'),
      url(r'^work/start$','work.views.start'),

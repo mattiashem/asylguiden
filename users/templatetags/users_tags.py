@@ -7,13 +7,12 @@ from django.template import RequestContext
 from django.template import Library
 from django.http import HttpResponseRedirect
 from operator import itemgetter
-from mongoengine.queryset import Q
 from django import forms
-from mongoengine.django.auth import User
 from book.models import Post
+from django.contrib.auth.models import User
+
 from users.models import UserInfo
 
-from mongoengine import *
 from django.contrib import auth
 register = template.Library()
 
