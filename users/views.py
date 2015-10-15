@@ -10,17 +10,26 @@ from book.models import Post
 from users.models import UserInfo
 import datetime
 import hashlib
+<<<<<<< HEAD
 from django.shortcuts import redirect
 
 
 #class User(User):
 #    location = GeoPointField()
+=======
+from chimpy import chimpy
+
+
+class User(User):
+    location = GeoPointField()
+>>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 
 def register(request):
-	'''
+    '''
 	Register an new user
 	'''
+<<<<<<< HEAD
 	c = {}
 	c.update(csrf(request))
 	info = "no"
@@ -73,6 +82,47 @@ def web_login(request):
 			print("The username and password were incorrect.")
 
 	return render_to_response("users/login.html", {'info': info}, context_instance=RequestContext(request))
+=======
+    c = {}
+    c.update(csrf(request))
+    info = "no"
+    if request.method == 'POST':
+        try:
+            User.create_user(request.POST['username'], request.POST['password1'], request.POST['email'])
+            user = auth.authenticate(username=request.POST['username'], password=request.POST['password1'])
+            if user is not None and user.is_active:
+                auth.login(request, user)
+                User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'])
+                signup_mailchump(request.POST['email'])
+                return HttpResponseRedirect("/users/mypage")
+
+        except:
+            info = "error"
+            return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
+    else:
+        return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
+
+
+def login(request):
+    '''
+	loggin the user
+	'''
+    c = {}
+    c.update(csrf(request))
+    info = "no"
+    if request.method == 'POST':
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+        user = auth.authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            auth.login(request, user)
+            User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'])
+            return HttpResponseRedirect("/users/mypage")
+        else:
+            info = "error"
+
+    return render_to_response("users/login.html", {'info': info}, context_instance=RequestContext(request))
+>>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 def resetpassword(request,keys):
 	'''
@@ -130,10 +180,18 @@ def user(request,username):
 	Show the user profile OPEN
 	'''
 
+<<<<<<< HEAD
 	print username
 	user = UserInfo.objects.get(username=username)
 	user_2 = User.objects.get(username=username)
 	return render_to_response("users/user.html",{'user_id':user_2.id,'userinfo':user},context_instance=RequestContext(request))
+=======
+	user = UserInfo.objects(username=username)
+	user_2 = User.objects(username=username)
+	for u in user_2:
+		user_id =  str(hashlib.sha224(str(u.id)).hexdigest())
+	return render_to_response("users/user.html",{'user_id':user_id,'userinfo':user},context_instance=RequestContext(request))
+>>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 
 
@@ -148,6 +206,7 @@ def mypage(request):
 	'''
 	Show the users my page
 	'''
+<<<<<<< HEAD
 	if request.user.is_authenticated():
 		#No info
 		info="no"
@@ -205,3 +264,52 @@ def signup_mailchump(email):
 	'''
 	chimp = chimpy.Connection('d784f29c89de4f56fc793d85a074623c-us8')
 	chimp.list_subscribe('be2d53aa4d', email, {'FIRST': 'User', 'LAST': 'Asylguiden'}, double_optin=False)
+=======
+	#No info
+	info="no"
+	#Updating user settingsglobal name 'request' is not defined
+	if request.POST.get("user_settings"):
+		user = User.objects.get(id=request.user.id)
+		if request.POST.get('password1'):
+			user.set_password(request.POST.get('password1'))
+		if request.POST.get('email'):
+			user.email = request.POST.get('email')
+		user.save()
+		info = "saved"
+	#updating user details in mongodb	
+	if request.POST.get("user_detial"):
+		user = User.objects.get(id=request.user.id)
+		update = UserInfo.objects.get(user=user)
+		update.username = request.user.username
+		update.first_name = request.POST.get('id_fname')
+		update.last_name = request.POST.get('id_sname')
+		update.address = request.POST.get('id_address')
+		update.postnr = request.POST.get('id_postnr')
+		update.cell = request.POST.get('id_cell')
+		update.country = request.POST.get('id_country')
+		update.language = request.POST.get('id_language')
+		update.save()
+		info = "saved"
+
+	#Get user info fix for displying correct user email after update
+	user_info = User.objects.get(id=request.user.id)
+	userid   = request.user.id
+	username = request.user.username
+	useremail = user_info.email
+
+
+	currentuser = UserInfo.objects(user=user_info)
+	users_articel = Post.objects(auther=user_info)
+
+
+
+	return render_to_response("users/mypage.html",{'user_id':str(hashlib.sha224(str(request.user.id)).hexdigest()),'username':username,'useremail':useremail,'userid':userid,'users_articel':users_articel,'info':info,'userinfo':currentuser},context_instance=RequestContext(request))
+
+def signup_mailchump(email):
+    '''
+    Sign upp new user to our mailchimp email service
+    All new usere that sign up will get sign up to automatical
+    '''
+    chimp = chimpy.Connection('d784f29c89de4f56fc793d85a074623c-us8')
+    chimp.list_subscribe('be2d53aa4d', email, {'FIRST': 'User', 'LAST': 'Asylguiden'}, double_optin=False)
+>>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c

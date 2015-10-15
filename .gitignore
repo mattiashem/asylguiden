@@ -1,3 +1,8 @@
+book/share/*
 asylguiden/settings.py
 asylguiden/wsgi.py
 *.pyc
+.idea/*
+static/profile/*
+static/thumb/*
+static/user/*

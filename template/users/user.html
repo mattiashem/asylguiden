@@ -4,6 +4,7 @@
 {% load i18n %}
 {% block content %}
 
+<<<<<<< HEAD
 
             <h3>{% trans "User info for user" %}</h3>
             <img src="/static/profile/thumb_{{ user_id }}.jpg" />
@@ -12,6 +13,18 @@
             <h4>{% trans "Country" %} : {{ userinfo.country }}</h4>
             <h4>{% trans "Posts" %} : {{ userinfo.postscount }}</h4>
             <h4>{% trans "Rate" %} : {{ userinfo.read }}</h4>
+=======
+        {% for user in userinfo %}
+            <h3>{% trans "User info for user" %}</h3>
+            <img src="/static/profile/thumb_{{ user_id }}.jpg" />
+            <h4>{% trans "Username" %} : {{ user.username }}</h4>
+            <h4>{% trans "Name" %} : {{ user.first_name }} {{ user.last_name }}</h4>
+            <h4>{% trans "Country" %} : {{ user.country }}</h4>
+            <h4>{% trans "Posts" %} : {{ user.postscount }}</h4>
+            <h4>{% trans "Rate" %} : {{ user.read }}</h4>
+
+        {% endfor %}
+>>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 
 
