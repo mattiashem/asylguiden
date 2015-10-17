@@ -17,7 +17,7 @@ def deploy():
         #run('cp /asylguiden_prod/nginx/tls/bundle.crt /asylguiden/nginx/ssl/asylguiden/bundle.crt')
         #Stoping and buildning new images
         run('docker-compose stop')
-        sudo('cp -rf /asylguiden_d /asylguiden')
+        sudo('rsync -av /asylguiden_d/* /asylguiden/')
         run('docker-compose build')
         run('docker-compose start')
 
