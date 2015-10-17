@@ -55,9 +55,9 @@
 
 								{% csrf_token %}
 								<input type="hidden" name="id" value="{{user.id}}">
-                                <img src="/static/profile/thumb_{{ user_id }}.jpg" />
+                                <!-- <img src="/static/profile/thumb_{{ user_id }}.jpg" />-->
 								<p><label for="id_fname">{% trans  "Name:" %}</label>
-<<<<<<< HEAD
+
 									<input class="form-control" id="id_fname" type="text" name="id_fname" maxlength="30" value="{{userinfo.first_name}}" />
 									<span class="helptext"></span></p>
 
@@ -69,19 +69,6 @@
 								<input type="text" class="form-control" name="id_postnr" id="id_postnr" value="{{userinfo.postnr}}"/> <span class="helptext"></span></p>
 								<p><label for="id_cell">{% trans  "Phone:" %}</label>
 								<input type="text" class="form-control" name="id_cell" id="id_cell" value="{{ userinfo.cell }}"/> <span class="helptext"></span></p>
-=======
-									<input class="form-control" id="id_fname" type="text" name="id_fname" maxlength="30" value="{{user.first_name}}" />
-									<span class="helptext"></span></p>
-
-								<p><label for="id_sname">{% trans  "Surname:" %}</label>
-								<input type="text" class="form-control" name="id_sname" id="id_sname" value="{{user.last_name}}"/></p>
-								<p><label for="id_addres">{% trans  "Address:" %}</label>
-								<input type="text" class="form-control" name="id_address" id="id_address" value="{{user.address}}"/> <span class="helptext"></span></p>
-								<p><label for="id_addres">{% trans  "Postnumber" %}:</label>
-								<input type="text" class="form-control" name="id_postnr" id="id_postnr" value="{{user.postnr}}"/> <span class="helptext"></span></p>
-								<p><label for="id_cell">{% trans  "Phone:" %}</label>
-								<input type="text" class="form-control" name="id_cell" id="id_cell" value="{{ user.cell }}"/> <span class="helptext"></span></p>
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 								<p><label for="id_cell">{% trans  "Contry:" %}</label>
 								<select class="form-control" name="country">
 <option value="Sweden">Sweden</option>

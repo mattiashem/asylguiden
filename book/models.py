@@ -5,7 +5,7 @@ from django.db import models
 from djangotoolbox.fields import ListField
 
 
-<<<<<<< HEAD
+
 class Post(models.Model):
     title = models.CharField(max_length=120)
     auther = models.CharField(max_length=120)
@@ -14,16 +14,7 @@ class Post(models.Model):
     page_views = models.FloatField()
     page_rate = models.FloatField()
     text = models.TextField()
-=======
-class Post(Document):
-    title = StringField(max_length=120, required=True)
-    auther = ReferenceField(User) 
-    location = ListField(StringField(max_length=40))
-    tags = ListField(StringField(max_length=40))
-    page_views = IntField()
-    page_rate = IntField()
-    text = StringField()
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
+
 
 
 class Question(models.Model):
