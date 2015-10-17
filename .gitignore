@@ -1,3 +1,4 @@
+db/*
 book/share/*
 asylguiden/settings.py
 asylguiden/wsgi.py
