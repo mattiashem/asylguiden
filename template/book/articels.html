@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block content %}
-<<<<<<< HEAD
+
 <div class="alert alert-success">{% trans "Auther:"%}<a href="/user/{{auther.username }}" > {{auther.first_name }} {{autherlast_name }}</a>, Validated , {% trans "Posts"%}: {{ autherpostscount }}, {% trans "Level" %}: {{ auther.read }} </div>
 
    	
@@ -15,23 +15,7 @@
 {% if user.is_authenticated %}
     <div id="status" class="alert alert-warning">{% trans "Rate this articel" %} <button onclick="vote('5','{{ a.id }}')">5</button> - 4 - 3 - 2 - 1</div>
 {% endif %}
-=======
-{% for user in auther %}
-<div class="alert alert-success">{% trans "Auther:"%}<a href="/user/{{user.username }}" > {{user.first_name }} {{user.last_name }}</a>, Validated , {% trans "Posts"%}: {{ user.postscount }}, {% trans "Level" %}: {{ user.read }} </div>
-{% endfor %}
- {% for a in articels %}
-   	
-    <h1> {{ a.title }}</h1>
-    <h3>Tags: {% for t in a.tags %}{{t}} {%endfor %}</h3>
-    <h3>Locations: {% for l in a.location %}{{l}} {%endfor %}</h3>
-    {% autoescape off %}{{a.text}}{% endautoescape %}
 
-<div class="alert alert-success">{% trans "Views"%}:{{a.page_views}}, {% trans "Rate" %}:{{a.page_rate}} </div>
-{% if user.is_authenticated %}
-    <div id="status" class="alert alert-warning">{% trans "Rate this articel" %} <button onclick="vote('5','{{ a.id }}')">5</button> - 4 - 3 - 2 - 1</div>
-{% endif %}
-{% endfor %}
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 <form name="rate">
  {% csrf_token %}
 </form>

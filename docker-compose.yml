@@ -15,3 +15,5 @@ web:
    - mongo
 mongo:
     image: mongo
+    volumes:
+     - /db_a:/data/db

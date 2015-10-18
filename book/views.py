@@ -24,24 +24,6 @@ from django.shortcuts import redirect
 
 
 
-
-#Images process
-<<<<<<< HEAD
-
-
-#class User(User):
-#    location =  GeoPointField()
-=======
-try:
-	    from PIL import Image, ImageOps
-except ImportError:
-	    import Image
-	    import ImageOps
-
-class User(User):
-    location =  GeoPointField()
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
-
 def start(request):
     return render_to_response('book/index.html',context_instance=RequestContext(request))
 
@@ -52,15 +34,13 @@ def new(request):
 
     if request.method == 'POST':
         currentuser = User.objects.get(id=request.user.id)
-<<<<<<< HEAD
         print currentuser
-=======
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
+
 
         #Tags
         incommingtags=request.POST["tags"].replace(" ","")
         thetags=incommingtags.split(',')
-<<<<<<< HEAD
+
 
         #Location
         incommingloca=request.POST["location"].replace(" ","")
@@ -69,24 +49,10 @@ def new(request):
         #Saving articel
         articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0)
         articel.save()
-        #UserInfo.objects(username=currentuser).update_one(inc__postscount=1)
+        UserInfo.objects.select_related().filter(username=currentuser).update(postscount=F('postscount')+1)
 
         return render_to_response('book/saved.html',context_instance=RequestContext(request))
 
-=======
-
-        #Location
-        incommingloca=request.POST["location"].replace(" ","")
-        thelocations=incommingloca.split(',')
-
-        #Saving articel
-        articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0)
-        articel.save()
-        UserInfo.objects(user=currentuser).update_one(inc__postscount=1)
-
-        return render_to_response('book/saved.html',context_instance=RequestContext(request))
-
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
     return render_to_response('book/new.html', c,context_instance=RequestContext(request))
 
@@ -115,10 +81,7 @@ def writeqestion(request):
 
 	return render_to_response('book/qestion.html', c,context_instance=RequestContext(request))
 
-<<<<<<< HEAD
 @login_required
-=======
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 def rate(request):
     '''
     Rate the articel
@@ -126,11 +89,8 @@ def rate(request):
     if request.method == 'POST':
         if request.user.id:
             currentuser = User.objects.get(id=request.user.id)
-<<<<<<< HEAD
-            Post.objects.select_related().filter(id=request.POST.get('articel')).update(page_rate=F('page_rate')+1)
-=======
+
             Post.objects(id=request.POST.get('articel')).update_one(inc__page_rate=int(request.POST.get('rate')))
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
             return render_to_response('book/rate_ok.html',context_instance=RequestContext(request))
         else:
             print "User not login"
@@ -169,23 +129,12 @@ def searchquestion(request):
 
 
 def articels(request):
-<<<<<<< HEAD
-    '''
-    Show articels in databas
-    '''
-    try:
-        articels = Post.objects.all()
-    except:
-           articels=[]
 
-    return render_to_response('book/list_articels.html',  {'articels': articels},context_instance=RequestContext(request))
-=======
 	'''
 	Show articels in databas
 	'''
-	articels = Post.objects()
+	articels = Post.objects.all()
 	return render_to_response('book/list_articels.html',  {'articels': articels},context_instance=RequestContext(request))
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 def top_ten_tags(request):
 	'''
@@ -241,7 +190,6 @@ def view_articel(request,id):
     '''
     View and articel
     '''
-<<<<<<< HEAD
     Post.objects.select_related().filter(id=id).update(page_views=F('page_views')+1)
     articels = Post.objects.get(id=id)
     a = articels
@@ -264,15 +212,7 @@ def view_question(request,id):
 
 
     return render_to_response('book/qarticels.html',  {'articels': articels, 'auther': theuser },context_instance=RequestContext(request))
-=======
-    Post.objects(id=id).update_one(inc__page_views=1)
-    articels = Post.objects(id=id)
-    a = articels[0]
-    UserInfo.objects(user=a.auther).update_one(inc__read=1)
-    theuser = UserInfo.objects(user=a.auther)
 
-    return render_to_response('book/articels.html',  {'articels': articels, 'auther': theuser },context_instance=RequestContext(request))
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 def view_tags(request,tags):
 	'''

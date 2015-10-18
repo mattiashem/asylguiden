@@ -10,26 +10,20 @@ from book.models import Post
 from users.models import UserInfo
 import datetime
 import hashlib
-<<<<<<< HEAD
+
 from django.shortcuts import redirect
 
 
-#class User(User):
-#    location = GeoPointField()
-=======
-from chimpy import chimpy
 
 
-class User(User):
-    location = GeoPointField()
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
+
+
 
 
 def register(request):
-    '''
+	'''
 	Register an new user
 	'''
-<<<<<<< HEAD
 	c = {}
 	c.update(csrf(request))
 	info = "no"
@@ -82,47 +76,9 @@ def web_login(request):
 			print("The username and password were incorrect.")
 
 	return render_to_response("users/login.html", {'info': info}, context_instance=RequestContext(request))
-=======
-    c = {}
-    c.update(csrf(request))
-    info = "no"
-    if request.method == 'POST':
-        try:
-            User.create_user(request.POST['username'], request.POST['password1'], request.POST['email'])
-            user = auth.authenticate(username=request.POST['username'], password=request.POST['password1'])
-            if user is not None and user.is_active:
-                auth.login(request, user)
-                User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'])
-                signup_mailchump(request.POST['email'])
-                return HttpResponseRedirect("/users/mypage")
-
-        except:
-            info = "error"
-            return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
-    else:
-        return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
 
 
-def login(request):
-    '''
-	loggin the user
-	'''
-    c = {}
-    c.update(csrf(request))
-    info = "no"
-    if request.method == 'POST':
-        username = request.POST.get('username', '')
-        password = request.POST.get('password', '')
-        user = auth.authenticate(username=username, password=password)
-        if user is not None and user.is_active:
-            auth.login(request, user)
-            User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'])
-            return HttpResponseRedirect("/users/mypage")
-        else:
-            info = "error"
 
-    return render_to_response("users/login.html", {'info': info}, context_instance=RequestContext(request))
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 def resetpassword(request,keys):
 	'''
@@ -180,18 +136,11 @@ def user(request,username):
 	Show the user profile OPEN
 	'''
 
-<<<<<<< HEAD
+
 	print username
 	user = UserInfo.objects.get(username=username)
 	user_2 = User.objects.get(username=username)
 	return render_to_response("users/user.html",{'user_id':user_2.id,'userinfo':user},context_instance=RequestContext(request))
-=======
-	user = UserInfo.objects(username=username)
-	user_2 = User.objects(username=username)
-	for u in user_2:
-		user_id =  str(hashlib.sha224(str(u.id)).hexdigest())
-	return render_to_response("users/user.html",{'user_id':user_id,'userinfo':user},context_instance=RequestContext(request))
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
 
 
 
@@ -206,7 +155,6 @@ def mypage(request):
 	'''
 	Show the users my page
 	'''
-<<<<<<< HEAD
 	if request.user.is_authenticated():
 		#No info
 		info="no"
@@ -264,7 +212,6 @@ def signup_mailchump(email):
 	'''
 	chimp = chimpy.Connection('d784f29c89de4f56fc793d85a074623c-us8')
 	chimp.list_subscribe('be2d53aa4d', email, {'FIRST': 'User', 'LAST': 'Asylguiden'}, double_optin=False)
-=======
 	#No info
 	info="no"
 	#Updating user settingsglobal name 'request' is not defined
@@ -312,4 +259,3 @@ def signup_mailchump(email):
     '''
     chimp = chimpy.Connection('d784f29c89de4f56fc793d85a074623c-us8')
     chimp.list_subscribe('be2d53aa4d', email, {'FIRST': 'User', 'LAST': 'Asylguiden'}, double_optin=False)
->>>>>>> d4e9b9a8f34944a3e045ff50c81afcfb9e32377c
