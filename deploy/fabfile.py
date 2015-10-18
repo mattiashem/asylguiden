@@ -3,7 +3,7 @@ from fabric.context_managers import cd
 from fabric.operations import put, sudo
 from fabric.contrib.project import rsync_project
 
-env.user='ubuntu'
+env.user='root'
 
 
 def deploy():

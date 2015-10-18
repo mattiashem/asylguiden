@@ -6,6 +6,7 @@
 
 
 FROM centos:centos7
+#FROM python:2-onbuild
 
 # File Author / Maintainer
 MAINTAINER Mattias Hemmingsson
