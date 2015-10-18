@@ -1,0 +1,21 @@
+{% extends "book/index.html" %}
+{% load i18n %}
+
+<h1>{% trans "Questions and Answers" %}</h1>
+{% block content %}
+
+
+    <h2> {{ articels.title }}</h2>
+    <h3>{% trans "Tags:" %} {% for t in articels.tags %}{{t}} {%endfor %}</h3>
+    <h3>{% trans "Locations:" %} {% for l in articels.location %}{{l}} {%endfor %}</h3>
+    {% autoescape off %}{{articels.text}}{% endautoescape %}
+
+
+
+
+
+
+
+
+
+{%endblock%}

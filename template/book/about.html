@@ -1,0 +1,45 @@
+
+
+
+
+{% extends "book/index.html" %}
+{% load i18n %}
+{% block content %}
+
+
+        {%if info == "saved" %}
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>{% trans "Sent! " %}</strong>{% trans  "You messages has bean sent to us" %}
+</div>
+
+{%endif%}
+
+
+<h1>{% trans "Asylguiden.se" %}</h1>
+<p>{% trans "Asylguiden is and online plattform and for asyl information, education and work" %}</p>
+
+
+			
+
+</table>			
+
+
+
+
+
+
+<h2>{% trans "Contact Asylguiden" %}</h2>
+
+<form action="#" method='post' role="form">
+    	{% csrf_token %}
+		<input class="form-control" type="text" name="subject" placeholder="Subject"/><br>
+        <input class="form-control" type="text" name="from_email" placeholder="You Email"/><br>
+		<textarea name="text" class="form-control">
+		</textarea><br>
+    	<button type="submit" class="btn btn-success" class="form-control">Send</button>
+
+</form>
+
+
+{%endblock%}

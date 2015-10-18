@@ -1,0 +1,26 @@
+{% extends "book/index.html" %}
+{% load i18n %}
+{% block content %}
+<table class="table table-striped">
+	<tr><td><h3>{% trans "Title" %}</h3></td><td><h3>{% trans "Tags" %}</h3></td><td><h3>{% trans "Location" %}</h3></td></tr>
+
+
+ {% for a in articels %}
+
+    <tr><td><a href="/book/question/{{ a.id }}" >{{ a.title }}</a></td><td>
+		{% for t in a.tags %}
+			{{t}}
+		{%endfor %}
+	</td><td>
+	{% for l in a.location %}
+			{{l}}
+		{%endfor %}
+</td></tr>
+
+
+{% endfor %}
+
+</table>
+
+
+{%endblock%}

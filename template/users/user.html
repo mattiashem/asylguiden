@@ -1,0 +1,18 @@
+{% extends "book/index.html" %}
+<!-- Load extra tags -->
+{% load users_tags %}
+{% load i18n %}
+{% block content %}
+
+
+            <h3>{% trans "User info for user" %}</h3>
+            <!-- <img src="/static/profile/thumb_{{ user_id }}.jpg" />-->
+            <h4>{% trans "Username" %} : {{ userinfo.username }}</h4>
+            <h4>{% trans "Name" %} : {{ userinfo.first_name }} {{ user.last_name }}</h4>
+            <h4>{% trans "Country" %} : {{ userinfo.country }}</h4>
+            <h4>{% trans "Posts" %} : {{ userinfo.postscount }}</h4>
+            <h4>{% trans "Rate" %} : {{ userinfo.read }}</h4>
+
+
+
+        {%endblock%}

@@ -1,0 +1,29 @@
+{% extends "book/index.html" %}
+{% load i18n %}
+{% block content %}
+{%if info == "error" %}
+<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>{% trans "Error" %}</strong>{% trans " Wrong Login please efter correct username ore password" %}
+</div>
+
+{%endif%}
+
+        <div class="row">
+  <div class="col-md-4">
+<h1>{% trans "Login" %}</h1>
+<form action="" method="post" class="form-horizontal" >
+
+	{% csrf_token %}
+
+	<p><label for="id_username">{% trans "Username:" %}</label>
+		<input id="id_username" type="text" name="username" maxlength="30" class="form-control" /> <span class="helptext"></span></p>
+<p><label for="id_password1">{% trans "Password:" %}</label>
+	<input type="password" name="password" id="id_password" class="form-control" /></p>
+
+	<input type="submit" value="Loggin" class="btn btn-success" class="form-control" >
+</form>
+
+      </div>
+            </div>
+{%endblock%}

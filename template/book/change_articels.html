@@ -1,0 +1,56 @@
+{% extends "book/index.html" %}
+{% load i18n %}
+
+{% block content %}
+
+
+{%if info == "update" %}
+<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>{% trans "Changed!" %}</strong>[% trans "The Articel has bean updated." %}
+</div>
+
+{%endif%}
+
+<h1>{% trans "Change Articel" %}</h1>
+
+ <form action="#" method='post'>
+
+   	{% csrf_token %}
+
+  <fieldset>
+    <label>{% trans "Name" %}</label>
+    <input type="hidden" name="id" value="{{ articels.id }}"/>
+    <input type="text" placeholder="Articel name" name='title'  value='{{ articels.title }}'>
+    <span class="help-block">{% trans "Enter name of articel" %}</span>
+    <label>{% trans "Locations" %}</label>
+    <input type="text" placeholder="Enter Locations " name="location" value='{% for l in articels.location %}{{l}} {%endfor %}' id="lo_search" data-provide="typeahead" data-items="10" >
+    <span class="help-block">{% trans "Enter location for articel if any" %}</span>
+    <label>{% trans "Tags" %}</label>
+    <input type="text" placeholder="Tags" name="tags" value='{% for t in articels.tags %}{{t}} {%endfor %}' id="ta_search" data-provide="typeahead" data-items="10">
+    <span class="help-block">{% trans "Enter tags to articel" %}</span>
+    <textarea rows="10" cols="50" name="text">{{ articels.text }}</textarea>
+
+
+
+    <button type="submit" class="btn btn-success">{% trans "Save" %}</button>
+  </fieldset>
+</form>
+
+
+
+{%endblock%}
+
+
+<!--Put you side javascript here as javascript code  -->
+{% block js_end%}
+
+ jQuery(document).ready(function() {
+        var subjects = ['Stockholm', 'Göteborg', 'Malmö', 'Lidköping', 'Uppsala', 'Umeå', 'Luleå', 'Norrköping', 'Jönköping'];   
+        $('#lo_search').typeahead({source: subjects})
+
+        var subjects = ['hund', 'katt', 'SQL', 'PostgreSQL', 'HTML', 'CSS', 'HTML5', 'CSS3', 'JSON'];   
+        $('#ta_search').typeahead({source: subjects})   
+          });
+
+{%endblock%}

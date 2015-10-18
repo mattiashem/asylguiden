@@ -1,0 +1,35 @@
+{% extends "book/index.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Help us" %}</h1>
+
+
+<table>
+	<tr>
+	<td valign="top" >
+		<h2>We need a lot of help !!</h2>
+		<p>Goin us at this project bourd</p><a href="https://tree.taiga.io/project/mattiashem-asylguiden/">Asylguiden open project</a>
+		<!-- Startin help section-->
+		<h3>Artwork</h3>
+		<p>Are you an amazing grafical designer that can work with html/css and javascript? Send us an email</p>
+		<h3>Server Hosting</h3>
+		<p>We need more server, Are you an hostingcompany and have some server over?. </p>
+        <h3>Translations</h3>
+        <p>Help us get asylguiden in as many laguage as possible. Download our laguage file and translate it for us.</p>
+        <h3>Donate money</h3>
+        <p>Money feeds ur server and programers and can make us build more and more.(Today donate to Mattias private paypal will change later)</p>
+        <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/SE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
+	<!-- Ending help -->
+	</td>
+	</tr>	
+</table>
+
+{%endblock%}
