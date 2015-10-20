@@ -47,7 +47,7 @@ def new(request):
         thelocations=incommingloca.split(',')
 
         #Saving articel
-        articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0)
+        articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0,language=request.POST["language"])
         articel.save()
         UserInfo.objects.select_related().filter(username=currentuser).update(postscount=F('postscount')+1)
 
