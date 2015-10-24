@@ -4,7 +4,7 @@
 {%if info == "error" %}
 <div class="alert">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>{% trans "Error" %}</strong>{% trans  "Error Register user username ore email address" %}
+  <strong>{% trans "Error" %}</strong>{% trans  " Error Register user username ore email address" %}
 </div>
 
 {%endif%}
@@ -14,19 +14,18 @@
 <form action="" method="post" class="form-horizontal">
 <div class="form-group">
 	{% csrf_token %}
+<p><label for="id_email" class="control-label" class="form-control" >{% trans "Email" %}:</label>
 
-	<p><label for="id_username">{% trans "Username:" %}</label>
-		<input id="id_username" type="text" name="username" maxlength="30" class="form-control" /> <span class="helptext">Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
+	<input type="email" name="email" id="id_email" class="form-control" /> <span class="helptext">{% trans "Enter you email address" %}</span><p class="help-block"></p></p>
+
+
 <p><label for="id_password1">{% trans "Password" %}:</label>
 	<input type="password" name="password1" id="id_password1" class="form-control"/></p>
 <p><label for="id_password2">{% trans "Password confirmation" %}:</label>
 	<input type="password" name="password2" id="id_password2" class="form-control" /> <span class="helptext">Enter the same password as above, for verification.</span></p>
 	<div class="control-group">
         <div class="controls">
-	<p><label for="id_email" class="control-label" class="form-control" >{% trans "Email" %}:</label>
-
-	<input type="email" name="email" id="id_email" class="form-control" /> <span class="helptext">{% trans "Enter you email address" %}</span><p class="help-block"></p></p>
-</div>
+	</div>
 </div>
 	<input type="submit" value="Create new account" class="btn btn-success">
     </div>

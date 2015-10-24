@@ -29,17 +29,22 @@
 
       <a href="/book/myupload"><button type="button" class="btn btn-success" class="form-control">{% trans "Upload Media" %}</button></a><br></br>
     </div>
-    <label>{% trans "Written in language" %}</label>
-    <select class="form-control" name="language">
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for language in languages %}
-                <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                {{ language.name_local }} ({{ language.code }})
-                </option>
-        {% endfor %}
-    </select>
-            </div>
 
+            <label>{% trans "Country articel regarding" %}</label>
+            <select class="form-control" name="country">
+                <option value="Sweden">{% trans  "Sweden" %}</option>
+                <option value="Sweden">{% trans  "Germany" %}</option>
+				</select>
+
+            <label>{% trans "Written in language" %}</label>
+                <select class="form-control" name="language">
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select><br>
       <textarea rows="10" cols="50" name="text"></textarea><br></br>
 
     <button type="submit" class="btn btn-success">{% trans "Save" %}</button>

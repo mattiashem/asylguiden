@@ -47,7 +47,7 @@ def new(request):
         thelocations=incommingloca.split(',')
 
         #Saving articel
-        articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0,language=request.POST["language"])
+        articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0,language=request.POST["language"],country=request.POST["country"])
         articel.save()
         UserInfo.objects.select_related().filter(username=currentuser).update(postscount=F('postscount')+1)
 
@@ -119,7 +119,7 @@ def searchquestion(request):
 
 	if request.method == 'POST':
 		search=request.POST['search']
-		Articels = Question.objects(Q(tags=search) | Q(where=search))
+		Articels = Question.objects(Q(tags=search) | Q(where=search) | Q(language=request.POST["language"]))
 		print Articels
 		return render_to_response('book/qsearch.html', {'articels': Articels},context_instance=RequestContext(request))
 

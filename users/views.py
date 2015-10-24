@@ -10,9 +10,8 @@ from book.models import Post
 from users.models import UserInfo
 import datetime
 import hashlib
-
+from email_control import welcome_email
 from django.shortcuts import redirect
-
 
 
 
@@ -28,20 +27,22 @@ def register(request):
 	c.update(csrf(request))
 	info = "no"
 	if request.method == 'POST':
-			user = User.objects.filter(username=request.POST['username'])
+			user = User.objects.filter(username=request.POST['email'])
 			print user
 			if user:
-				print "#########################user already is there"
-				return HttpResponseRedirect("/users/register")
+				info= "error"
+				return render_to_response("users/register.html", {'info': info}, context_instance=RequestContext(request))
 			else:
-				User.objects.create_user(request.POST['username'], request.POST['email'], request.POST['password1'])
-				user = authenticate(username=request.POST['username'], password=request.POST['password1'])
+				User.objects.create_user(request.POST['email'], request.POST['email'], request.POST['password1'])
+				user = authenticate(username=request.POST['email'], password=request.POST['password1'])
 				print user
 				if user is not None:
 					if user.is_active:
 						login(request, user)
 						print "logged in"
-						User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['username'],postscount=0,read=0)
+						User_info = UserInfo.objects.get_or_create(user=user, username=request.POST['email'],postscount=0,read=0)
+						if welcome_email(request.POST['email'],request.POST['email']):
+							print "Welcome email sent"
 						#signup_mailchump(request.POST['email'])
 						return HttpResponseRedirect("/users/mypage")
 			return HttpResponseRedirect("/users/register")
@@ -60,7 +61,7 @@ def web_login(request):
 	c.update(csrf(request))
 	info = "no"
 	if request.method == 'POST':
-		user = authenticate(username='mathem', password='test')
+		user = authenticate(username=request.POST['username'], password=request.POST['password'])
 		print user
 		if user is not None:
 			# the password verified for the user

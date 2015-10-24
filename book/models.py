@@ -10,6 +10,7 @@ class Post(models.Model):
     title = models.CharField(max_length=120)
     auther = models.CharField(max_length=120)
     language = models.CharField(max_length=120)
+    country = models.CharField(max_length=120)
     location = ListField()
     tags = ListField()
     page_views = models.FloatField()
