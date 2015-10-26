@@ -70,9 +70,10 @@
 								<p><label for="id_cell">{% trans  "Phone:" %}</label>
 								<input type="text" class="form-control" name="id_cell" id="id_cell" value="{{ userinfo.cell }}"/> <span class="helptext"></span></p>
 								<p><label for="id_cell">{% trans  "Contry:" %}</label>
-								<select class="form-control" name="country">
-<option value="Sweden">{% trans  "Sweden" %}</option>
-<option value="Sweden">{% trans  "Germany" %}</option>
+								<select class="form-control" name="id_country">
+									<option>{{ userinfo.country }}</option>
+<option selected="selected" value="Sweden">{% trans  "Sweden" %}</option>
+<option value="Germany">{% trans  "Germany" %}</option>
 
 
 								</select>
@@ -80,6 +81,7 @@
 
 								<p><label for="id_cell">{% trans  "Langage:" %}</label>
 								<select class="form-control" multiple="multiple" name="id_language">
+								  <option selected="selected">{{ userinfo.language }}</option>
 								  <option>{% trans  "Swedish" %}</option>
 								  <option>{% trans  "English" %}</option>
 								  <option>{% trans  "Germany" %}</option>

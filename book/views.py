@@ -27,6 +27,22 @@ from django.shortcuts import redirect
 def start(request):
     return render_to_response('book/index.html',context_instance=RequestContext(request))
 
+
+def get_user_settings(id):
+
+        if id == None:
+            print "get all laguages"
+            return True
+        else:
+            print id
+            currentuser = User.objects.get(id=id)
+            lan = UserInfo.objects.get(username=currentuser)
+            print lan.country
+            print lan.language
+            dict = {'country': lan.country, 'language': lan.language};
+            return dict
+
+
 @login_required
 def new(request):
     c = {}
@@ -129,12 +145,15 @@ def searchquestion(request):
 
 
 def articels(request):
-
-	'''
-	Show articels in databas
-	'''
-	articels = Post.objects.all()
-	return render_to_response('book/list_articels.html',  {'articels': articels},context_instance=RequestContext(request))
+    '''
+    Show articels in databas
+    '''
+    u_dict = get_user_settings(request.user.id)
+    if u_dict:
+        articels = Post.objects.all()
+    else:
+        articels = Post.objects.filter(language=u_dict['language'], country=u_dict['country'])
+    return render_to_response('book/list_articels.html',  {'articels': articels},context_instance=RequestContext(request))
 
 def top_ten_tags(request):
 	'''
