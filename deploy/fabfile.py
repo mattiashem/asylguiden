@@ -40,7 +40,7 @@ def deploy():
         run("sed -i 's/DEBUG \= True/DEBUG \= False/' /asylguiden/asylguiden/settings.py")
         run("sed -i 's/TEMPLATE_DEBUG \= DEBUG/\#TEMPLATE_DEBUG \= DEBUG/' /asylguiden/asylguiden/settings.py")
         run("sed -i 's/THUMBNAIL_DEBUG \= True/\THUMBNAIL_DEBUG \= False/' /asylguiden/asylguiden/settings.py")
-        run("sed -i 's/^SECRET_KEY.*/\SECRET_KEY = {0}/' /asylguiden/asylguiden/settings.py".format (id_generator()))
+        run("sed -i 's/^SECRET_KEY.*/\SECRET_KEY = \"{0}\"/' /asylguiden/asylguiden/settings.py".format (id_generator()))
 
 
         #sudo('rsync -av /asylguiden_d/* /asylguiden/')
