@@ -16,7 +16,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Asylguiden.se</title>
-		
+
 		<link type="text/css" href="/static/css/bootstrap.css" rel="stylesheet" />
         <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
 		<link type="text/css" href="/static/css/main.css" rel="stylesheet" />
@@ -86,15 +86,12 @@
 });
         </script>
 
-        {% block head %}
-		<meta name="description" content="Här hjälper vi asylsökande till bra integration, Välkommen att hjälpa och få hjälp">
-        <meta name="author" content="Asylguiden ">
+		<meta name="description" content="">
+        <meta name="author" content="">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        {% endblock %}
-
 
 	</head>
-	 
+
 <!---top meny values -->
   <div class="topbar row topmenu">
             <div class="col-md-1"></div>
@@ -104,31 +101,81 @@
 
   </div>
 
+   <!-- custom page menu -->
+     <div class="topmenu">
+	    <div id="dhtmlgoodies_control"><a href="#" onclick="slidedown_showHide('box1');return false;">Console</a></div>
+	    <div class="dhtmlgoodies_contentBox" id="box1">
+		<div class="dhtmlgoodies_content" id="subBox1">
+			<!-- Console content goes here -->
+			<console>
 
-   <!-- custom page menu if arabic use menu from right-->
-{% get_current_language as LANGUAGE_CODE %}
-{% if LANGUAGE_CODE == 'ar' %}
-     {% include "book/menu_r.html" %}
-{% else %}
-    {% include "book/menu_l.html" %}
-{% endif %}
+                <div class="row">
+                    <div class="col-md-8">
+                        {% if user.is_authenticated %}
+                        <b>User {{ user.username}}</b><a href="/users/mypage">{% trans "Account" %}</a> <a href="/users/logout">{% trans "Log Out" %}</a>
+                        {% else %}
+                        <a href="/users/login"><button class="btn btn-primary" type="submit">{% trans "Login" %}</button></a><a href="/users/register"><button class="btn btn-success" type="submit">{% trans "Register" %}</button></a>
+                        {% endif %}
+                    </div>
+                     <div class="col-md-4">
+                        <form action="{% url 'set_language' %}" method="post" class="form-inline" >
+                        <b>{% trans "Language" %}</b>
+                        {% csrf_token %}
+                        <input   name="next" type="hidden" value="{{ redirect_to }}" class="form-control"/>
+                        <select  name="language" class="form-control"
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Change" class="form-control btn btn-info"/>
+                        </form></div>
+                    </div>
 
 
 
-           <!--- CONTENT HERE -->
-         <div class="container">
-               {% block content %}
 
 
 
 
 
+                <div class="row">
+                <div class="col-md-4">
+                    <li><h3>{% trans "The Book" %}</h3></li>
+                    <li><a href="/book/start">{% trans "Home" %}</a></li>
+                    <li><a href="/book/articels">{% trans "Read" %}</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/book/new">{% trans "Write" %}</a></li>
+                    {%endif%}
+                    <li><a href="/book/search">{% trans "Search" %}</a></li>
+                </div>
+
+                <div class="col-md-4">
+                    <li><h3>{% trans "Places" %}</h3></li>
+                    {% for loca in top_locations %}
+                    <li><a href="/book/location/{{loca}}/">{{ loca }}</a></li>
+                    {% endfor %}
+              </div>
+
+                <div class="col-md-4">
+                    <li><h3>{% trans "Tags" %}</h3></li>
+                    {% for tags in top_tags %}
+                    <li><a href="/book/tags/{{tags}}/">{{ tags }}</a></li>
+                    {% endfor %}
+                </div>
+                 </div>
 
 
 
-
-<!-- Carousel
-    ================================================== -->
+            </console>
+        </div>
+        </div>
+     </div>
+ <div class="container">
+   {% block content %}
+        </div>
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
@@ -169,59 +216,71 @@
 
 
 
+
+
+
+    <div class="container">
+
+
+
+
       <!-- START THE FEATURETTES -->
-     <div class="container">
 
-            <hr class="featurette-divider">
-                <div class="featurette">
-                    <img class="featurette-image pull-left" src="/static/img/work.jpg">
-                    <h2 class="featurette-heading">{% trans "Information " %}<br><span class="muted"></span></h2>
-                    <p class="lead">{% trans "Read how others have done and experince, And when you are at the end of you intergartion please give back so that you can help others." %}</p>
-                </div>
+      <hr class="featurette-divider">
 
-            <hr class="featurette-divider">
-                <div class="featurette">
-                    <img class="featurette-image pull-right" src="/static/img/sthlm.jpg">
-                    <h2 class="featurette-heading">{% trans "Stockholm" %}<br></h2>
-                    <p class="lead">{% trans "Qestions about STHLM here we have collected our best articels from Stockholm"%}</p>
-                </div>
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="/static/img/work.jpg">
+        <h2 class="featurette-heading"><span class="muted">{% trans "Small online directed courses with certificate" %}</span></h2>
+        <p class="lead">{% trans "Lets make a online course for 'Working in burger kitchen' take the course get certificated and now any burger place can give you work ?" %}</p>
+      </div>
 
-            <hr class="featurette-divider">
-                <div class="featurette">
-                    <img class="featurette-image pull-left" src="/static/img/a.jpg">
-                    <h2 class="featurette-heading">{% trans "GIVE TO The Guide "%}</h2>
-                    <p class="lead">{% trans "Give the guide five stories that you have heard och experince. So other can learn from what you have sean and heard." %}</p>
-                 </div>
-    </div>
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+
+
+        <h2 class="featurette-heading">{% trans "Free Educations" %}</h2>
+        <p class="lead">{% trans "There are son many free online eductaions today. Asylguiden provides help finding and passing online courses."%}</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+
+        <h2 class="featurette-heading">{% trans "We need your help"%}<span class="muted">
+        <p class="lead">{% trans "We need help from companies so that we can make the right online course, And from schools so the course can be great, come work with us" %}</p>
+      </div>
+
+      <hr class="featurette-divider">
+
       <!-- /END THE FEATURETTES -->
   {% endblock %}
-              <!-- CLOSING CONTENT -->
-
 
       <!-- FOOTER -->
       <footer>
           <br>
           <br>
-            <p class="pull-right"><a href="#">{% trans "Back to top" %}</a></p>
-            <p>&copy; 2015 Asylguiden. &middot; <a href="/about">{% trans "About" %}</a> &middot; <a href="/help">{% trans "Help Us" %}</a> &middot; <a href="/tech">{% trans "Tech" %}</a> &middot; <a href="/support">{% trans "Support" %}</a>&middot; <a href="/supporters"><b>{% trans "Our Supporters" %}</b></a></p>
+        <p class="pull-right"><a href="#">{% trans "Back to top" %}</a></p>
+        <p>&copy; 2014 Asylguiden. &middot; <a href="/about">{% trans "About" %}</a> &middot; <a href="/help">{% trans "Help Us" %}</a> &middot; <a href="/tech">{% trans "Tech" %}</a> &middot; <a href="/support">{% trans "Support" %}</a>&middot; <a href="/supporters"><b>{% trans "Our Supporters" %}</b></a></p>
       </footer>
 
     </div><!-- /.container -->
 
-   
+
   <!-- JavaScript at the bottom for fast page loading -->
 
   <script src="/static/js/jquery.min.js"></script>
-  
+
 
   <!-- scripts concatenated and minified via ant build script-->
   <script defer src="/static/js/plugins.js"></script>
   <script defer src="/static/js/script.js"></script>
-
+  <script defer src="/static/js/bootstrap.js"></script>
   <script defer src="/static/js/formvalidation.js"></script>
   <script defer src="/static/js/mylibs/console.js"></script>
   <!-- end scripts-->
    <script>
+
    {% block js_end %}
       !function ($) {
         $(function(){
@@ -229,24 +288,23 @@
           $('#myCarousel').carousel()
         })
       }(window.jQuery)
+
+
+
+
+
         $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
 
-   {% endblock %}
+
+        {% endblock %}
+
+
+
+
+
+
     </script>
 
 
-<!-- Google analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-44628197-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-</body>  
-</html>  
+</body>
+</html>

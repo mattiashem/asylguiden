@@ -18,7 +18,7 @@ EXPOSE 8080:8080
 #Installing git
 RUN yum install git -y
 RUN yum install gcc -y
-RUN yum install python-devel -y
+RUN yum install python-devel libjpeg-turbo-devel zlib-devel-y
 
 
 #Setting up pip

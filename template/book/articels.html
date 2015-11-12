@@ -1,6 +1,16 @@
 {% extends "book/index.html" %}
 {% load i18n %}
 
+
+        {% block head %}
+		<meta name="description" content="{{ articels.title }}, {% for l in articels.location %}{{l}} {%endfor %}, {% for t in articels.tags %}{{t}} {%endfor %}">
+        <meta name="author" content="{{ auther.first_name }}, {{ autherlast_name }}">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {% endblock %}
+
+
+
+
 {% block content %}
 
 <div class="alert alert-success">{% trans "Auther:"%}<a href="/user/{{auther.username }}" > {{auther.first_name }} {{autherlast_name }}</a>, Validated , {% trans "Posts"%}: {{ autherpostscount }}, {% trans "Level" %}: {{ auther.read }} </div>

@@ -1,0 +1,76 @@
+{% load i18n %}
+<div class="topmenu">
+	    <div id="dhtmlgoodies_control"><a href="#" onclick="slidedown_showHide('box1');return false;">Console</a></div>
+	    <div class="dhtmlgoodies_contentBox" id="box1">
+		<div class="dhtmlgoodies_content" id="subBox1">
+			<!-- Console content goes here -->
+			<console>
+
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <!--{% get_current_language as LANGUAGE_CODE %}
+                        {{LANGUAGE_CODE}}-->
+                        {% if user.is_authenticated %}
+                        <b>User {{ user.username}}</b> - <a href="/users/mypage"><button class="btn btn-primary" type="submit">{% trans "Account" %}</button></a> <a href="/users/logout"><button class="btn btn-warning" type="submit">{% trans "Log Out" %}</button></a>
+                        {% else %}
+                        <a href="/users/login"><button class="btn btn-primary" type="submit">{% trans "Login" %}</button></a><a href="/users/register"><button class="btn btn-success" type="submit">{% trans "Register" %}</button></a>
+                        {% endif %}
+                    </div>
+                     <div class="col-md-4">
+                        <form action="{% url 'set_language' %}" method="post" class="form-inline" >
+                        <b>{% trans "Language" %}</b>
+                        {% csrf_token %}
+                        <input   name="next" type="hidden" value="{{ redirect_to }}" class="form-control"/>
+                        <select  name="language" class="form-control"
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Change" class="form-control btn btn-info"/>
+                        </form></div>
+                    </div>
+
+
+
+
+
+
+
+
+                <div class="row">
+                <div class="col-md-4">
+                    <li><h3>{% trans "The Book" %}</h3></li>
+                    <li><a href="/book/start">{% trans "Home" %}</a></li>
+                    <li><a href="/book/articels">{% trans "Read" %}</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/book/new">{% trans "Write" %}</a></li>
+                    {%endif%}
+                    <li><a href="/book/search">{% trans "Search" %}</a></li>
+                </div>
+
+                <div class="col-md-4">
+                    <li><h3>{% trans "Places" %}</h3></li>
+                    {% for loca in top_locations %}
+                    <li><a href="/book/location/{{loca}}/">{{ loca }}</a></li>
+                    {% endfor %}
+              </div>
+
+                <div class="col-md-4">
+                    <li><h3>{% trans "Tags" %}</h3></li>
+                    {% for tags in top_tags %}
+                    <li><a href="/book/tags/{{tags}}/">{{ tags }}</a></li>
+                    {% endfor %}
+                </div>
+                 </div>
+
+
+
+            </console>
+        </div>
+        </div>
+     </div>
+    <!-- closing custom page menu -->

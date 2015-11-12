@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 22:03+0100\n"
+"POT-Creation-Date: 2015-10-26 22:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,141 +16,131 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: asylguiden/settings.py:157 template/users/mypage.html:86
 msgid "English"
-msgstr "Engelska"
+msgstr ""
 
 #: asylguiden/settings.py:158 template/users/mypage.html:85
 msgid "Swedish"
-msgstr "Svenska"
+msgstr ""
 
 #: template/book/about.html:13
 msgid "Sent! "
 msgstr ""
 
 #: template/book/about.html:13
-#, fuzzy
-#| msgid "You articel has bean saved"
 msgid "You messages has bean sent to us"
-msgstr "Din artikel har sparats"
+msgstr ""
 
 #: template/book/about.html:19
 msgid "Asylguiden.se"
 msgstr ""
 
 #: template/book/about.html:20
-#, fuzzy
-#| msgid ""
-#| "Asylguiden is and plattform for delevering information beetween people"
 msgid ""
 "Asylguiden is and online plattform and for asyl information, education and "
 "work"
-msgstr "Asyluiden en plattform för informatiosn delnad"
+msgstr ""
 
 #: template/book/about.html:32
 msgid "Contact Asylguiden"
-msgstr "Kontakta Asylguiden"
+msgstr ""
 
 #: template/book/articels.html:6
 msgid "Auther:"
-msgstr "Författare"
+msgstr ""
 
 #: template/book/articels.html:6 template/users/user.html:13
 msgid "Posts"
-msgstr "Artiklar"
+msgstr ""
 
 #: template/book/articels.html:6
 msgid "Level"
-msgstr "Nivå"
+msgstr ""
 
 #: template/book/articels.html:14
 msgid "Views"
-msgstr "Läst"
+msgstr ""
 
 #: template/book/articels.html:14 template/users/user.html:14
 msgid "Rate"
-msgstr "Betyg"
+msgstr ""
 
 #: template/book/articels.html:16
-#, fuzzy
-#| msgid "Enter tags to articel"
 msgid "Rate this articel"
-msgstr "Skriv tags för artiklar"
+msgstr ""
 
 #: template/book/change_articels.html:10
 msgid "Changed!"
-msgstr "Ändrad!"
+msgstr ""
 
 #: template/book/change_articels.html:15
 msgid "Change Articel"
-msgstr "Ändra Artikel"
+msgstr ""
 
 #: template/book/change_articels.html:22 template/book/new.html:17
 #: template/book/qsearch.html:12 template/book/search.html:14
 #: template/users/user.html:11
 msgid "Name"
-msgstr "Namn"
+msgstr ""
 
 #: template/book/change_articels.html:25 template/book/new.html:19
 msgid "Enter name of articel"
-msgstr "Skriv namn på artikel"
+msgstr ""
 
 #: template/book/change_articels.html:26 template/book/locations.html:5
 #: template/book/new.html:20
 msgid "Locations"
-msgstr "Område"
+msgstr ""
 
 #: template/book/change_articels.html:28
 msgid "Enter location for articel if any"
-msgstr "Skriv område som rör artikel"
+msgstr ""
 
 #: template/book/change_articels.html:29 template/book/index.html:175
 #: template/book/list_articels.html:5 template/book/list_questions.html:5
 #: template/book/new.html:25 template/book/tags.html:5
 #: template/users/mypage.html:101
 msgid "Tags"
-msgstr "Tags"
+msgstr ""
 
 #: template/book/change_articels.html:31
 msgid "Enter tags to articel"
-msgstr "Skriv tags för artiklar"
+msgstr ""
 
 #: template/book/change_articels.html:36 template/book/new.html:50
 #: template/book/qestion.html:30
 msgid "Save"
-msgstr "Sparad"
+msgstr ""
 
 #: template/book/delete_articels.html:9
 msgid "Deleted!"
-msgstr "Bortagen!"
+msgstr ""
 
 #: template/book/delete_articels.html:9
 msgid "The Articel has bean deleted."
-msgstr "Artikeln har blivit bortagen"
+msgstr ""
 
 #: template/book/delete_articels.html:19
 msgid "DELETE"
-msgstr "RADERA"
+msgstr ""
 
 #: template/book/help.html:5
 msgid "Help us"
-msgstr "Hjälp oss"
+msgstr ""
 
 #: template/book/index.html:134 template/edu/index.html:134
 #: template/work/index.html:134
-#, fuzzy
-#| msgid "The Book"
 msgid "Book"
-msgstr "Boken"
+msgstr ""
 
 #: template/book/index.html:135 template/edu/index.html:135
 #: template/work/index.html:135
-#, fuzzy
-#| msgid "Location"
 msgid "Education"
-msgstr "Område"
+msgstr ""
 
 #: template/book/index.html:136 template/edu/index.html:136
 #: template/work/index.html:136 template/work/index.html.py:153
@@ -159,55 +149,54 @@ msgstr ""
 
 #: template/book/index.html:153
 msgid "The Book"
-msgstr "Boken"
+msgstr ""
 
 #: template/book/index.html:154
 msgid "Home"
-msgstr "Hem"
+msgstr ""
 
 #: template/book/index.html:155
 msgid "Read"
-msgstr "Läs"
+msgstr ""
 
 #: template/book/index.html:157
 msgid "Write"
-msgstr "Skriv"
+msgstr ""
 
 #: template/book/index.html:159 template/book/qsearch.html:16
 #: template/book/search.html:5 template/book/search.html.py:29
 msgid "Search"
-msgstr "Sök"
+msgstr ""
 
 #: template/book/index.html:168
 msgid "Places"
-msgstr "Platser"
+msgstr ""
 
 #: template/book/index.html:184 template/book/index.html.py:187
 #: template/edu/index.html:174 template/edu/index.html.py:177
 #: template/work/index.html:174 template/work/index.html.py:177
 msgid "Account"
-msgstr "Konto"
+msgstr ""
 
 #: template/book/index.html:185 template/edu/index.html:175
 #: template/work/index.html:175
 msgid "Log Out"
-msgstr "Logga ut"
+msgstr ""
 
 #: template/book/index.html:188 template/edu/index.html:178
 #: template/users/login.html:14 template/work/index.html:178
 msgid "Login"
-msgstr "Logga in"
+msgstr ""
 
 #: template/book/index.html:189 template/edu/index.html:179
 #: template/work/index.html:179
 msgid "Register"
-msgstr "Registrera"
+msgstr ""
 
 #: template/book/index.html:195 template/edu/index.html:185
 #: template/work/index.html:185
-#, fuzzy
 msgid "Language"
-msgstr "Välj Språk"
+msgstr ""
 
 #: template/book/index.html:233 template/edu/index.html:213
 #: template/work/index.html:214
@@ -216,10 +205,8 @@ msgstr ""
 
 #: template/book/index.html:234 template/book/index.html.py:271
 #: template/edu/index.html:214 template/work/index.html:215
-#, fuzzy
-#| msgid "Location"
 msgid "Information "
-msgstr "Område"
+msgstr ""
 
 #: template/book/index.html:235 template/edu/index.html:215
 #: template/work/index.html:216
@@ -231,24 +218,22 @@ msgstr ""
 #: template/book/index.html:242 template/edu/index.html:222
 #: template/work/index.html:223
 msgid "Integration basic TWO"
-msgstr "Intergration steg två"
+msgstr ""
 
 #: template/book/index.html:243 template/edu/index.html:153
 #: template/edu/index.html.py:223 template/work/index.html:224
-#, fuzzy
-#| msgid "Locations"
 msgid "Educations"
-msgstr "Område"
+msgstr ""
 
 #: template/book/index.html:244 template/edu/index.html:224
 #: template/work/index.html:225
 msgid "Get education can be university ore not"
-msgstr "Få utbildning kan vara Univeristet eller inte"
+msgstr ""
 
 #: template/book/index.html:252 template/edu/index.html:232
 #: template/work/index.html:233
 msgid "Integration basic TREE"
-msgstr "Intergration steg tre"
+msgstr ""
 
 #: template/book/index.html:253 template/edu/index.html:233
 #: template/work/index.html:234
@@ -258,7 +243,7 @@ msgstr ""
 #: template/book/index.html:254 template/edu/index.html:234
 #: template/work/index.html:235
 msgid "Get a work and wrote us you story and the circel is closed"
-msgstr "Få ett jobb och ge oss din history för att sluta cirklen"
+msgstr ""
 
 #: template/book/index.html:272
 msgid ""
@@ -268,99 +253,87 @@ msgstr ""
 
 #: template/book/index.html:280
 msgid "Stockholm"
-msgstr "Stockholm"
+msgstr ""
 
 #: template/book/index.html:281
 msgid ""
 "Qestions about STHLM here we have collected our best articels from Stockholm"
-msgstr "Frågor om STHLM vi har samlat dom ästa artiklarna om Stockholm"
+msgstr ""
 
 #: template/book/index.html:288
 msgid "GIVE TO The Guide "
-msgstr "Ge till guiden"
+msgstr ""
 
 #: template/book/index.html:289
-#, fuzzy
-#| msgid ""
-#| "Give the guide five stories that you have heard och experince. So other "
-#| "can learn from your"
 msgid ""
 "Give the guide five stories that you have heard och experince. So other can "
 "learn from what you have sean and heard."
 msgstr ""
-"GE oss fem historier som du har hört eller upplevt. Så att andra kan lära "
-"från dom"
 
 #: template/book/index.html:304 template/edu/index.html:292
 #: template/work/index.html:293
 msgid "Back to top"
-msgstr "Tillbaka upp"
+msgstr ""
 
 #: template/book/index.html:305 template/edu/index.html:293
 #: template/work/index.html:294
 msgid "About"
-msgstr "Om oss"
+msgstr ""
 
 #: template/book/index.html:305 template/edu/index.html:293
 #: template/work/index.html:294
-#, fuzzy
-#| msgid "Help us"
 msgid "Help Us"
-msgstr "Hjälp oss"
+msgstr ""
 
 #: template/book/index.html:305 template/book/tech.html:4
 #: template/edu/index.html:293 template/work/index.html:294
 msgid "Tech"
-msgstr "Teknik"
+msgstr ""
 
 #: template/book/index.html:305 template/book/support.html:4
 #: template/edu/index.html:293 template/work/index.html:294
 msgid "Support"
-msgstr "Support"
+msgstr ""
 
 #: template/book/index.html:305 template/book/supporters.html:5
 #: template/edu/index.html:293 template/work/index.html:294
-#, fuzzy
-#| msgid "Support"
 msgid "Our Supporters"
-msgstr "Support"
+msgstr ""
 
 #: template/book/list_articels.html:5 template/book/list_questions.html:5
 #: template/users/mypage.html:101
 msgid "Title"
-msgstr "Titel"
+msgstr ""
 
 #: template/book/list_articels.html:5 template/book/list_questions.html:5
 #: template/users/mypage.html:101
 msgid "Location"
-msgstr "Område"
+msgstr ""
 
 #: template/book/myupload.html:10
 msgid "Uploaded"
-msgstr "Uppladdad"
+msgstr ""
 
 #: template/book/myupload.html:10
-#, fuzzy
-#| msgid "You articel has bean saved"
 msgid "  You file has bean uploaded"
-msgstr "Din artikel har sparats"
+msgstr ""
 
 #: template/book/myupload.html:17 template/users/login.html:7
 #: template/users/register.html:7
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 #: template/book/myupload.html:17
 msgid "  You file has the wrong file type"
-msgstr " Din fil har fel format"
+msgstr ""
 
 #: template/book/myupload.html:24
 msgid "File upload"
-msgstr "Fil uppladdad"
+msgstr ""
 
 #: template/book/myupload.html:25
 msgid "You can upload images with file extenasion .jpg .png and .gif"
-msgstr "Du kan ladda upp filer med format .jpg .png and .gif"
+msgstr ""
 
 #: template/book/myupload.html:26
 msgid ""
@@ -370,45 +343,43 @@ msgstr ""
 
 #: template/book/myupload.html:36
 msgid "Profile Photo"
-msgstr "Profile foto"
+msgstr ""
 
 #: template/book/myupload.html:37
 msgid ""
 "To update you profile photo upload a file here. The photo will be rezised"
-msgstr "För att updatera ditt profile foto ladda upp den här. Din bild kommer bli förminskad"
+msgstr ""
 
 #: template/book/new.html:16
 msgid "New Articel"
-msgstr "Ny Artikel"
+msgstr ""
 
 #: template/book/new.html:24
 msgid ""
 "Enter location for articel if any (Sepperate with , exemple stockholm, "
 "Uppsala)"
-msgstr "Skriv in område för artikeln tex (stockholm,uppsala)"
+msgstr ""
 
 #: template/book/new.html:28 template/book/qestion.html:24
 msgid "Enter tags to articel (Sepperate with , exemple work, internet)"
-msgstr "Skriv tag för artikel dela med , tex (jobba, internet)"
+msgstr ""
 
 #: template/book/new.html:30
 msgid "Upload Media"
-msgstr "Ladda upp ledia"
+msgstr ""
 
 #: template/book/new.html:33
 msgid "Country articel regarding"
-msgstr "Vilket land tillhör artikeln"
+msgstr ""
 
 #: template/book/new.html:35 template/users/mypage.html:75
-#, fuzzy
-#| msgid "Swedish"
 msgid "Sweden"
-msgstr "Svenska"
+msgstr ""
 
 #: template/book/new.html:36 template/users/mypage.html:76
 #: template/users/mypage.html.py:87
 msgid "Germany"
-msgstr "Tyska"
+msgstr ""
 
 #: template/book/new.html:39
 msgid "Written in language"
@@ -416,73 +387,69 @@ msgstr ""
 
 #: template/book/qarticels.html:4
 msgid "Questions and Answers"
-msgstr "Frågor och svar"
+msgstr ""
 
 #: template/book/qarticels.html:9
 msgid "Tags:"
-msgstr "Tags"
+msgstr ""
 
 #: template/book/qarticels.html:10
 msgid "Locations:"
-msgstr "Område"
+msgstr ""
 
 #: template/book/qestion.html:12
-#, fuzzy
 msgid "Answer Qestion"
-msgstr "Sök i Frågor"
+msgstr ""
 
 #: template/book/qestion.html:13
 msgid "The guestion"
-msgstr "Frågan"
+msgstr ""
 
 #: template/book/qestion.html:15
 msgid "Enter the qestion"
-msgstr "Din fråga"
+msgstr ""
 
 #: template/book/qestion.html:16
 msgid "Where is this qestion"
-msgstr "Vart rör frågan"
+msgstr ""
 
 #: template/book/qestion.html:20
-#, fuzzy
 msgid ""
 "Enter location for articel if any (Sepperate with , exemple stockholm, "
 "uppsala)"
-msgstr "Skriv in område för artikeln tex (stockholm,uppsala)"
+msgstr ""
 
 #: template/book/qestion.html:21
 msgid "Tags the qestion"
-msgstr "Tags till frågan"
+msgstr ""
 
 #: template/book/qestion.html:25
 msgid "The Answer"
-msgstr "Svaret"
+msgstr ""
 
 #: template/book/qsearch.html:5
 msgid "Search in Questions"
-msgstr "Sök i Frågor"
+msgstr ""
 
 #: template/book/qsearch.html:14 template/book/search.html:16
 msgid "Enter search ords for Articels, tags ore locations"
-msgstr "Skriv sökord för artiklar tags eller området"
+msgstr ""
 
 #: template/book/qsearch.html:24 template/book/search.html:41
 msgid "Results"
-msgstr "Resultat"
+msgstr ""
 
 #: template/book/saved.html:5
 msgid "Thank You"
-msgstr "Tack"
+msgstr ""
 
 #: template/book/saved.html:6
 msgid "You articel has bean saved"
-msgstr "Din artikel har sparats"
+msgstr ""
 
 #: template/book/search.html:18
-#, fuzzy
-#| msgid "Search in Questions"
 msgid "Search in language"
-msgstr "Sök i Frågor"
+msgstr ""
 
 #: template/book/support.html:5
 msgid "We are setting up all docs at readthedocs.org"
@@ -493,16 +460,12 @@ msgid "Read our docs"
 msgstr ""
 
 #: template/book/support.html:9
-#, fuzzy
-#| msgid "Email"
 msgid "Email us"
-msgstr "Email"
+msgstr ""
 
 #: template/book/support.html:10
-#, fuzzy
-#| msgid "No email found"
 msgid "Drop us email on"
-msgstr "Ingen email hittad"
+msgstr ""
 
 #: template/edu/index.html:262
 msgid "Small online directed courses with certificate"
@@ -516,7 +479,7 @@ msgstr ""
 
 #: template/edu/index.html:271
 msgid "Free Educations"
-msgstr "Gratis utbildning"
+msgstr ""
 
 #: template/edu/index.html:272
 msgid ""
@@ -526,7 +489,7 @@ msgstr ""
 
 #: template/edu/index.html:279
 msgid "We need your help"
-msgstr "We behöver din hjälp"
+msgstr ""
 
 #: template/edu/index.html:280
 msgid ""
@@ -536,168 +499,161 @@ msgstr ""
 
 #: template/users/login.html:7
 msgid " Wrong Login please efter correct username ore password"
-msgstr "Fel login ogiltigt användrnamn eller lösenord"
+msgstr ""
 
 #: template/users/login.html:19 template/users/mypage.html:33
 msgid "Username:"
-msgstr "Användrnamn"
+msgstr ""
 
 #: template/users/login.html:21 template/users/mypage.html:35
 msgid "Password:"
-msgstr "Lösenord"
+msgstr ""
 
 #: template/users/lost_password.html:8
 msgid "Reset Link generated"
-msgstr "Återställnings link har genererats"
+msgstr ""
 
 #: template/users/lost_password.html:8
 msgid " An reset link has bean generated and send to you email."
-msgstr "En återställnings länk har renereats och skickts till dig"
+msgstr ""
 
 #: template/users/lost_password.html:16
 msgid "No email found"
-msgstr "Ingen email hittad"
+msgstr ""
 
 #: template/users/lost_password.html:16
 msgid " There was no users found with that email."
-msgstr "Det fanns ingen användare med det email"
+msgstr ""
 
 #: template/users/lost_password.html:23
 msgid "Reset Password"
-msgstr "Återställ Lösenord"
+msgstr ""
 
 #: template/users/lost_password.html:24
 msgid ""
 "To resett you password please provide us with your email addres to you "
 "account"
 msgstr ""
-"För att återställa ditt lösenord skriv in din email address till ditt konto"
 
 #: template/users/lost_password.html:29
 msgid "Email:"
-msgstr "Email:"
+msgstr ""
 
 #: template/users/mypage.html:8
 msgid "My page"
-msgstr "Min Sida"
+msgstr ""
 
 #: template/users/mypage.html:12
 msgid "Updated!"
-msgstr "Updaterad!"
+msgstr ""
 
 #: template/users/mypage.html:12
 msgid "You account has bean updated."
-msgstr "Ditt Konto har blivit updaterad"
+msgstr ""
 
 #: template/users/mypage.html:20
 msgid "Account Settings"
-msgstr "Konto Instaällningar"
+msgstr ""
 
 #: template/users/mypage.html:22
 msgid "User Detailjs"
-msgstr "Användar Uppgifter"
+msgstr ""
 
 #: template/users/mypage.html:23
 msgid "Articels"
-msgstr "Artiklar"
+msgstr ""
 
 #: template/users/mypage.html:37
 msgid "Password confirmation:"
-msgstr "Lösenord Konfirmation"
+msgstr ""
 
 #: template/users/mypage.html:40
 msgid "Emaill:"
-msgstr "Email:"
+msgstr ""
 
 #: template/users/mypage.html:42 template/users/register.html:19
 msgid "Enter you email address"
-msgstr "Skriv in din email address"
+msgstr ""
 
 #: template/users/mypage.html:59
 msgid "Name:"
-msgstr "Namn:"
+msgstr ""
 
 #: template/users/mypage.html:64
 msgid "Surname:"
-msgstr "Efternamn:"
+msgstr ""
 
 #: template/users/mypage.html:66
 msgid "Address:"
-msgstr "Address:"
+msgstr ""
 
 #: template/users/mypage.html:68
 msgid "Postnumber"
-msgstr "Postnummer"
+msgstr ""
 
 #: template/users/mypage.html:70
 msgid "Phone:"
-msgstr "Telefon:"
+msgstr ""
 
 #: template/users/mypage.html:72
 msgid "Contry:"
-msgstr "Land:"
+msgstr ""
 
 #: template/users/mypage.html:80
 msgid "Contry of stay"
-msgstr "Land där du är"
+msgstr ""
 
 #: template/users/mypage.html:82
 msgid "Langage:"
-msgstr "Språk"
+msgstr ""
 
 #: template/users/mypage.html:89
 msgid "Languages to write and read articels in. Press  to mark several"
-msgstr "Språk att skriva och läsa artiklar i"
+msgstr ""
 
 #: template/users/mypage.html:111
 msgid "Change"
-msgstr "Ändrat"
+msgstr ""
 
 #: template/users/mypage.html:111
 msgid "Delete"
-msgstr "Radera"
+msgstr ""
 
 #: template/users/mypage.html:113
 msgid "No Articels"
-msgstr "Inga Artiklar"
+msgstr ""
 
 #: template/users/register.html:7
-#, fuzzy
-#| msgid "Error Register user username ore email address"
 msgid " Error Register user username ore email address"
-msgstr "Error med att registrera ditt konto"
+msgstr ""
 
 #: template/users/register.html:13
 msgid "Register new account"
-msgstr "Registrera nytt konto"
+msgstr ""
 
 #: template/users/register.html:17
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: template/users/register.html:22
 msgid "Password"
-msgstr "Lösenord"
+msgstr ""
 
 #: template/users/register.html:24
 msgid "Password confirmation"
-msgstr "Lösenords Konfirmation"
+msgstr ""
 
 #: template/users/user.html:8
 msgid "User info for user"
-msgstr "Användarinformation"
+msgstr ""
 
 #: template/users/user.html:10
-#, fuzzy
-#| msgid "Username:"
 msgid "Username"
-msgstr "Användrnamn"
+msgstr ""
 
 #: template/users/user.html:12
-#, fuzzy
-#| msgid "Contry:"
 msgid "Country"
-msgstr "Land:"
+msgstr ""
 
 #: template/work/index.html:263
 msgid "Matching"
@@ -721,70 +677,9 @@ msgstr ""
 
 #: template/work/index.html:280
 msgid "Expanding the guide"
-msgstr "Bygga ut Asylguiden"
+msgstr ""
 
 #: template/work/index.html:281
 msgid ""
 "We are in the business of helping and where people need help we should expand"
 msgstr ""
-
-#~ msgid "People working on Asylguiden"
-#~ msgstr "Folk som jobbar på Asylguiden"
-
-#~ msgid "Answers"
-#~ msgstr "Frågor"
-
-#~ msgid "Start using the guide by pressing Console"
-#~ msgstr "Börja använd guiden genom att tryca console"
-
-#~ msgid "Start today writing to the Guide"
-#~ msgstr "Börja idag med att skriva till Guiden"
-
-#, fuzzy
-#~ msgid "Sign up today and start writing into the guid"
-#~ msgstr "Börja idag med att skriva till Guiden"
-
-#~ msgid "Sign Up"
-#~ msgstr "Registrera dig"
-
-#~ msgid "Giving back"
-#~ msgstr "Ge tillbaka"
-
-#~ msgid ""
-#~ "Dont let other fall into the same pits as you, Give the guide you "
-#~ "experiencse and let other move on"
-#~ msgstr "Låt inte andra göra samma mistage som dig. Skriv in i Guiden idag"
-
-#~ msgid "Write Articel"
-#~ msgstr "Skriv Artikel"
-
-#~ msgid "Finding Work !!"
-#~ msgstr "Hitta arbete"
-
-#~ msgid "Read how to get an work in Sweden"
-#~ msgstr "Läs hur du får ett arbete i sverige"
-
-#~ msgid ""
-#~ "Findin work in Stockholm is hard, Here we have collected our articels "
-#~ "about getting work in STHLM"
-#~ msgstr ""
-#~ "Hitta arbete i Stockholm är svårt. Läs våra artiklar hur du hittar jobba "
-#~ "i STHLM"
-
-#~ msgid "Help living arount Stockholm"
-#~ msgstr "Hjälp bo runt Stockholm"
-
-#~ msgid "Read local articels from Stockholm"
-#~ msgstr "Läs lokala artiklar från Stockholm"
-
-#~ msgid "Give us the five stories from you"
-#~ msgstr "Ge oss fem historier"
-
-#~ msgid "Privacy"
-#~ msgstr "Privacy"
-
-#~ msgid "Terms"
-#~ msgstr "Terms"
-
-#~ msgid "Qestions and Answers"
-#~ msgstr "Frågot och svar"

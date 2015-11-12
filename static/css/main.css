@@ -29,7 +29,7 @@ console{
 		height:35px;
 		position:relative;
 		background-color:#DC533F;
-		width:100%;
+		width:80%;
 		padding:10px;
 		font-size: 20px;
 		color:#242424;
@@ -47,7 +47,7 @@ console{
 		background-color:#DC533F;
 		overflow:hidden;
 		padding:20px;
-		width:100%;
+		width:90%;
 		z-index:+4;
 				
 	}
@@ -55,6 +55,7 @@ console{
 		position:relative;		
 		background-color:#DC533F;
 		width:90%;
+        height: auto;
 		font-size:14px;
 		z-index:+4;
 		

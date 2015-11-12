@@ -1,3 +1,6 @@
 gunicorn
 mandrill
 mailchimp
+facebook-sdk
+twython
+pillow

@@ -21,6 +21,10 @@ from django.core.mail import send_mail, BadHeaderError
 from django.db.models import F
 from itertools import chain
 from django.shortcuts import redirect
+from share.twitter_connect import send_to_twitter
+from share.facebook_connect import post_to_facebook
+from PIL import Image
+import PIL.ImageOps
 
 
 
@@ -66,7 +70,12 @@ def new(request):
         articel=Post(title=request.POST['title'],auther=currentuser,location=thelocations,tags=thetags,text=request.POST["text"],page_views=0,page_rate=0,language=request.POST["language"],country=request.POST["country"])
         articel.save()
         UserInfo.objects.select_related().filter(username=currentuser).update(postscount=F('postscount')+1)
-
+        #Sharing
+        try:
+            send_to_twitter(request.POST['title'],str(thetags[0]),str(thelocations[0]))
+            post_to_facebook(request.POST['title'],str(thetags[0]),str(thelocations[0]))
+        except :
+            print "Error sharing posts"
         return render_to_response('book/saved.html',context_instance=RequestContext(request))
 
 
@@ -350,6 +359,7 @@ def media(request):
 @login_required
 def upload_file(request):
     info="no"
+    print "user " + str(request.user.id)
     #Approved file extenasions
     images = [".jpg", ".png", ".gif", ".JPG", ".PNG", ".GIF"]
     movies = [".mp4", ".MP4"]
@@ -360,10 +370,11 @@ def upload_file(request):
                 form = UploadFileForm(request.POST, request.FILES)
                 if form.is_valid():
                     #If the form is good process the file for update
-                    handle_uploaded_file(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
+
+                    handle_uploaded_file(request.FILES['file'],request.FILES['file'].name, request.user.id)
                     if "profile" == request.POST['profile']:
                         #If profile images is used send file to be the profile images
-                        profile_file(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
+                        profile_file(request.FILES['file'],request.FILES['file'].name, request.user.id)
                     info="Uploaded"
         #WHEN AN MOVIE IS UPLOADED
         elif request.FILES['file'].name.endswith(tuple(movies)):
@@ -371,7 +382,7 @@ def upload_file(request):
                     form = UploadFileForm(request.POST, request.FILES)
                     if form.is_valid():
                         #If the form is good process the file for update
-                        handle_uploaded_movie(request.FILES['file'],request.FILES['file'].name, hashlib.sha224(str(request.user.id)).hexdigest())
+                        handle_uploaded_movie(request.FILES['file'],request.FILES['file'].name.replace(' ','_'), hashlib.sha224(str(request.user.id)).hexdigest())
                     info="Uploaded"
         else:
             info="ERROR_FILETYPE"
@@ -384,57 +395,57 @@ def profile_file(f,name,id):
     '''
     Making the profile photo for users
     '''
-    with open(settings.STATIC_ROOT+"/profile/"+str(id)+name, 'wb+') as destination:
+    with open("/code/static/profile/"+str(id)+name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
-    image = Image.open(settings.STATIC_ROOT+"/profile/"+str(id)+name)
+    image = Image.open("/code/static/profile/"+str(id)+name)
     # ImageOps compatible mode
     if image.mode not in ("L", "RGB"):
         image = image.convert("RGB")
 
     image.thumbnail((200,200), Image.ANTIALIAS)
-    image.save(settings.STATIC_ROOT+"/profile/thumb_"+str(id)+".jpg", 'JPEG', quality=75)
+    image.save("/code/static/profile/thumb_"+str(id)+".jpg", 'JPEG', quality=75)
 
 def handle_uploaded_movie(f,name,id):
     '''
     Uploading the movie to the correct folder
     And transcode the movie if its not mp4 format and used for html5 standards
     '''
-    if not os.path.isdir(settings.STATIC_ROOT+"/user/"+str(id)):
-        os.mkdir(settings.STATIC_ROOT+"/user/"+str(id))
-    with open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name, 'wb+') as destination:
+    if not os.path.isdir("/code/static/user/"+str(id)):
+        os.mkdir("/code/static/user/"+str(id))
+    with open("/code/static/user/"+str(id)+"/"+name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
 
 def handle_uploaded_file(f,name,id):
     '''
-    Uploading and rezecing imgaes uploaded from users
+    Uploading and rezecing imgaes uploaded from userscd ..
     '''
 
-    if not os.path.isdir(settings.STATIC_ROOT+"/user/"+str(id)):
-        os.mkdir(settings.STATIC_ROOT+"/user/"+str(id))
-    with open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name, 'wb+') as destination:
+    if not os.path.isdir("/code/static/user/"+str(id)):
+        os.mkdir("/code/static/user/"+str(id))
+    with open("/code/static/user/"+str(id)+"/"+name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
-    image = Image.open(settings.STATIC_ROOT+"/user/"+str(id)+"/"+name)
+    image = Image.open("/code/static/user/"+str(id)+"/"+name)
 
     #Making thumbnail and images in differnt sizes
-    if not os.path.isdir(settings.STATIC_ROOT+"/thumb/"+str(id)):
-        os.mkdir(settings.STATIC_ROOT+"/thumb/"+str(id))
+    if not os.path.isdir("/code/static/thumb/"+str(id)):
+        os.mkdir("/code/static/thumb/"+str(id))
 
     # ImageOps compatible mode
     if image.mode not in ("L", "RGB"):
         image = image.convert("RGB")
 
-    fname=name.split('.')
+    #fname=name.split('.')
 
     imageresize = image.resize((200,200), Image.ANTIALIAS)
-    imageresize.save(settings.STATIC_ROOT+"/thumb/"+str(id)+"/resize_200_200"+fname[0]+".jpg", 'JPEG', quality=75)
+    imageresize.save("/code/static/thumb/"+str(id)+"/resize_200_200"+name+".jpg", 'JPEG', quality=75)
 
     image.thumbnail((200,200), Image.ANTIALIAS)
-    image.save(settings.STATIC_ROOT+"/thumb/"+str(id)+"/thumpnail_"+fname[0]+".jpg", 'JPEG', quality=75)
+    image.save("/code/static/thumb/"+str(id)+"/thumpnail_"+name+".jpg", 'JPEG', quality=75)
 
-    imagefit = ImageOps.fit(image, (200, 200), Image.ANTIALIAS)
-    imagefit.save(settings.STATIC_ROOT+"/thumb/"+str(id)+"/fit_"+fname[0]+".jpg", 'JPEG', quality=75)
+    imagefit = PIL.ImageOps.fit(image, (200, 200), Image.ANTIALIAS)
+    imagefit.save("/code/static/thumb/"+str(id)+"/fit_"+name+".jpg", 'JPEG', quality=75)
